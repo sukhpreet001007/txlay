@@ -16,6 +16,14 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: var(--font-main);
     color: var(--text-color);
@@ -52,7 +60,7 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #888;
     border-radius: 4px;
 }
 

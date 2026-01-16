@@ -1,0 +1,40 @@
+/* Catalog Side Sidebar Styles */
+.catalog-side {
+    background-color: #f8f9fa;
+}
+
+.catalog-sidebar .list-group-item {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #eee !important;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.catalog-sidebar .list-group-item:hover {
+    background-color: #f0f4ff;
+    padding-left: 25px;
+}
+
+.catalog-sidebar .list-group-item a {
+    color: #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog-sidebar .list-group-item:hover a {
+    color: #230b9e;
+}
+
+.catalog-sidebar .card-header {
+    background: #232f3e;
+}
+
+.catalog-sidebar .list-group-item.active {
+    background-color: #230b9e;
+    border-color: #230b9e;
+}
+
+.catalog-sidebar .list-group-item.active a {
+    color: #fff;
+}

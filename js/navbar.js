@@ -113,4 +113,64 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // --- Navbar Scroll Logic ---
+    const navMenu = document.getElementById('navMenu');
+    const scrollLeftBtn = document.getElementById('navScrollLeft');
+    const scrollRightBtn = document.getElementById('navScrollRight');
+    const mainNavbar = document.querySelector('.main-navbar');
+
+    function updateScrollButtons() {
+        if (!navMenu) return;
+
+        const isScrollable = navMenu.scrollWidth > navMenu.clientWidth;
+
+        if (isScrollable) {
+            // Show/hide left button
+            if (navMenu.scrollLeft > 20) {
+                scrollLeftBtn.classList.add('visible');
+            } else {
+                scrollLeftBtn.classList.remove('visible');
+            }
+
+            // Show/hide right button
+            if (navMenu.scrollLeft + navMenu.clientWidth < navMenu.scrollWidth - 20) {
+                scrollRightBtn.classList.add('visible');
+            } else {
+                scrollRightBtn.classList.remove('visible');
+            }
+        } else {
+            scrollLeftBtn.classList.remove('visible');
+            scrollRightBtn.classList.remove('visible');
+        }
+    }
+
+    if (navMenu && scrollLeftBtn && scrollRightBtn) {
+        scrollLeftBtn.addEventListener('click', () => {
+            navMenu.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+
+        scrollRightBtn.addEventListener('click', () => {
+            navMenu.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+
+        navMenu.addEventListener('scroll', updateScrollButtons);
+        window.addEventListener('resize', updateScrollButtons);
+
+        // Initial check
+        setTimeout(updateScrollButtons, 500);
+    }
+
+    // Fix for Dropdowns being clipped by overflow-x: auto
+    if (mainNavbar) {
+        const navItems = document.querySelectorAll('.nav-item.has-dropdown');
+        navItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                navMenu.style.overflow = 'visible';
+            });
+            item.addEventListener('mouseleave', () => {
+                navMenu.style.overflowX = 'auto';
+            });
+        });
+    }
 });

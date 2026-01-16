@@ -1,0 +1,162 @@
+/* Product Detail Page Styles */
+
+:root {
+    --product-primary: #84C44C;
+    --product-dark: #232f3e;
+    --product-muted: #6c757d;
+    --product-border: #e9ecef;
+    --product-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.product-detail-section {
+    background-color: #fcfcfc;
+}
+
+/* Image Container */
+.product-image-container {
+    background: #fff;
+    padding: 40px;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.product-badge-discount {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #ff4757;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(255, 71, 87, 0.3);
+}
+
+.main-product-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 500px;
+    transition: transform 0.5s ease;
+}
+
+.main-product-img:hover {
+    transform: scale(1.05);
+}
+
+/* Thumbnails */
+.thumb-box {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--product-border);
+    border-radius: 12px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.thumb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.thumb-box.active {
+    border-color: var(--product-primary);
+    box-shadow: 0 4px 12px rgba(132, 196, 76, 0.2);
+}
+
+.thumb-box:hover {
+    border-color: var(--product-primary);
+}
+
+/* Details Content */
+.product-details-content {
+    padding-left: 20px;
+}
+
+.breadcrumb-item a {
+    color: var(--product-muted);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--product-primary);
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.current-price {
+    color: var(--product-dark);
+}
+
+.discount-pill {
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+/* Quantity Selector */
+.quantity-selector .btn {
+    border-color: var(--product-border);
+    color: var(--product-dark);
+    font-weight: 700;
+}
+
+.quantity-selector .form-control {
+    border-color: var(--product-border);
+    font-weight: 700;
+}
+
+/* Actions */
+.btn-primary {
+    background-color: var(--product-primary);
+    border-color: var(--product-primary);
+    color: #000;
+}
+
+.btn-primary:hover {
+    background-color: var(--product-dark);
+    border-color: var(--product-dark);
+    color: #fff;
+}
+
+.btn-dark {
+    background-color: var(--product-dark);
+    border-color: var(--product-dark);
+}
+
+.btn-dark:hover {
+    background-color: var(--product-primary);
+    border-color: var(--product-primary);
+    color: #000;
+}
+
+.btn-outline-danger:hover {
+    background-color: #ff4757;
+    border-color: #ff4757;
+}
+
+/* Trust Badges */
+.product-trust-badges p {
+    font-weight: 600;
+    color: var(--product-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .product-details-content {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+
+    .product-image-container {
+        padding: 20px;
+    }
+}

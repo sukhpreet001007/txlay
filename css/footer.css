@@ -1,0 +1,124 @@
+/* Main Footer Styles */
+.main-footer {
+    background-color: #131921;
+    /* Amazon Dark Footer Color */
+    color: #ffffff;
+    padding: 60px 0 30px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.footer-container {
+    max-width: 1400px;
+}
+
+.footer-column-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #84C44C;
+    /* Green accent */
+}
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-list li {
+    margin-bottom: 12px;
+}
+
+.footer-links-list a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links-list a:hover {
+    color: #84C44C;
+    transform: translateX(5px);
+}
+
+.contact-info-text {
+    font-size: 14px;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.contact-info-text strong {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.contact-highlight {
+    color: #84C44C;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.certifications-img-wrapper {
+    margin-top: 15px;
+}
+
+.certifications-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.footer-bottom {
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-note {
+    font-size: 12px;
+    color: #888888;
+    margin-bottom: 10px;
+}
+
+.copyright-text {
+    font-size: 13px;
+    color: #aaaaaa;
+    margin: 0;
+}
+
+/* Responseiveness */
+@media (max-width: 991px) {
+    .main-footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-column {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-column-title {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .footer-links-list a {
+        font-size: 13px;
+    }
+}
