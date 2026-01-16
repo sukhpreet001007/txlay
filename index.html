@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Txley - Premium Supplies</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/mediaquery.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="site-header">
+        <!-- Top Utility Bar -->
+        <div class="top-bar">
+            <div class="container-contents">
+                <div class="top-links-left">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Markets</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#" class="highlight">Promos & Specials</a>
+                </div>
+                <div class="top-links-right">
+                    <a href="#"><i class="fa-solid fa-bolt"></i> Quick Order</a>
+                    <a href="#"><i class="fa-regular fa-user"></i> My Account</a>
+                    <a href="#" class="login-btn">Sign In / Create Account</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header (Logo, Search, Cart) -->
+        <div class="main-header">
+            <div class="container-contents header-grid">
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- Logo -->
+                <div class="logo-wrapper">
+                    <img src="assets/txley-logo.png" alt="Txley Logo" class="brand-logo">
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-wrapper">
+                    <div class="search-container">
+                        <input type="text" id="dynamicSearch" class="search-input" placeholder="Search our catalog...">
+                        <button class="search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cart -->
+                <div class="cart-wrapper">
+                    <div class="cart-box">
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="cart-badge">0</span>
+                        </div>
+                        <div class="cart-info">
+                            <span class="cart-label">Your Cart</span>
+                            <span class="cart-total">0 Product <span class="divider">|</span> $0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="main-navbar">
+            <div class="container-contents">
+                <ul class="nav-menu">
+                    <!-- Item 1: Janitorial -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Janitorial & Facility Supplies <i
+                                class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-menu-custom">
+                            <ul class="dropdown-list">
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#"> View All Janitorial & Facility Supplies </a>
+                                    
+                                </li>
+                                <li class="dropdown-item has-nested">
+                                    <a href="#">Lighting <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            <li><a href="#">Lamps/LED Lighting</a></li>
+                                            <li><a href="#">Flashlights</a></li>
+                                            <li><a href="#">Task Lights</a></li>
+                                            <li><a href="#">Lanterns</a></li>
+                                            <li><a href="#">Light Blubs</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Tools & Equipment <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            <li><a href="#">Utility Knives & Cutters</a></li>
+                                            <li><a href="#">Tool Storage & Organization</a></li>
+                                            <li><a href="#">Door Accessories</a></li>
+                                            <li><a href="#">Hand Trucks & Dollies</a></li>
+                                            <li><a href="#">Utility Replacement Blades</a></li>
+                                            <li><a href="#">Tape Measures/Guages</a></li>
+                                            <li><a href="#">Screwdrivers</a></li>
+                                            <li><a href="#">Outdoor Equipment</a></li>
+                                            <li><a href="#">Tool Kits</a></li>
+                                            <li><a href="#">Tape Measures/Gauges</a></li>
+                                            <li><a href="#">Ladders & Step Stools</a></li>
+                                            <li><a href="#">Floor Mats</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Waste & Recycling<i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                           
+                                            <li><a href="#">Trash Bags & Liners</a></li>
+                                            <li><a href="#">Waste Containers & Lids</a></li>
+                                            <li><a href="#">Medical Waste Bags & Container</a></li>
+                                            <li><a href="#">Recycling Bins</a></li>
+                                            <li><a href="#">Smoking Receptacles</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Janitorial Equipment <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            <li><a href="#">Cleaning/Utlity Carts</a></li>
+                                            <li><a href="#">Cleaning Tool Organizers</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Air & Odor Control<i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            <li><a href="#">Air Fresheners</a></li>
+                                            <li><a href="#">Air Purifier Filters</a></li>
+                                            <li><a href="#">Deodorizers</a></li>
+                                            <li><a href="#">Air Freshners Dispensers</a></li>
+                                            <li><a href="#">Air Purifiers</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Cleaning Supplies<i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            <!-- <li class="dropdown-item has-deep-nested">
+                                                <a href="#">Toilet Tissue <i class="fa-solid fa-chevron-right"></i></a>
+                                                <div class="deep-nested-dropdown">
+                                                    <ul class="nested-list">
+                                                        <li><a href="#">Standard Roll</a></li>
+                                                        <li><a href="#">Jumbo Roll</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li> -->
+                                            <li><a href="#">Glass Cleaners</a></li>
+                                            <li><a href="#">Specialty Cleaners</a></li>
+                                            <li><a href="#">Multipurpose cleaners</a></li>
+                                            <li><a href="#">Disinfectants</a></li>
+                                            <li><a href="#">Drain Cleaners</a></li>
+                                            <li><a href="#">Restroom & Toilet Cleaners </a></li>
+                                            <li><a href="#">Cleaning Wipes</a></li>
+                                            <li><a href="#">Dish/Dishwasher Detergents</a></li>
+                                            <li><a href="#">Lanudry Cleaning & Supplies</a></li>
+                                            <li><a href="#">Adhesive Removers</a></li>
+                                            <li><a href="#">Lens Cleaners</a></li>
+                                            <li><a href="#">Stain Remover - Crayon, Marker, Ink</a></li>
+                                            <li><a href="#">"Stain Remover - Crayon, Marker, Ink"</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Pest Control <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                           
+                                            <li><a href="#">Pesticides</a></li>
+                                            <li><a href="#">Repellents</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Floor Care <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            
+                                            <li><a href="#">Floor/Carpet Cleaners & Protectors</a></li>
+                                             <li><a href="#">Spil control & Absorbents</a></li>
+                                             <li><a href="#">Vacuum Cleaners</a></li>
+                                             <li><a href="#">Floor Mats</a></li>
+                                             <li><a href="#">Floor Machines & Accessories</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Cleaning Tools <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            
+                                            <li><a href="#">Mops & Refills</a></li>
+                                            <li><a href="#">Sponges, Cleaning Pads & Wipers</a></li>
+                                            <li><a href="#">Scurb Brushes</a></li>
+                                            <li><a href="#">Squeegees / Scrappers</a></li>
+                                            <li><a href="#">Toilet Bowl Brushes</a></li>
+                                            <li><a href="#">Sprayer Dispensing & Accessories</a></li>
+                                            <li><a href="#">Brooms & Sweepers</a></li>
+                                            <li><a href="#">Buckets & Wringers</a></li>
+                                            <li><a href="#">Poles & Handles</a></li>
+                                            <li><a href="#">Dusters</a></li>
+                                            <li><a href="#">Debris Nabbers</a></li>
+                                            <li><a href="#">Dust Pans</a></li>
+                                            <li><a href="#">Dust Mop Frames</a></li>
+                                            <li><a href="#">Cleaning Pad Holders</a></li>
+                                            <li><a href="#">"Sponges, Cleaning Pads & Wipers"</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Climate Control <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            
+                                            <li><a href="#">Fans</a></li>
+                                            <li><a href="#">Humidifiers</a></li>
+                                            <li><a href="#">Heaters</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Security <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            
+                                            <li><a href="#">Key Tags</a></li>
+                                            <li><a href="#">Key Boxes & Storage</a></li>
+                                            <li><a href="#">Safety Horn</a></li>
+                                            <li><a href="#">Locks</a></li>
+                                            <li><a href="#">Lockout Kits</a></li>
+                                            <li><a href="#">Alert Chimes</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Facility Signs <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            
+                                            <li><a href="#">Safety Data Sheets - SDS</a></li>
+                                            <li><a href="#">Safety Signs</a></li>
+                                            <li><a href="#">Restroom Signs</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Personal Care & Hygiene <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            
+                                            <li><a href="#">Lens Cleaners</a></li>
+                                            <li><a href="#">Feminine Hygiene Products</a></li>
+                                            <li><a href="#">Cotton Balls & Swabs</a></li>
+                                            <li><a href="#">Personal Hygiene Supplies</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Restroom Supplies <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                          
+                                            <li><a href="#">Hand Soaps/Cleaners</a></li>
+                                            <li><a href="#">Personal Hygiene Supplies</a></li>
+                                            <li><a href="#">Urinal Screens/Mats</a></li>
+                                            <li><a href="#">Urinal Deodorant Blocks</a></li>
+                                            <li><a href="#">Toilet Seat Covers</a></li>
+                                            <li><a href="#">Restroom Mats</a></li>
+                                            <li><a href="#">Plungers</a></li>
+                                            <li><a href="#">Sanitary Receptacle Dispenser</a></li>
+                                            <li><a href="#">Toilet Cover Dispensers</a></li>
+                                            <li><a href="#">Disposable Liners</a></li>
+                                            <li><a href="#">Changing Tables/Liners</a></li>
+                                            <li><a href="#">Shower Accessories</a></li>
+                                            <li><a href="#">Receptacles</a></li>
+                                            <li><a href="#">Flush Systems</a></li>
+                                            <li><a href="#">Faucets</a></li>
+                                            <li><a href="#">Hand Dryers</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Skin & Body Care <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                           
+                                            <li><a href="#">Hand Sanitizers</a></li>
+                                            <li><a href="#">Liquid Soap/Sanitizer Dispeners</a></li>
+                                            <li><a href="#">Skin/Body Lotions</a></li>
+                                            <li><a href="#">Skiin Wipes</a></li>
+                                            <li><a href="#">Hand Soaps/cleaners</a></li>
+                                            <li><a href="#">Skin Care Dispensers & Refills</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Facility Supplies <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                           
+                                            <li><a href="#">Snow/Ice Melt</a></li>
+                                            <li><a href="#">Ladders & Step Stool</a></li>
+                                            <li><a href="#">Crowd Control</a></li>
+                                            <li><a href="#">Marketing/Industrial Paint</a></li>
+                                            <li><a href="#">Restroom Signs</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Paper Products/Dispensers <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                           
+                                            <li><a href="#">Bathroom Tissue</a></li>
+                                            <li><a href="#">Bathroom Tissue Dispensers</a></li>
+                                            <li><a href="#">Facial Tissues</a></li>
+                                            <li><a href="#">Paper Towels</a></li>
+                                            <li><a href="#">Paper Towels Dispensers</a></li>
+                                            <li><a href="#">Napkins</a></li>
+                                            <li><a href="#">Napkins Dispensers</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                
+                                <li class="dropdown-item has-nested">
+                                    <a href="#">Cleaning Chemicals <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            <li><a href="#">All Purpose Cleaners</a></li>
+                                            <li><a href="#">Disinfectants</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- Item 2: Industrial Safety -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Industrial Safety <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-menu-custom">
+                            <ul class="dropdown-list">
+                                <li class="dropdown-item"><a href="#">View All Industrial Safety</a></li>
+                                <li class="dropdown-item"><a href="#">Gloves</a></li>
+                                <li class="dropdown-item"><a href="#">Apparel</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- Item 3: Laundry -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Laundry & Warewash <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-menu-custom">
+                            <ul class="dropdown-list">
+                                <li class="dropdown-item"><a href="#">View All Laundry & Warewash</a></li>
+                                <li class="dropdown-item"><a href="#">Commercial laundry Chemicals</a></li>
+                                <li class="dropdown-item"><a href="#">Commercial warewash Chemicals</a></li>
+                                <li class="dropdown-item"><a href="#">Laundry Detergents</a></li>
+                                <li class="dropdown-item"><a href="#">Fabric Refreshers</a></li>
+                                <li class="dropdown-item"><a href="#">Stain Removers</a></li>
+                                <li class="dropdown-item"><a href="#">Fabric Softeners & Starch</a></li>
+                                <li class="dropdown-item"><a href="#">Hamper & Laundry Bags</a></li>
+                                <li class="dropdown-item"><a href="#">Lint Rollers</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- Item 4: Office Supplies -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Office Supplies <i class="fa-solid fa-chevron-down"></i></a>
+                         <div class="dropdown-menu-custom">
+                            <ul class="dropdown-list">
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#"> View All Office Supplies </a>
+                                    
+                                </li>
+                                <li class="dropdown-item has-nested">
+                                    <a href="#">Calendars & Planners <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            <li><a href="#">Calendars & Refills</a></li>
+                                            <li><a href="#">Planners & Refills</a></li>
+                                            <li><a href="#">Address/Phone & PW Books</a></li>
+                                            <li><a href="#">Planners & Appointment Books</a></li>
+                                            <li><a href="#">Refillable Planners & Refills</a></li>
+                                            <li><a href="#">Academic Planners</a></li>
+                                             <li><a href="#">Wall Calendars & Pads</a></li>
+                                             <li><a href="#">Desk Calendars & Pads</a></li>
+                                             <li><a href="#">Journals & Diaries</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Desk Organizers <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            <li><a href="#">Desk Pads/Desk Pad Calendars</a></li>
+                                            <li><a href="#">Letter Trays</a></li>
+                                            <li><a href="#">Wall File Organizers</a></li>
+                                            <li><a href="#">Bookends/Book Racks</a></li>
+                                            <li><a href="#">Pencil Holders</a></li>
+                                            <li><a href="#">Desktops File Sorters</a></li>
+                                            <li><a href="#">Desktop Organizers</a></li>
+                                            <li><a href="#">Card Files & Holders</a></li>
+                                            <li><a href="#">Copyholders</a></li>
+                                            <li><a href="#">Desktop Accessories</a></li>
+                                            <li><a href="#">Desk Drawer Organizers</a></li>
+                                            <li><a href="#">Desk Drawer Organizers</a></li>
+                                            <li><a href="#">Desk Shelves</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">General Supplies<i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                           
+                                            <li><a href="#">Signs & Nameplates</a></li>
+                                            <li><a href="#">Waste Containers & Lids</a></li>
+                                            <li><a href="#">Medical Waste Bags & Container</a></li>
+                                            <li><a href="#">Recycling Bins</a></li>
+                                            <li><a href="#">Smoking Receptacles</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Janitorial Equipment <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            <li><a href="#">Cleaning/Utlity Carts</a></li>
+                                            <li><a href="#">Cleaning Tool Organizers</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Air & Odor Control<i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            <li><a href="#">Air Fresheners</a></li>
+                                            <li><a href="#">Air Purifier Filters</a></li>
+                                            <li><a href="#">Deodorizers</a></li>
+                                            <li><a href="#">Air Freshners Dispensers</a></li>
+                                            <li><a href="#">Air Purifiers</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Cleaning Supplies<i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            <!-- <li class="dropdown-item has-deep-nested">
+                                                <a href="#">Toilet Tissue <i class="fa-solid fa-chevron-right"></i></a>
+                                                <div class="deep-nested-dropdown">
+                                                    <ul class="nested-list">
+                                                        <li><a href="#">Standard Roll</a></li>
+                                                        <li><a href="#">Jumbo Roll</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li> -->
+                                            <li><a href="#">Glass Cleaners</a></li>
+                                            <li><a href="#">Specialty Cleaners</a></li>
+                                            <li><a href="#">Multipurpose cleaners</a></li>
+                                            <li><a href="#">Disinfectants</a></li>
+                                            <li><a href="#">Drain Cleaners</a></li>
+                                            <li><a href="#">Restroom & Toilet Cleaners </a></li>
+                                            <li><a href="#">Cleaning Wipes</a></li>
+                                            <li><a href="#">Dish/Dishwasher Detergents</a></li>
+                                            <li><a href="#">Lanudry Cleaning & Supplies</a></li>
+                                            <li><a href="#">Adhesive Removers</a></li>
+                                            <li><a href="#">Lens Cleaners</a></li>
+                                            <li><a href="#">Stain Remover - Crayon, Marker, Ink</a></li>
+                                            <li><a href="#">"Stain Remover - Crayon, Marker, Ink"</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Pest Control <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                           
+                                            <li><a href="#">Pesticides</a></li>
+                                            <li><a href="#">Repellents</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Floor Care <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            
+                                            <li><a href="#">Floor/Carpet Cleaners & Protectors</a></li>
+                                             <li><a href="#">Spil control & Absorbents</a></li>
+                                             <li><a href="#">Vacuum Cleaners</a></li>
+                                             <li><a href="#">Floor Mats</a></li>
+                                             <li><a href="#">Floor Machines & Accessories</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Cleaning Tools <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            
+                                            <li><a href="#">Mops & Refills</a></li>
+                                            <li><a href="#">Sponges, Cleaning Pads & Wipers</a></li>
+                                            <li><a href="#">Scurb Brushes</a></li>
+                                            <li><a href="#">Squeegees / Scrappers</a></li>
+                                            <li><a href="#">Toilet Bowl Brushes</a></li>
+                                            <li><a href="#">Sprayer Dispensing & Accessories</a></li>
+                                            <li><a href="#">Brooms & Sweepers</a></li>
+                                            <li><a href="#">Buckets & Wringers</a></li>
+                                            <li><a href="#">Poles & Handles</a></li>
+                                            <li><a href="#">Dusters</a></li>
+                                            <li><a href="#">Debris Nabbers</a></li>
+                                            <li><a href="#">Dust Pans</a></li>
+                                            <li><a href="#">Dust Mop Frames</a></li>
+                                            <li><a href="#">Cleaning Pad Holders</a></li>
+                                            <li><a href="#">"Sponges, Cleaning Pads & Wipers"</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Climate Control <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            
+                                            <li><a href="#">Fans</a></li>
+                                            <li><a href="#">Humidifiers</a></li>
+                                            <li><a href="#">Heaters</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Security <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            
+                                            <li><a href="#">Key Tags</a></li>
+                                            <li><a href="#">Key Boxes & Storage</a></li>
+                                            <li><a href="#">Safety Horn</a></li>
+                                            <li><a href="#">Locks</a></li>
+                                            <li><a href="#">Lockout Kits</a></li>
+                                            <li><a href="#">Alert Chimes</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Facility Signs <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            
+                                            <li><a href="#">Safety Data Sheets - SDS</a></li>
+                                            <li><a href="#">Safety Signs</a></li>
+                                            <li><a href="#">Restroom Signs</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Personal Care & Hygiene <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            
+                                            <li><a href="#">Lens Cleaners</a></li>
+                                            <li><a href="#">Feminine Hygiene Products</a></li>
+                                            <li><a href="#">Cotton Balls & Swabs</a></li>
+                                            <li><a href="#">Personal Hygiene Supplies</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Restroom Supplies <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                          
+                                            <li><a href="#">Hand Soaps/Cleaners</a></li>
+                                            <li><a href="#">Personal Hygiene Supplies</a></li>
+                                            <li><a href="#">Urinal Screens/Mats</a></li>
+                                            <li><a href="#">Urinal Deodorant Blocks</a></li>
+                                            <li><a href="#">Toilet Seat Covers</a></li>
+                                            <li><a href="#">Restroom Mats</a></li>
+                                            <li><a href="#">Plungers</a></li>
+                                            <li><a href="#">Sanitary Receptacle Dispenser</a></li>
+                                            <li><a href="#">Toilet Cover Dispensers</a></li>
+                                            <li><a href="#">Disposable Liners</a></li>
+                                            <li><a href="#">Changing Tables/Liners</a></li>
+                                            <li><a href="#">Shower Accessories</a></li>
+                                            <li><a href="#">Receptacles</a></li>
+                                            <li><a href="#">Flush Systems</a></li>
+                                            <li><a href="#">Faucets</a></li>
+                                            <li><a href="#">Hand Dryers</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Skin & Body Care <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                           
+                                            <li><a href="#">Hand Sanitizers</a></li>
+                                            <li><a href="#">Liquid Soap/Sanitizer Dispeners</a></li>
+                                            <li><a href="#">Skin/Body Lotions</a></li>
+                                            <li><a href="#">Skiin Wipes</a></li>
+                                            <li><a href="#">Hand Soaps/cleaners</a></li>
+                                            <li><a href="#">Skin Care Dispensers & Refills</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Facility Supplies <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                           
+                                            <li><a href="#">Snow/Ice Melt</a></li>
+                                            <li><a href="#">Ladders & Step Stool</a></li>
+                                            <li><a href="#">Crowd Control</a></li>
+                                            <li><a href="#">Marketing/Industrial Paint</a></li>
+                                            <li><a href="#">Restroom Signs</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li class="dropdown-item has-nested">
+                                    <a href="#">Paper Products/Dispensers <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                           
+                                            <li><a href="#">Bathroom Tissue</a></li>
+                                            <li><a href="#">Bathroom Tissue Dispensers</a></li>
+                                            <li><a href="#">Facial Tissues</a></li>
+                                            <li><a href="#">Paper Towels</a></li>
+                                            <li><a href="#">Paper Towels Dispensers</a></li>
+                                            <li><a href="#">Napkins</a></li>
+                                            <li><a href="#">Napkins Dispensers</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                
+                                <li class="dropdown-item has-nested">
+                                    <a href="#">Cleaning Chemicals <i class="fa-solid fa-chevron-right"></i></a>
+                                    <div class="nested-dropdown">
+                                        <ul class="nested-list">
+                                            <li><a href="#">All Purpose Cleaners</a></li>
+                                            <li><a href="#">Disinfectants</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- Item 5: Equipment -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Janitorial Equipment <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-menu-custom">
+                            <ul class="dropdown-list">
+                                <li class="dropdown-item"><a href="#">Vacuums</a></li>
+                                <li class="dropdown-item"><a href="#">Floor Machines</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- Item 6: Restaurant -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Restaurant Supplies <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-menu-custom">
+                            <ul class="dropdown-list">
+                                <li class="dropdown-item"><a href="#">Disposables</a></li>
+                                <li class="dropdown-item"><a href="#">Kitchenware</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- Item 7: Healthcare -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Healthcare <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-menu-custom">
+                            <ul class="dropdown-list">
+                                <li class="dropdown-item"><a href="#">Gloves</a></li>
+                                <li class="dropdown-item"><a href="#">Sanitizers</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- Item 8: Safety PPE -->
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Safety & PPE <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-menu-custom">
+                            <ul class="dropdown-list">
+                                <li class="dropdown-item"><a href="#">Masks</a></li>
+                                <li class="dropdown-item"><a href="#">Helmets</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Microfiber <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-menu-custom">
+                            <ul class="dropdown-list">
+                                <li class="dropdown-item"><a href="#">Cloths</a></li>
+                                <li class="dropdown-item"><a href="#">Mops</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Technology <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-menu-custom">
+                            <ul class="dropdown-list">
+                                <li class="dropdown-item"><a href="#">Accessories</a></li>
+                                <li class="dropdown-item"><a href="#">Cables</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">Menu</div>
+            <button class="close-sidebar-btn" id="closeSidebarBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="sidebar-menu">
+            <!-- Sidebar Item 1 -->
+            <li class="sidebar-item">
+                <div class="sidebar-link has-submenu">Janitorial & Facility Supplies <i
+                        class="fa-solid fa-chevron-down"></i></div>
+                <ul class="sidebar-submenu">
+                    <li class="sidebar-subitem">
+                        <div class="sidebar-link has-submenu">Paper Products <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <ul class="sidebar-submenu-level-2">
+                            <li class="sidebar-link">Toilet Tissue</li>
+                            <li class="sidebar-link">Paper Towels</li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-subitem">
+                        <div class="sidebar-link has-submenu">Cleaning Chemicals <i
+                                class="fa-solid fa-chevron-down"></i></div>
+                        <ul class="sidebar-submenu-level-2">
+                            <li class="sidebar-link">All Purpose Cleaners</li>
+                            <li class="sidebar-link">Disinfectants</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Sidebar Item 2 -->
+            <li class="sidebar-item">
+                <div class="sidebar-link has-submenu">Industrial Safety <i class="fa-solid fa-chevron-down"></i></div>
+                <ul class="sidebar-submenu">
+                    <li class="sidebar-subitem">
+                        <div class="sidebar-link has-submenu">Gloves <i class="fa-solid fa-chevron-down"></i></div>
+                        <ul class="sidebar-submenu-level-2">
+                            <li class="sidebar-link">Disposable</li>
+                            <li class="sidebar-link">Work Gloves</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Generic Sidebar Items -->
+            <li class="sidebar-item">
+                <div class="sidebar-link has-submenu">Laundry & Warewash <i class="fa-solid fa-chevron-down"></i></div>
+                <ul class="sidebar-submenu">
+                    <li class="sidebar-link">Detergents</li>
+                </ul>
+            </li>
+            <li class="sidebar-item">
+                <div class="sidebar-link has-submenu">Office Supplies <i class="fa-solid fa-chevron-down"></i></div>
+                <ul class="sidebar-submenu">
+                    <li class="sidebar-link">Genernal</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Content Placeholder -->
+    <main style="min-height: 80vh; background-color: #f8f9fa;">
+        <!-- Body content would go here -->
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+/* Tablet and Desktop adjustments (Switch to Sidebar at 1200px) */
+@media (max-width: 1200px) {
+    .container-contents {
+        padding: 0 15px;
+    }
+
+    .search-container {
+        max-width: 100%;
+    }
+
+    /* Hide Desktop Navbar */
+    .main-navbar {
+        display: none;
+    }
+
+    /* Show Mobile Menu Button */
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    /* Header Grid Layout for Tablet/Mobile */
+    .header-grid {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        /* Menu - Logo - Cart */
+        align-items: center;
+        gap: 15px;
+        padding-bottom: 5px;
+    }
+
+    .mobile-menu-btn {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .logo-wrapper {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .cart-wrapper {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
+    }
+
+    .search-wrapper {
+        display: block;
+        grid-column: 1 / -1;
+        /* Full width row below */
+        grid-row: 2;
+        margin-top: 10px;
+    }
+
+    .brand-logo {
+        height: 60px;
+        /* Smaller for tablet/mobile */
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Hide Top Bar on small mobile for cleaner look */
+    .top-bar {
+        display: none;
+    }
+
+    .main-header {
+        padding: 15px 0;
+    }
+
+    /* Cart adjustments - Icon only */
+    .cart-info {
+        display: none;
+    }
+
+    .cart-box {
+        padding: 0;
+        border: none;
+        background: transparent;
+        box-shadow: none !important;
+    }
+
+    .cart-icon {
+        margin-right: 0;
+        font-size: 24px;
+    }
+
+    .cart-badge {
+        right: -10px;
+        top: -5px;
+    }
+
+    .brand-logo {
+        height: 45px;
+    }
+
+    .search-input {
+        padding: 12px 50px 12px 20px;
+        font-size: 14px;
+    }
+}
