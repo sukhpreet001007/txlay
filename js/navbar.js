@@ -208,6 +208,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
+            // Close when scrolling
+            window.addEventListener('scroll', () => {
+                if (moreRowContainer.classList.contains('active')) {
+                    moreRowContainer.classList.remove('active');
+                    moreButton.querySelector('i').style.transform = '';
+                }
+            });
+
             navMenu.parentElement.appendChild(moreButton);
             document.body.appendChild(moreRowContainer);
         }
