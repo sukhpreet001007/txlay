@@ -41,3 +41,15 @@
     color: #28a745;
     margin-bottom: 20px;
 }
+
+/* Fix for desktop view - prevent double scrollbar */
+@media (min-width: 992px) {
+    .auth-section {
+        min-height: 100vh !important;
+        padding-bottom: 300px !important;
+    }
+
+    .auth-page-container {
+        margin: 80px auto 150px auto;
+    }
+}
