@@ -83,7 +83,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (sidebarOverlay) {
-        sidebarOverlay.addEventListener('click', closeSidebar);
+        sidebarOverlay.addEventListener('click', () => {
+            closeSidebar();
+            closeAccountDropdownFunc();
+        });
+    }
+
+    // --- Mobile Account Dropdown Logic ---
+    const mobileAccountBtn = document.getElementById('mobileAccountBtn');
+    const mobileAccountDropdown = document.getElementById('mobileAccountDropdown');
+    const closeAccountDropdown = document.getElementById('closeAccountDropdown');
+
+    function openAccountDropdown() {
+        mobileAccountDropdown.classList.add('active');
+        sidebarOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeAccountDropdownFunc() {
+        if (mobileAccountDropdown) {
+            mobileAccountDropdown.classList.remove('active');
+        }
+        if (!mobileSidebar.classList.contains('active')) {
+            sidebarOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+
+    if (mobileAccountBtn) {
+        mobileAccountBtn.addEventListener('click', openAccountDropdown);
+    }
+
+    if (closeAccountDropdown) {
+        closeAccountDropdown.addEventListener('click', closeAccountDropdownFunc);
     }
 
     // --- Sidebar Accordion Logic ---
@@ -114,65 +146,96 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Navbar Scroll Logic ---
+    // --- Navbar Pagination Logic (Replaces Scroll Logic) ---
     const navMenu = document.getElementById('navMenu');
     const scrollLeftBtn = document.getElementById('navScrollLeft');
     const scrollRightBtn = document.getElementById('navScrollRight');
-    const mainNavbar = document.querySelector('.main-navbar');
 
-    function updateScrollButtons() {
+    // Pagination State
+    let currentPage = 0;
+
+    function getItemsPerPage() {
+        const width = window.innerWidth;
+        if (width > 1680) return 10;
+        if (width > 1200) return 6; // Show 6 items (6 + 6 + 3 = 15 total)
+        return 10;
+    }
+
+    function updatePagination() {
         if (!navMenu) return;
 
-        const isScrollable = navMenu.scrollWidth > navMenu.clientWidth;
+        const itemsPerPage = getItemsPerPage();
 
-        if (isScrollable) {
-            // Show/hide left button
-            if (navMenu.scrollLeft > 20) {
+        // Select direct list items only
+        const navItems = Array.from(navMenu.children).filter(child => child.tagName === 'LI');
+        const totalItems = navItems.length;
+
+        // Ensure currentPage doesn't exceed new max page on resize
+        const maxPage = Math.max(0, Math.ceil(totalItems / itemsPerPage) - 1);
+        if (currentPage > maxPage) {
+            currentPage = maxPage;
+        }
+
+        // Calculate range for current page
+        const start = currentPage * itemsPerPage;
+        const end = start + itemsPerPage;
+
+        // Show/Hide Items
+        navItems.forEach((item, index) => {
+            if (index >= start && index < end) {
+                item.style.display = ''; // Reset to default (show)
+                item.style.opacity = '1';
+                item.style.visibility = 'visible';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        // Update Buttons Visibility
+        if (scrollLeftBtn) {
+            if (currentPage > 0) {
                 scrollLeftBtn.classList.add('visible');
             } else {
                 scrollLeftBtn.classList.remove('visible');
             }
+        }
 
-            // Show/hide right button
-            if (navMenu.scrollLeft + navMenu.clientWidth < navMenu.scrollWidth - 20) {
+        if (scrollRightBtn) {
+            if (end < totalItems) {
                 scrollRightBtn.classList.add('visible');
             } else {
                 scrollRightBtn.classList.remove('visible');
             }
-        } else {
-            scrollLeftBtn.classList.remove('visible');
-            scrollRightBtn.classList.remove('visible');
         }
     }
 
     if (navMenu && scrollLeftBtn && scrollRightBtn) {
         scrollLeftBtn.addEventListener('click', () => {
-            navMenu.scrollBy({ left: -300, behavior: 'smooth' });
+            if (currentPage > 0) {
+                currentPage--;
+                updatePagination();
+            }
         });
 
         scrollRightBtn.addEventListener('click', () => {
-            navMenu.scrollBy({ left: 300, behavior: 'smooth' });
+            const itemsPerPage = getItemsPerPage();
+            const navItems = Array.from(navMenu.children).filter(child => child.tagName === 'LI');
+            const totalItems = navItems.length;
+            if ((currentPage + 1) * itemsPerPage < totalItems) {
+                currentPage++;
+                updatePagination();
+            }
         });
-
-        navMenu.addEventListener('scroll', updateScrollButtons);
-        window.addEventListener('resize', updateScrollButtons);
 
         // Initial check
-        setTimeout(updateScrollButtons, 500);
+        updatePagination();
+
+        // Re-check on resize (maintain logic even if viewport changes)
+        window.addEventListener('resize', updatePagination);
     }
 
-    // Fix for Dropdowns being clipped by overflow-x: auto
-    if (mainNavbar) {
-        const navItems = document.querySelectorAll('.nav-item.has-dropdown');
-        navItems.forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                navMenu.style.overflow = 'visible';
-            });
-            item.addEventListener('mouseleave', () => {
-                navMenu.style.overflowX = 'auto';
-            });
-        });
-    }
+    // Fix for Dropdowns being clipped (Removed as CSS now handles this permanently)
+    // Legacy code removed to prevent conflict with 'overflow: visible' CSS.
 
     // Overflow Fix for Nested Dropdowns
     const nestedItems = document.querySelectorAll('.dropdown-item.has-nested, .dropdown-item.has-deep-nested');

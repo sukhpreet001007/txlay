@@ -41,24 +41,3 @@
     color: #28a745;
     margin-bottom: 20px;
 }
-
-/* Breadcrumbs */
-.breadcrumb-section {
-    background-color: #f8f9fa;
-    padding: 15px 0;
-    border-bottom: 1px solid #e9ecef;
-}
-
-.breadcrumb {
-    margin: 0;
-    font-size: 14px;
-}
-
-.breadcrumb-item a {
-    color: #0056b3;
-    text-decoration: none;
-}
-
-.breadcrumb-item.active {
-    color: #6c757d;
-}

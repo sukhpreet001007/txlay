@@ -38,3 +38,11 @@
 .catalog-sidebar .list-group-item.active a {
     color: #fff;
 }
+
+/* Disable collapse interaction on Tablet/Desktop */
+@media (min-width: 768px) {
+    .collapsible-sidebar-header {
+        pointer-events: none;
+        cursor: default !important;
+    }
+}

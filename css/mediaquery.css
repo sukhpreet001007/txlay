@@ -23,11 +23,22 @@
     /* Header Grid Layout for Tablet/Mobile */
     .header-grid {
         display: grid;
-        grid-template-columns: 50px 1fr 50px;
-        /* Menu - Logo - Cart */
+        grid-template-columns: 45px 1fr auto auto;
         align-items: center;
-        gap: 15px;
+        gap: 6px;
         padding-bottom: 5px;
+    }
+
+    .mobile-account-wrapper {
+        display: block;
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .cart-wrapper {
+        grid-column: 4;
+        grid-row: 1;
+        justify-self: end;
     }
 
     .mobile-menu-btn {
@@ -43,7 +54,7 @@
     }
 
     .cart-wrapper {
-        grid-column: 3;
+        grid-column: 4;
         grid-row: 1;
         justify-self: end;
     }
@@ -60,9 +71,29 @@
         height: 60px;
         /* Smaller for tablet/mobile */
     }
+
+    .sidebar-img {
+        width: 100px !important;
+    }
+
+    .cart-info {
+        display: none;
+    }
+
+    .top-links-right a {
+        font-size: 10px;
+    }
+
+    .top-links-left a {
+        font-size: 10px;
+    }
+
+    .all-cate {
+        font-size: 16px;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     /* Hide Top Bar on small mobile for cleaner look */
     .top-bar {
@@ -89,6 +120,13 @@
     .cart-icon {
         margin-right: 0;
         font-size: 24px;
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile-account-btn {
+        padding-right: 0;
+        /* Remove right padding to reduce gap with cart */
     }
 
     .cart-badge {
@@ -104,4 +142,53 @@
         padding: 12px 50px 12px 20px;
         font-size: 14px;
     }
+
+    /* Catalog Sidebar Mobile Adjustments */
+    .collapsible-sidebar-header {
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .collapsible-sidebar-header:active {
+        background-color: #1a222d;
+    }
+
+    .toggle-icon {
+        transition: transform 0.3s ease;
+    }
+
+    .collapsible-sidebar-header[aria-expanded="true"] .toggle-icon {
+        transform: rotate(180deg);
+    }
+
+    /* Banner reordering adjustment */
+    .banner-section {
+        order: -1;
+        /* Ensure it's very top if in a flex container, but here it's moved in HTML */
+    }
+
+    .section-sub-title {
+        margin-top: 15px !important;
+    }
+
+    .sidebar-img {
+        width: 100px !important;
+    }
+}
+
+/* Specific adjustment for Banner Section above Three Blocks */
+@media (max-width: 991px) {
+    .banner-section {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .hero-banner {
+        border-radius: 8px;
+    }
+
+    .three-blocks-links {
+        padding-top: 15px;
+    }
+
 }
