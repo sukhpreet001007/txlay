@@ -218,12 +218,12 @@
     z-index: 99;
     width: 100%;
     overflow: visible !important;
+    min-height: 52px;
 }
 
 .main-navbar .container-contents {
     max-width: 100%;
-    padding: 0 50px;
-    /* Space for arrows */
+    padding: 0 20px;
 }
 
 .nav-container-wrapper {
@@ -234,57 +234,15 @@
     overflow: visible !important;
 }
 
-.nav-scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 35px;
-    height: 35px;
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #fff;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 101;
-    transition: all 0.3s ease;
-    visibility: hidden;
-    /* Hidden by default, JS will show */
-    opacity: 0;
-}
-
-.nav-scroll-btn.visible {
-    visibility: visible;
-    opacity: 1;
-}
-
-.nav-scroll-btn:hover {
-    background: #84C44C;
-    color: #000;
-    border-color: #84C44C;
-}
-
-.nav-scroll-btn.left {
-    left: 10px;
-}
-
-.nav-scroll-btn.right {
-    right: 10px;
-}
-
 .nav-menu {
     display: flex;
     flex-wrap: nowrap;
-    /* Keep in one row as requested */
     position: relative;
-    /* Use relative to allow dropdown anchoring */
     justify-content: center;
-    /* Center items */
     overflow: visible !important;
-    /* Allow dropdowns to show fully */
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-menu::-webkit-scrollbar {
@@ -673,6 +631,128 @@
     border-top: 2px solid #eee;
 }
 
-#closeAccountDropdown {
+/* --- More Menu Styles --- */
+.more-navbar-row {
+    width: 100vw !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(20px) !important;
+    background-color: #232f3e !important;
+    padding: 0 20px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 0 !important;
+    min-height: 52px;
+    overflow: visible !important;
+}
+
+.nav-item.more-item:hover .more-navbar-row {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0) !important;
+}
+
+.more-dropdown-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.more-dropdown-list .nav-item {
+    position: relative !important;
+}
+
+.more-dropdown-list .nav-link {
+    white-space: nowrap !important;
+}
+
+
+/* --- More Button Styles --- */
+.more-nav-btn {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #84C44C;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 113, 220, 0.3);
+}
+
+.more-nav-btn:hover {
+    background: #84c44cbb;
+    box-shadow: 0 4px 12px rgba(0, 113, 220, 0.5);
+    transform: translateY(-50%) translateY(-2px);
+}
+
+.more-nav-btn i {
+    transition: transform 0.3s ease;
+    font-size: 11px;
+}
+
+/* More Row Container */
+.more-nav-row {
+    position: fixed;
+    top: var(--navbar-top, 0px);
+    left: 0;
+    width: 100%;
+    background-color: #232f3e;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 20px;
+    min-height: 52px;
+    overflow: visible;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 98;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+}
+
+.more-nav-row.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.more-nav-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.more-nav-list .nav-item {
+    position: relative !important;
+}
+
+.more-nav-list .nav-link {
+    white-space: nowrap !important;
+}
+
+/* Ensure sub-dropdowns in More row work correctly */
+.more-nav-list .dropdown-menu-custom {
+    top: 100% !important;
+    transform: translateY(10px) !important;
+}
+
+.more-nav-list .nav-item:hover>.dropdown-menu-custom {
+    transform: translateY(0) !important;
 }

@@ -130,135 +130,113 @@ document.addEventListener('DOMContentLoaded', () => {
             if (submenu) {
                 const isOpen = submenu.style.display === 'block';
 
-                // Close other submenus at the same level (optional - creates a true accordion)
-                // const parentList = this.closest('ul');
-                // const siblingSubmenus = parentList.querySelectorAll(':scope > li > ul');
-                // siblingSubmenus.forEach(sub => {
-                //     if (sub !== submenu) {
-                //         sub.style.display = 'none';
-                //         sub.previousElementSibling.classList.remove('open');
-                //     }
-                // });
-
                 submenu.style.display = isOpen ? 'none' : 'block';
                 this.classList.toggle('open', !isOpen);
             }
         });
     });
 
-    // --- Navbar Pagination Logic (Replaces Scroll Logic) ---
+    // --- Navbar "More" Button Logic ---
     const navMenu = document.getElementById('navMenu');
-    const scrollLeftBtn = document.getElementById('navScrollLeft');
-    const scrollRightBtn = document.getElementById('navScrollRight');
 
-    // Pagination State
-    let currentPage = 0;
+    function handleNavbarOverflow() {
+        if (!navMenu || window.innerWidth <= 1200) return;
 
-    function getItemsPerPage() {
-        const width = window.innerWidth;
-        if (width > 1680) return 10;
-        if (width > 1200) return 6; // Show 6 items (6 + 6 + 3 = 15 total)
-        return 10;
-    }
+        // Reset: Move all items back to main menu first
+        const moreBtn = document.getElementById('moreNavBtn');
+        const moreRow = document.getElementById('moreNavRow');
 
-    function updatePagination() {
-        if (!navMenu) return;
-
-        const itemsPerPage = getItemsPerPage();
-
-        // Select direct list items only
-        const navItems = Array.from(navMenu.children).filter(child => child.tagName === 'LI');
-        const totalItems = navItems.length;
-
-        // Ensure currentPage doesn't exceed new max page on resize
-        const maxPage = Math.max(0, Math.ceil(totalItems / itemsPerPage) - 1);
-        if (currentPage > maxPage) {
-            currentPage = maxPage;
+        if (moreBtn) moreBtn.remove();
+        if (moreRow) {
+            const itemsToMove = Array.from(moreRow.querySelectorAll('.nav-item'));
+            itemsToMove.forEach(item => {
+                navMenu.appendChild(item);
+            });
+            moreRow.remove();
         }
 
-        // Calculate range for current page
-        const start = currentPage * itemsPerPage;
-        const end = start + itemsPerPage;
+        const items = Array.from(navMenu.children).filter(child => child.tagName === 'LI');
+        const containerWidth = navMenu.parentElement.offsetWidth;
+        let currentWidth = 0;
+        const moreBtnWidth = 120;
+        let overflowIndex = -1;
 
-        // Show/Hide Items
-        navItems.forEach((item, index) => {
-            if (index >= start && index < end) {
-                item.style.display = ''; // Reset to default (show)
-                item.style.opacity = '1';
-                item.style.visibility = 'visible';
-            } else {
-                item.style.display = 'none';
+        // Find overflow point
+        items.forEach((item, index) => {
+            const itemWidth = item.getBoundingClientRect().width;
+            if (currentWidth + itemWidth > containerWidth - moreBtnWidth && overflowIndex === -1) {
+                overflowIndex = index;
             }
+            currentWidth += itemWidth;
         });
 
-        // Update Buttons Visibility
-        if (scrollLeftBtn) {
-            if (currentPage > 0) {
-                scrollLeftBtn.classList.add('visible');
-            } else {
-                scrollLeftBtn.classList.remove('visible');
-            }
-        }
+        // Handle Overflow
+        if (overflowIndex !== -1) {
+            // Create More Button
+            const moreButton = document.createElement('button');
+            moreButton.id = 'moreNavBtn';
+            moreButton.className = 'more-nav-btn';
+            moreButton.innerHTML = 'More <i class="fa-solid fa-chevron-down"></i>';
 
-        if (scrollRightBtn) {
-            if (end < totalItems) {
-                scrollRightBtn.classList.add('visible');
-            } else {
-                scrollRightBtn.classList.remove('visible');
-            }
+            // Create More Row
+            const moreRowContainer = document.createElement('div');
+            moreRowContainer.id = 'moreNavRow';
+            moreRowContainer.className = 'more-nav-row';
+            moreRowContainer.innerHTML = '<ul class="nav-menu more-nav-list"></ul>';
+
+            const moreList = moreRowContainer.querySelector('.more-nav-list');
+            items.slice(overflowIndex).forEach(item => {
+                moreList.appendChild(item);
+            });
+
+            // Add click handler
+            moreButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isActive = moreRowContainer.classList.toggle('active');
+                moreButton.querySelector('i').style.transform = isActive ? 'rotate(180deg)' : '';
+
+                // Calculate navbar position for fixed positioning
+                const navbarRect = navMenu.parentElement.parentElement.getBoundingClientRect();
+                moreRowContainer.style.setProperty('--navbar-top', `${navbarRect.bottom}px`);
+            });
+
+            // Close when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!moreRowContainer.contains(e.target) && !moreButton.contains(e.target)) {
+                    moreRowContainer.classList.remove('active');
+                    moreButton.querySelector('i').style.transform = '';
+                }
+            });
+
+            navMenu.parentElement.appendChild(moreButton);
+            document.body.appendChild(moreRowContainer);
         }
     }
 
-    if (navMenu && scrollLeftBtn && scrollRightBtn) {
-        scrollLeftBtn.addEventListener('click', () => {
-            if (currentPage > 0) {
-                currentPage--;
-                updatePagination();
-            }
-        });
-
-        scrollRightBtn.addEventListener('click', () => {
-            const itemsPerPage = getItemsPerPage();
-            const navItems = Array.from(navMenu.children).filter(child => child.tagName === 'LI');
-            const totalItems = navItems.length;
-            if ((currentPage + 1) * itemsPerPage < totalItems) {
-                currentPage++;
-                updatePagination();
-            }
-        });
-
-        // Initial check
-        updatePagination();
-
-        // Re-check on resize (maintain logic even if viewport changes)
-        window.addEventListener('resize', updatePagination);
-    }
-
-    // Fix for Dropdowns being clipped (Removed as CSS now handles this permanently)
-    // Legacy code removed to prevent conflict with 'overflow: visible' CSS.
+    // Initial and resize handlers
+    window.addEventListener('load', handleNavbarOverflow);
+    window.addEventListener('resize', handleNavbarOverflow);
+    setTimeout(handleNavbarOverflow, 100);
+    setTimeout(handleNavbarOverflow, 500);
 
     // Overflow Fix for Nested Dropdowns
-    const nestedItems = document.querySelectorAll('.dropdown-item.has-nested, .dropdown-item.has-deep-nested');
+    const navbarContainer = document.querySelector('.main-navbar');
+    if (navbarContainer) {
+        navbarContainer.addEventListener('mouseenter', function (e) {
+            const item = e.target.closest('.dropdown-item.has-nested, .dropdown-item.has-deep-nested');
+            if (!item) return;
 
-    nestedItems.forEach(item => {
-        item.addEventListener('mouseenter', function () {
-            const submenu = this.querySelector('.nested-dropdown, .deep-nested-dropdown');
+            const submenu = item.querySelector('.nested-dropdown, .deep-nested-dropdown');
             if (submenu) {
-                // Temporarily show to calculate width (if invisible) or just trust rect if transition allows
-                // Since opacity is 0, layout is typically present if display is not none.
-                // Our CSS uses visibility: hidden, but layout should be there. 
-                // However, transform might affect rect.
-
                 const rect = submenu.getBoundingClientRect();
                 const viewportWidth = window.innerWidth;
 
-                // Check if right edge exceeds viewport width
                 if (rect.right > viewportWidth) {
                     submenu.classList.add('open-left');
                 } else {
                     submenu.classList.remove('open-left');
                 }
             }
-        });
-    });
+        }, true);
+    }
 });
