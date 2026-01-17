@@ -1,0 +1,64 @@
+/* reuse existing modal styles but adapt for page */
+.auth-page-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.auth-page-header {
+    background: linear-gradient(135deg, #0056b3, #00a8e8);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.auth-page-title {
+    font-weight: 700;
+    margin: 0;
+    font-size: 24px;
+}
+
+.auth-page-body {
+    padding: 40px;
+}
+
+/* Forgot Password Specific */
+.forgot-password-container {
+    max-width: 500px;
+}
+
+.verification-message {
+    text-align: center;
+    padding: 40px;
+    display: none;
+}
+
+.verification-message i {
+    font-size: 60px;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+/* Breadcrumbs */
+.breadcrumb-section {
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.breadcrumb {
+    margin: 0;
+    font-size: 14px;
+}
+
+.breadcrumb-item a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}

@@ -173,4 +173,29 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Overflow Fix for Nested Dropdowns
+    const nestedItems = document.querySelectorAll('.dropdown-item.has-nested, .dropdown-item.has-deep-nested');
+
+    nestedItems.forEach(item => {
+        item.addEventListener('mouseenter', function () {
+            const submenu = this.querySelector('.nested-dropdown, .deep-nested-dropdown');
+            if (submenu) {
+                // Temporarily show to calculate width (if invisible) or just trust rect if transition allows
+                // Since opacity is 0, layout is typically present if display is not none.
+                // Our CSS uses visibility: hidden, but layout should be there. 
+                // However, transform might affect rect.
+
+                const rect = submenu.getBoundingClientRect();
+                const viewportWidth = window.innerWidth;
+
+                // Check if right edge exceeds viewport width
+                if (rect.right > viewportWidth) {
+                    submenu.classList.add('open-left');
+                } else {
+                    submenu.classList.remove('open-left');
+                }
+            }
+        });
+    });
 });

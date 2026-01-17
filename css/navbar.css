@@ -556,3 +556,19 @@
     color: #666;
     background-color: #f1f1f1;
 }
+
+/* Left-Opening Nested Dropdown (Added for Overflow Fix) */
+.nested-dropdown.open-left,
+.deep-nested-dropdown.open-left {
+    left: auto;
+    right: 100%;
+    border-left: none;
+    border-right: 3px solid #0071dc;
+    border-radius: 8px 0 8px 8px;
+    transform: translateX(-10px);
+}
+
+.dropdown-item.has-nested:hover>.nested-dropdown.open-left,
+.dropdown-item.has-deep-nested:hover>.deep-nested-dropdown.open-left {
+    transform: translateX(0);
+}
