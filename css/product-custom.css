@@ -1,0 +1,226 @@
+/* Custom Action Buttons */
+.action-buttons-grid {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    /* Force one row */
+    margin-top: 15px;
+}
+
+.btn-custom-action {
+    flex: 1;
+    /* Equal width */
+    padding: 10px 5px;
+    font-size: 13px;
+    /* small text */
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    color: var(--product-dark);
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-custom-action::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--product-primary);
+    transition: width 0.3s ease;
+    z-index: -1;
+    border-radius: 8px;
+}
+
+.btn-custom-action i {
+    font-size: 16px;
+    color: var(--product-primary);
+    transition: transform 0.3s ease;
+}
+
+.btn-custom-action:hover {
+    color: #fff;
+    border-color: var(--product-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(132, 196, 76, 0.2);
+}
+
+.btn-custom-action:hover::before {
+    width: 100%;
+}
+
+.btn-custom-action:hover i {
+    color: #fff;
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* Modal Styling */
+.custom-modal-content {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.custom-modal-header {
+    background: linear-gradient(135deg, var(--product-primary), #6dae36);
+    color: #fff;
+    padding: 20px 30px;
+    border-bottom: none;
+}
+
+.custom-modal-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.custom-modal-body {
+    padding: 30px;
+    background: #fff;
+}
+
+.btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    opacity: 0.8;
+}
+
+.btn-close-white:hover {
+    opacity: 1;
+}
+
+.form-floating>.form-control {
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+}
+
+.form-floating>.form-control:focus {
+    border-color: var(--product-primary);
+    box-shadow: 0 0 0 0.25rem rgba(132, 196, 76, 0.15);
+}
+
+.btn-modal-submit {
+    background: var(--product-dark);
+    color: #fff;
+    width: 100%;
+    padding: 14px;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.btn-modal-submit:hover {
+    background: #fff;
+    color: var(--product-dark);
+    border-color: var(--product-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Font Sizing for Buttons */
+@media (max-width: 1200px) {
+    .btn-custom-action {
+        font-size: 12px;
+        padding: 10px 4px;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 991px) {
+    /* On Tablets they can stack or be grid */
+}
+
+@media (max-width: 576px) {
+
+    /* Mobile: Hide text, show icons only or abbreviations */
+    .btn-custom-action span {
+        display: none;
+    }
+
+    .btn-custom-action {
+        padding: 12px;
+        justify-content: center;
+    }
+
+    .btn-custom-action i {
+        font-size: 18px;
+        margin: 0;
+    }
+}
+
+/* Zoom Styling */
+.main-image-wrapper {
+    position: relative;
+    cursor: crosshair;
+    display: inline-block;
+    /* wraps image tightly */
+    width: 100%;
+    /* Ensures responsiveness */
+}
+
+/* The Lens (Magnifying Glass on Image) */
+.zoom-lens {
+    position: absolute;
+    border: 1px solid #888;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 100px;
+    height: 100px;
+    display: none;
+    /* hidden by default */
+    pointer-events: none;
+    /* allows mouse interaction with image */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* The Zoom Result (Side Window) */
+.zoom-result {
+    position: absolute;
+    top: 50px;
+    /* Align near top of image */
+    left: 102%;
+    /* Push to the right */
+    width: 500px;
+    height: 500px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+}
+
+/* Ensure container allows overflow for the result window to show */
+#productImageContainer {
+    overflow: visible !important;
+    /* We need visible overflow to show the side div, 
+       but if we want rounded corners on the card, we might lose clipping of the bottom elements.
+       We can restore clipping on children if needed. */
+}
+
+/* Responsive: Hide Zoom on tablets/mobile */
+@media (max-width: 991px) {
+
+    .zoom-lens,
+    .zoom-result {
+        display: none !important;
+    }
+
+    .main-image-wrapper {
+        cursor: default;
+    }
+}

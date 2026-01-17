@@ -20,7 +20,7 @@
 }
 
 .link-block-card:hover {
-    background-color: #230b9e;
+    background-color: #00AFEF;
     /* Walmart Blue Theme on hover */
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(35, 11, 158, 0.2);

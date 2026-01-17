@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/product-detail.css">
+    <link rel="stylesheet" href="css/product-custom.css">
+    <link rel="stylesheet" href="css/product-tabs.css">
 </head>
 
 <body>
@@ -1812,12 +1814,17 @@
             <div class="row g-5">
                 <!-- Left Side: Product Image -->
                 <div class="col-lg-6">
-                    <div class="product-image-container card border-0 shadow-sm rounded-4 overflow-hidden">
+                    <div class="product-image-container card border-0 shadow-sm rounded-4" id="productImageContainer">
                         <div class="product-badge-discount">-15% OFF</div>
-                        <img src="assets/vaccum.png" alt="Industrial Vacuum Cleaner" class="img-fluid main-product-img">
+                        <div class="main-image-wrapper" id="mainImageWrapper">
+                            <img src="assets/vaccum.png" alt="Industrial Vacuum Cleaner"
+                                class="img-fluid main-product-img" id="mainProductImg">
+                            <div id="zoomLens" class="zoom-lens"></div>
+                        </div>
+                        <div id="zoomResult" class="zoom-result"></div>
                         <div class="product-thumbnails mt-3 d-flex gap-2 px-3 pb-3">
                             <div class="thumb-box active"><img src="assets/vaccum.png" alt="Thumb 1"></div>
-                            <div class="thumb-box"><img src="assets/vaccum.png" alt="Thumb 2"></div>
+                            <div class="thumb-box"><img src="assets/mirrior-vacuum.png" alt="Thumb 2"></div>
                             <div class="thumb-box"><img src="assets/vaccum.png" alt="Thumb 3"></div>
                         </div>
                     </div>
@@ -1894,36 +1901,106 @@
                                     Buy Now
                                 </button>
                             </div>
-
-                            <button class="btn btn-outline-danger btn-lg w-100 py-2 fw-bold rounded-3 mt-2">
-                                <i class="fa-regular fa-heart me-2"></i> Add to Wishlist
-                            </button>
-                        </div>
-
-                        <div class="product-trust-badges mt-5 pt-4 border-top">
-                            <div class="row text-center g-3">
-                                <div class="col-4">
-                                    <i class="fa-solid fa-truck-fast fs-4 text-muted mb-2"></i>
-                                    <p class="small mb-0">Fast Delivery</p>
-                                </div>
-                                <div class="col-4">
-                                    <i class="fa-solid fa-shield-halved fs-4 text-muted mb-2"></i>
-                                    <p class="small mb-0">Secure Pay</p>
-                                </div>
-                                <div class="col-4">
-                                    <i class="fa-solid fa-rotate-left fs-4 text-muted mb-2"></i>
-                                    <p class="small mb-0">30 Day Return</p>
-                                </div>
+                            <div class="action-buttons-grid">
+                                <button class="btn btn-custom-action" title="Add to Wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span>Wishlist</span>
+                                </button>
+                                <button class="btn btn-custom-action" title="Add to Favorites">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>Favorites</span>
+                                </button>
+                                <button class="btn btn-custom-action" data-bs-toggle="modal"
+                                    data-bs-target="#bulkQuoteModal" title="Bulk Quote">
+                                    <i class="fa-solid fa-boxes-packing"></i>
+                                    <span>Bulk Quote</span>
+                                </button>
+                                <button class="btn btn-custom-action" data-bs-toggle="modal"
+                                    data-bs-target="#corporatePricingModal" title="Request Corporate Pricing">
+                                    <i class="fa-solid fa-building"></i>
+                                    <span>Corp. Pricing</span>
+                                </button>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Description and Properties Tabs -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <ul class="nav nav-tabs custom-product-tabs" id="productTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="description-tab" data-bs-toggle="tab"
+                                data-bs-target="#description" type="button" role="tab" aria-controls="description"
+                                aria-selected="true">DESCRIPTION</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="properties-tab" data-bs-toggle="tab"
+                                data-bs-target="#properties" type="button" role="tab" aria-controls="properties"
+                                aria-selected="false">PROPERTIES</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content custom-tab-content" id="productTabsContent">
+                        <!-- Description Tab -->
+                        <div class="tab-pane fade show active" id="description" role="tabpanel"
+                            aria-labelledby="description-tab">
+                            <div class="mobile-collapse-container description-collapsed">
+                                <ol class="description-list">
+                                    <li>Ideal for transacting business or welcoming guests.</li>
+                                    <li>Commercial-grade laminate work surface and side panels are water-, scratch- and
+                                        stain-resistant.</li>
+                                    <li>Bow-shaped transaction counter and high-sided panels for privacy.</li>
+                                    <li>Protective 3mm edge banding helps prevent damage from bumps.</li>
+                                </ol>
+                            </div>
+                            <button class="btn btn-link read-more-btn">Read More</button>
+                        </div>
+
+                        <!-- Properties Tab -->
+                        <div class="tab-pane fade" id="properties" role="tabpanel" aria-labelledby="properties-tab">
+                            <div class="mobile-collapse-container properties-collapsed">
+                                <table class="table properties-table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <th>Size</th>
+                                            <td>2000W Heavy Duty</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Features</th>
+                                            <td>HEPA Filtration, Stainless Steel Body</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Warranty</th>
+                                            <td>2 Years Comprehensive</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Dimensions</th>
+                                            <td>50 x 50 x 80 cm</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Weight</th>
+                                            <td>15 kg</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button class="btn btn-link read-more-btn">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+        </div>
         </div>
     </section>
 
 
-      <!-- Mobile Sidebar -->
+    <!-- Mobile Sidebar -->
     <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
     <div class="mobile-sidebar" id="mobileSidebar">
         <div class="sidebar-header">
@@ -2259,6 +2336,202 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/product-zoom.js"></script>
+    <script src="js/product-tabs.js"></script>
+    <!-- Bulk Quote Modal -->
+    <div class="modal fade" id="bulkQuoteModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal-content">
+                <div class="modal-header custom-modal-header">
+                    <h5 class="modal-title custom-modal-title"><i class="fa-solid fa-boxes-packing"></i> Bulk Quote
+                        Request</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body custom-modal-body">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="bulkFirstName" placeholder="First Name">
+                                    <label for="bulkFirstName">First Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="bulkLastName" placeholder="Last Name">
+                                    <label for="bulkLastName">Last Name</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="bulkEmail" placeholder="Email">
+                                    <label for="bulkEmail">Email Address</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="bulkPhone" placeholder="Phone">
+                                    <label for="bulkPhone">Phone Number</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="bulkQuantity" placeholder="Quantity">
+                                    <label for="bulkQuantity">Quantity Interest</label>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-modal-submit">Submit Request</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Corporate Pricing Modal -->
+    <div class="modal fade" id="corporatePricingModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content custom-modal-content">
+                <div class="modal-header custom-modal-header">
+                    <h5 class="modal-title custom-modal-title"><i class="fa-solid fa-building"></i> Corporate Pricing
+                        Request</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body custom-modal-body">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="corpFirstName"
+                                        placeholder="Company First Name">
+                                    <label for="corpFirstName">Company First Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="corpLastName"
+                                        placeholder="Company Last Name">
+                                    <label for="corpLastName">Company Last Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="corpEmail" placeholder="Company Email">
+                                    <label for="corpEmail">Company Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="corpPhone" placeholder="Company Phone">
+                                    <label for="corpPhone">Company Phone Number</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="corpMonthlyQty"
+                                        placeholder="Estimate Monthly Quantity">
+                                    <label for="corpMonthlyQty">Estimate Monthly Quantity</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <select class="form-select" id="corpState">
+                                        <option selected>Select State...</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="DC">District Of Columbia</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                    <label for="corpState">State</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <select class="form-select" id="corpCity">
+                                        <option selected>Select City...</option>
+                                        <option value="City1">New York</option>
+                                        <option value="City2">Los Angeles</option>
+                                        <option value="City3">Chicago</option>
+                                        <option value="City4">Houston</option>
+                                        <option value="City5">Phoenix</option>
+                                    </select>
+                                    <label for="corpCity">City</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="corpZip" placeholder="Zip Code">
+                                    <label for="corpZip">Zip Code</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a comment here" id="corpNotes"
+                                        style="height: 100px"></textarea>
+                                    <label for="corpNotes">Notes</label>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-modal-submit">Submit Corporate Request</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

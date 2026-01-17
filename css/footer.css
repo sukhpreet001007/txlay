@@ -12,7 +12,7 @@
 }
 
 .footer-column-title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     margin-bottom: 25px;
     color: #ffffff;
@@ -44,7 +44,7 @@
 .footer-links-list a {
     color: #cccccc;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 18px;
     transition: all 0.3s ease;
     display: inline-block;
 }
@@ -55,7 +55,7 @@
 }
 
 .contact-info-text {
-    font-size: 14px;
+    font-size: 18px;
     color: #cccccc;
     line-height: 1.6;
 }
@@ -64,7 +64,7 @@
     color: #ffffff;
     display: block;
     margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .contact-highlight {

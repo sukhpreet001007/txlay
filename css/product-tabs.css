@@ -1,0 +1,95 @@
+/* Product Tabs Section */
+.custom-product-tabs {
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 20px;
+    gap: 0;
+}
+
+.custom-product-tabs .nav-link {
+    border: none;
+    border-radius: 0;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    margin-right: 2px;
+    transition: all 0.3s;
+    background: transparent;
+}
+
+.custom-product-tabs .nav-link.active {
+    background-color: #00a8e8;
+    /* Cyan/Blue from screenshot */
+    color: #fff;
+}
+
+.custom-product-tabs .nav-link:hover {
+    color: #00a8e8;
+}
+
+.custom-product-tabs .nav-link.active:hover {
+    color: #fff;
+}
+
+/* Tab Content */
+.custom-tab-content {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.description-list {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.description-list li {
+    margin-bottom: 8px;
+}
+
+/* Properties Table */
+.properties-table {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.properties-table th {
+    width: 30%;
+    background-color: #f9f9f9;
+    font-weight: 600;
+}
+
+.properties-table td,
+.properties-table th {
+    padding: 12px;
+    border: 1px solid #eee;
+}
+
+/* Mobile Read More Logic */
+.read-more-btn {
+    display: none;
+    /* Hidden by default on desktop */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 0;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+
+    /* Collapse behavior for Description */
+    .mobile-collapse-container.description-collapsed .description-list li:nth-child(n+2) {
+        display: none;
+    }
+
+    /* Collapse behavior for Table */
+    .mobile-collapse-container.properties-collapsed tr:nth-child(n+2) {
+        display: none;
+    }
+
+    .read-more-btn {
+        display: inline-block;
+        color: var(--product-primary);
+    }
+}

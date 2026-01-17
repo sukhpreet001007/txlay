@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/three-blocks.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/auth-modal.css">
 </head>
 
 <body>
@@ -46,7 +47,8 @@
                 <div class="top-links-right">
                     <a href="#"><i class="fa-solid fa-bolt"></i> Quick Order</a>
                     <a href="#"><i class="fa-regular fa-user"></i> My Account</a>
-                    <a href="#" class="login-btn">Sign In / Create Account</a>
+                    <a href="#" class="login-btn" data-bs-toggle="modal" data-bs-target="#authModal">Sign In / Create
+                        Account</a>
                 </div>
             </div>
         </div>
@@ -2327,6 +2329,140 @@
             </div>
         </div>
     </footer>
+
+    <!-- Auth Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content auth-modal-content">
+                <div class="modal-header auth-modal-header">
+                    <h5 class="modal-title auth-modal-title">Welcome to Txley</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body auth-modal-body">
+                    <!-- Tabs -->
+                    <ul class="nav nav-tabs auth-tabs" id="authTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="signin-tab" data-bs-toggle="tab"
+                                data-bs-target="#signin" type="button" role="tab" aria-selected="true">Sign In</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup"
+                                type="button" role="tab" aria-selected="false">Create Account</button>
+                        </li>
+                    </ul>
+
+                    <!-- Content -->
+                    <div class="tab-content" id="authTabsContent">
+                        <!-- Sign In -->
+                        <div class="tab-pane fade show active" id="signin" role="tabpanel">
+                            <form>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="signinEmail"
+                                        placeholder="name@example.com">
+                                    <label for="signinEmail">Email Address</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="password" class="form-control" id="signinPassword"
+                                        placeholder="Password">
+                                    <label for="signinPassword">Password</label>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                                    </div>
+                                    <a href="#" class="text-decoration-none small">Forgot Password?</a>
+                                </div>
+                                <button type="submit" class="btn btn-auth-submit">Login</button>
+                            </form>
+                        </div>
+
+                        <!-- Create Account -->
+                        <div class="tab-pane fade" id="signup" role="tabpanel">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="signupFirstName"
+                                                placeholder="First Name">
+                                            <label for="signupFirstName">First Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="signupLastName"
+                                                placeholder="Last Name">
+                                            <label for="signupLastName">Last Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="signupEmail"
+                                                placeholder="Email">
+                                            <label for="signupEmail">Email Address</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="signupAddress"
+                                                placeholder="Address">
+                                            <label for="signupAddress">Address</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="signupCity" placeholder="City">
+                                            <label for="signupCity">City</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="signupState">
+                                                <option selected>Choose...</option>
+                                                <option value="AL">Alabama</option>
+                                                <option value="AK">Alaska</option>
+                                                <option value="AZ">Arizona</option>
+                                                <option value="CA">California</option>
+                                                <option value="NY">New York</option>
+                                                <option value="TX">Texas</option>
+                                                <option value="WA">Washington</option>
+                                                <!-- Add more states as needed -->
+                                            </select>
+                                            <label for="signupState">State</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="signupZip" placeholder="Zip">
+                                            <label for="signupZip">Zip Code</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="password" class="form-control" id="signupPassword"
+                                                placeholder="Password">
+                                            <label for="signupPassword">Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="password" class="form-control" id="signupConfirmPassword"
+                                                placeholder="Confirm Password">
+                                            <label for="signupConfirmPassword">Confirm Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <button type="submit" class="btn btn-auth-submit">Create Account</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
