@@ -136,89 +136,88 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Navbar "More" Button Logic ---
+    // --- Desktop Paginated Navbar Logic ---
     const navMenu = document.getElementById('navMenu');
+    const navPrevBtn = document.getElementById('navPrevBtn');
+    const navNextBtn = document.getElementById('navNextBtn');
 
-    function handleNavbarOverflow() {
-        if (!navMenu || window.innerWidth <= 1200) return;
+    if (navMenu && navPrevBtn && navNextBtn) {
+        const navItems = Array.from(navMenu.querySelectorAll(':scope > .nav-item'));
+        const itemsPerPage = 6;
+        let currentPage = 0;
+        const totalPages = Math.ceil(navItems.length / itemsPerPage);
 
-        // Reset: Move all items back to main menu first
-        const moreBtn = document.getElementById('moreNavBtn');
-        const moreRow = document.getElementById('moreNavRow');
-
-        if (moreBtn) moreBtn.remove();
-        if (moreRow) {
-            const itemsToMove = Array.from(moreRow.querySelectorAll('.nav-item'));
-            itemsToMove.forEach(item => {
-                navMenu.appendChild(item);
-            });
-            moreRow.remove();
-        }
-
-        const items = Array.from(navMenu.children).filter(child => child.tagName === 'LI');
-        const containerWidth = navMenu.parentElement.offsetWidth;
-        let currentWidth = 0;
-        const moreBtnWidth = 120;
-        let overflowIndex = -1;
-
-        // Find overflow point
-        items.forEach((item, index) => {
-            const itemWidth = item.getBoundingClientRect().width;
-            if (currentWidth + itemWidth > containerWidth - moreBtnWidth && overflowIndex === -1) {
-                overflowIndex = index;
+        function updateNavbar() {
+            if (window.innerWidth <= 1200) {
+                // On mobile, show all for the horizontal scroll if needed, 
+                // but usually the sidebar handles it.
+                // However, we added arrow buttons in index.html, so we hide them.
+                navPrevBtn.style.display = 'none';
+                navNextBtn.style.display = 'none';
+                navItems.forEach(item => item.style.display = '');
+                return;
             }
-            currentWidth += itemWidth;
-        });
 
-        // Handle Overflow
-        if (overflowIndex !== -1) {
-            // Create More Button
-            const moreButton = document.createElement('button');
-            moreButton.id = 'moreNavBtn';
-            moreButton.className = 'more-nav-btn';
-            moreButton.innerHTML = 'More <i class="fa-solid fa-chevron-down"></i>';
+            navPrevBtn.style.display = 'flex';
+            navNextBtn.style.display = 'flex';
 
-            // Create More Row
-            const moreRowContainer = document.createElement('div');
-            moreRowContainer.id = 'moreNavRow';
-            moreRowContainer.className = 'more-nav-row';
-            moreRowContainer.innerHTML = '<ul class="nav-menu more-nav-list"></ul>';
+            const start = currentPage * itemsPerPage;
+            const end = start + itemsPerPage;
 
-            const moreList = moreRowContainer.querySelector('.more-nav-list');
-            items.slice(overflowIndex).forEach(item => {
-                moreList.appendChild(item);
-            });
-
-            // Add click handler
-            moreButton.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const isActive = moreRowContainer.classList.toggle('active');
-                moreButton.querySelector('i').style.transform = isActive ? 'rotate(180deg)' : '';
-
-                // Calculate absolute position (including scroll)
-                const navbarRect = navMenu.parentElement.parentElement.getBoundingClientRect();
-                const absoluteTop = navbarRect.bottom + window.scrollY;
-                moreRowContainer.style.setProperty('--navbar-top', `${absoluteTop}px`);
-            });
-
-            // Close when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!moreRowContainer.contains(e.target) && !moreButton.contains(e.target)) {
-                    moreRowContainer.classList.remove('active');
-                    moreButton.querySelector('i').style.transform = '';
+            navItems.forEach((item, index) => {
+                if (index >= start && index < end) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
                 }
             });
 
-            navMenu.parentElement.appendChild(moreButton);
-            document.body.appendChild(moreRowContainer);
+            // Update arrow states
+            navPrevBtn.disabled = currentPage === 0;
+            navNextBtn.disabled = currentPage === totalPages - 1;
+
+            // Optional: Hide arrows if they aren't needed
+            navPrevBtn.style.visibility = currentPage === 0 ? 'hidden' : 'visible';
+            navNextBtn.style.visibility = currentPage === totalPages - 1 ? 'hidden' : 'visible';
         }
+
+        navNextBtn.addEventListener('click', () => {
+            if (currentPage < totalPages - 1) {
+                currentPage++;
+                updateNavbar();
+            }
+        });
+
+        navPrevBtn.addEventListener('click', () => {
+            if (currentPage > 0) {
+                currentPage--;
+                updateNavbar();
+            }
+        });
+
+        // Initialize and handle resize
+        window.addEventListener('resize', updateNavbar);
+        updateNavbar();
     }
 
-    // Initial and resize handlers
-    window.addEventListener('load', handleNavbarOverflow);
-    window.addEventListener('resize', handleNavbarOverflow);
-    setTimeout(handleNavbarOverflow, 100);
-    setTimeout(handleNavbarOverflow, 500);
+    // Function to handle long dropdowns (20+ items)
+    function applyDropdownScrolling() {
+        const dropdowns = document.querySelectorAll('.nested-dropdown, .deep-nested-dropdown');
+        dropdowns.forEach(dropdown => {
+            const list = dropdown.querySelector('ul');
+            if (list) {
+                const items = list.querySelectorAll(':scope > li');
+                if (items.length >= 20) {
+                    dropdown.classList.add('scrollable-dropdown');
+                } else {
+                    dropdown.classList.remove('scrollable-dropdown');
+                }
+            }
+        });
+    }
+
+    // Apply on load
+    applyDropdownScrolling();
 
     // Overflow Fix for Nested Dropdowns
     const navbarContainer = document.querySelector('.main-navbar');

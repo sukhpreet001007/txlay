@@ -37,14 +37,14 @@
     <!-- Header Section -->
     <header class="site-header">
         <!-- Top Utility Bar -->
-         <div class="top-bar">
+        <div class="top-bar">
             <div class="container-contents">
                 <div class="top-links-left">
                     <a href="index.html">Home</a>
                     <a href="about.html">About Us</a>
                     <a href="markets.html">Markets</a>
                     <a href="contactus.html">Contact Us</a>
-                    <a href="#" class="highlight">Promos & Specials</a>
+                    <a href="promos.html" class="highlight">Promos & Specials</a>
                 </div>
                 <div class="top-links-right">
                     <a href="#"><i class="fa-solid fa-bolt"></i> Quick Order</a>
@@ -80,7 +80,7 @@
                 <!-- Account Icon (Mobile Only) -->
                 <div class="mobile-account-wrapper">
                     <button class="mobile-account-btn" id="mobileAccountBtn">
-                        <i class="fa-regular fa-user"></i>
+                        <i class="fa-solid fa-user"></i>
                     </button>
                     <div class="mobile-account-dropdown" id="mobileAccountDropdown">
                         <div class="dropdown-header-mobile">
@@ -97,7 +97,7 @@
                             <li><a href="about.html">About Us</a></li>
                             <li><a href="markets.html">Markets</a></li>
                             <li><a href="contactus.html">Contact Us</a></li>
-                            <li><a href="#" class="highlight">Promos & Specials</a></li>
+                            <li><a href="promos.html" class="highlight">Promos & Specials</a></li>
                         </ul>
                     </div>
                 </div>
@@ -121,6 +121,7 @@
         <!-- Desktop Navigation Menu -->
         <nav class="main-navbar">
             <div class="container-contents nav-container-wrapper">
+                <button id="navPrevBtn" class="nav-arrow-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
                 <ul class="nav-menu" id="navMenu">
                     <!-- Item 1: Janitorial -->
                     <li class="nav-item has-dropdown">
@@ -1828,6 +1829,8 @@
                         <a href="#" class="nav-link">Txley's Picks</a>
                     </li>
                 </ul>
+                <button id="navNextBtn" class="nav-arrow-btn next-btn"><i
+                        class="fa-solid fa-chevron-right"></i></button>
             </div>
         </nav>
     </header>
@@ -3278,74 +3281,76 @@
                     </div>
 
                     <div class="contact-form-card">
-    <h3 class="contact-form-title">Contact Form</h3>
+                        <h3 class="contact-form-title">Contact Form</h3>
 
-    <form action="#" method="POST">
-        <!-- First row: Email and Full Name -->
-        <div class="two-column-row">
-            <div class="two-column-field">
-                <label for="email_top" class="form-horizontal-label">E-mail</label>
-                <div class="form-horizontal-input">
-                    <input type="email" id="email_top" class="contact-input" placeholder="Email">
-                </div>
-            </div>
-            <div class="two-column-field">
-                <label for="fullName" class="form-horizontal-label">Full Name</label>
-                <div class="form-horizontal-input">
-                    <input type="text" id="fullName" class="contact-input" placeholder="Full name">
-                </div>
-            </div>
-        </div>
+                        <form action="#" method="POST">
+                            <!-- First row: Email and Full Name -->
+                            <div class="two-column-row">
+                                <div class="two-column-field">
+                                    <label for="email_top" class="form-horizontal-label">E-mail</label>
+                                    <div class="form-horizontal-input">
+                                        <input type="email" id="email_top" class="contact-input" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="two-column-field">
+                                    <label for="fullName" class="form-horizontal-label">Full Name</label>
+                                    <div class="form-horizontal-input">
+                                        <input type="text" id="fullName" class="contact-input" placeholder="Full name">
+                                    </div>
+                                </div>
+                            </div>
 
-        <!-- Second row: Company and Contact Number -->
-        <div class="two-column-row">
-            <div class="two-column-field">
-                <label for="company" class="form-horizontal-label">Company</label>
-                <div class="form-horizontal-input">
-                    <input type="text" id="company" class="contact-input" placeholder="Company">
-                </div>
-            </div>
-            <div class="two-column-field">
-                <label for="phone" class="form-horizontal-label">Contact Number</label>
-                <div class="form-horizontal-input">
-                    <input type="tel" id="phone" class="contact-input" placeholder="Contact Number">
-                </div>
-            </div>
-        </div>
+                            <!-- Second row: Company and Contact Number -->
+                            <div class="two-column-row">
+                                <div class="two-column-field">
+                                    <label for="company" class="form-horizontal-label">Company</label>
+                                    <div class="form-horizontal-input">
+                                        <input type="text" id="company" class="contact-input" placeholder="Company">
+                                    </div>
+                                </div>
+                                <div class="two-column-field">
+                                    <label for="phone" class="form-horizontal-label">Contact Number</label>
+                                    <div class="form-horizontal-input">
+                                        <input type="tel" id="phone" class="contact-input" placeholder="Contact Number">
+                                    </div>
+                                </div>
+                            </div>
 
-        <!-- Email address (second email field) -->
-        <div class="form-horizontal-row">
-            <label for="email_bottom" class="form-horizontal-label">Email address</label>
-            <div class="form-horizontal-input">
-                <input type="email" id="email_bottom" class="contact-input" placeholder="Email Address">
-            </div>
-        </div>
+                            <!-- Email address (second email field) -->
+                            <div class="form-horizontal-row">
+                                <label for="email_bottom" class="form-horizontal-label">Email address</label>
+                                <div class="form-horizontal-input">
+                                    <input type="email" id="email_bottom" class="contact-input"
+                                        placeholder="Email Address">
+                                </div>
+                            </div>
 
-        <!-- Question/Comment/Concern textarea -->
-        <div class="form-horizontal-row align-items-start">
-            <label for="message" class="form-horizontal-label pt-2">Question, Comment, or Concern</label>
-            <div class="form-horizontal-input">
-                <textarea id="message" class="contact-input contact-textarea"
-                    placeholder="Question/Comment/Concern"></textarea>
-            </div>
-        </div>
+                            <!-- Question/Comment/Concern textarea -->
+                            <div class="form-horizontal-row align-items-start">
+                                <label for="message" class="form-horizontal-label pt-2">Question, Comment, or
+                                    Concern</label>
+                                <div class="form-horizontal-input">
+                                    <textarea id="message" class="contact-input contact-textarea"
+                                        placeholder="Question/Comment/Concern"></textarea>
+                                </div>
+                            </div>
 
-        <!-- Submit button -->
-        <div class="form-horizontal-row mt-4">
-            <div class="form-horizontal-label"></div> <!-- Spacer -->
-            <div class="form-horizontal-input">
-                <button type="submit" class="contact-btn">Submit</button>
-            </div>
-        </div>
-    </form>
-</div>
+                            <!-- Submit button -->
+                            <div class="form-horizontal-row mt-4">
+                                <div class="form-horizontal-label"></div> <!-- Spacer -->
+                                <div class="form-horizontal-input">
+                                    <button type="submit" class="contact-btn">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-   <footer class="main-footer mt-3">
+    <footer class="main-footer mt-3">
         <div class="container footer-container">
             <div class="row">
                 <!-- Column 1: Browse Our Catalog -->

@@ -642,9 +642,144 @@
     .careers-cta {
         padding: 20px;
     }
+.promos-specials-container {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.promos-header {
+    font-size: 42px;
+    font-weight: 700;
+    color: #232f3e;
+    margin-bottom: 30px;
+    position: relative;
+    font-family: 'Outfit', sans-serif;
+}
+
+.promos-header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #232f3e, #00a8e8, #232f3e);
+    border-radius: 2px;
+}
+
+.promos-card {
+    background: linear-gradient(135deg, #ffffff 0%, #fafbfc 100%);
+    border-radius: 20px;
+    padding: 50px 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 168, 232, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.promos-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #232f3e, #00a8e8, #232f3e);
+}
+
+.promos-icon-wrapper {
+    margin-bottom: 25px;
+}
+
+.promos-icon {
+    color: #232f3e;
+    opacity: 0.9;
+    filter: drop-shadow(0 4px 6px rgba(35, 47, 62, 0.1));
+}
+
+.promos-content {
+    position: relative;
+    z-index: 1;
+}
+
+.promos-message {
+    font-size: 22px;
+    color: #232f3e;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-style: italic;
+    background: linear-gradient(135deg, #232f3e 0%, #3a4b60 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.countdown-placeholder {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 12px;
+    padding: 20px;
+    border: 2px dashed #ced4da;
+    max-width: 400px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.countdown-placeholder:hover {
+    border-color: #00a8e8;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 168, 232, 0.1);
+}
+
+.countdown-text {
+    font-size: 18px;
+    color: #3a4b60;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Animation for attention */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.promos-icon {
+    animation: pulse 3s infinite ease-in-out;
+}
+
 
 
     @media (max-width: 768px) {
+            .promos-header {
+        font-size: 32px;
+    }
+    
+    .promos-card {
+        padding: 30px 20px;
+        margin: 0 15px;
+    }
+    
+    .promos-message {
+        font-size: 18px;
+    }
+    
+    .promos-icon {
+        width: 50px;
+        height: 50px;
+    }
     .two-column-row {
         flex-direction: column;
         gap: 15px;

@@ -35,16 +35,16 @@
 <body>
 
     <!-- Header Section -->
-    <header class="site-header">
+     <header class="site-header">
         <!-- Top Utility Bar -->
-         <div class="top-bar">
+        <div class="top-bar">
             <div class="container-contents">
                 <div class="top-links-left">
                     <a href="index.html">Home</a>
                     <a href="about.html">About Us</a>
                     <a href="markets.html">Markets</a>
                     <a href="contactus.html">Contact Us</a>
-                    <a href="#" class="highlight">Promos & Specials</a>
+                    <a href="promos.html" class="highlight">Promos & Specials</a>
                 </div>
                 <div class="top-links-right">
                     <a href="#"><i class="fa-solid fa-bolt"></i> Quick Order</a>
@@ -80,7 +80,7 @@
                 <!-- Account Icon (Mobile Only) -->
                 <div class="mobile-account-wrapper">
                     <button class="mobile-account-btn" id="mobileAccountBtn">
-                        <i class="fa-regular fa-user"></i>
+                        <i class="fa-solid fa-user"></i>
                     </button>
                     <div class="mobile-account-dropdown" id="mobileAccountDropdown">
                         <div class="dropdown-header-mobile">
@@ -97,7 +97,7 @@
                             <li><a href="about.html">About Us</a></li>
                             <li><a href="markets.html">Markets</a></li>
                             <li><a href="contactus.html">Contact Us</a></li>
-                            <li><a href="#" class="highlight">Promos & Specials</a></li>
+                            <li><a href="promos.html" class="highlight">Promos & Specials</a></li>
                         </ul>
                     </div>
                 </div>
@@ -121,6 +121,7 @@
         <!-- Desktop Navigation Menu -->
         <nav class="main-navbar">
             <div class="container-contents nav-container-wrapper">
+                <button id="navPrevBtn" class="nav-arrow-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
                 <ul class="nav-menu" id="navMenu">
                     <!-- Item 1: Janitorial -->
                     <li class="nav-item has-dropdown">
@@ -1828,6 +1829,8 @@
                         <a href="#" class="nav-link">Txley's Picks</a>
                     </li>
                 </ul>
+                <button id="navNextBtn" class="nav-arrow-btn next-btn"><i
+                        class="fa-solid fa-chevron-right"></i></button>
             </div>
         </nav>
     </header>
