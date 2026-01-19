@@ -39,9 +39,9 @@
             <div class="container-contents">
                 <div class="top-links-left">
                     <a href="index.html">Home</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Markets</a>
-                    <a href="#">Contact Us</a>
+                    <a href="about.html">About Us</a>
+                    <a href="markets.html">Markets</a>
+                    <a href="contactus.html">Contact Us</a>
                     <a href="#" class="highlight">Promos & Specials</a>
                 </div>
                 <div class="top-links-right">
@@ -92,9 +92,9 @@
                             <li><a href="#"><i class="fa-solid fa-bolt"></i> Quick Order</a></li>
                             <hr>
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Markets</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="markets.html">Markets</a></li>
+                            <li><a href="contactus.html">Contact Us</a></li>
                             <li><a href="#" class="highlight">Promos & Specials</a></li>
                         </ul>
                     </div>
@@ -1836,14 +1836,44 @@
     <section class="banner-section py-2 mt-2 d-lg-none">
         <div class="container">
             <div class="hero-banner mb-0">
-                <img src="assets/banner.avif" alt="Industrial Supplies Banner" class="banner-img">
-                <div class="banner-content">
-                    <span class="banner-tag">Flash Sale</span>
-                    <h2 class="banner-title">Professional Tools for Every Job</h2>
-                    <p class="banner-text">Upgrade your facility with our premium selection of industrial and
-                        janitorial equipment. Quality guaranteed.</p>
-                    <a href="#" class="banner-btn">Shop Collection <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                <div class="banner-slides">
+                    <div class="banner-slide">
+                        <img src="assets/banner11.jpg" alt="Industrial Supplies Banner" class="banner-img">
+                        <div class="banner-content">
+                            <span class="banner-tag">Flash Sale</span>
+                            <h2 class="banner-title">Professional Tools for Every Job</h2>
+                            <p class="banner-text">Upgrade your facility with our premium selection of industrial and
+                                janitorial equipment. Quality guaranteed.</p>
+                            <a href="#" class="banner-btn">Shop Collection <i
+                                    class="fa-solid fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="banner-slide">
+                        <img src="assets/banner22.avif" alt="Waste Management Banner" class="banner-img">
+                        <div class="banner-content">
+                            <span class="banner-tag">New Arrival</span>
+                            <h2 class="banner-title">Efficient Waste Management</h2>
+                            <p class="banner-text">Keep your workspace clean and organized with our durable waste bins
+                                and recycling solutions.</p>
+                            <a href="#" class="banner-btn">Shop Collection <i
+                                    class="fa-solid fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="banner-slide">
+                        <img src="assets/banner3.jpg" alt="Office Essentials Banner" class="banner-img">
+                        <div class="banner-content">
+                            <span class="banner-tag">Best Seller</span>
+                            <h2 class="banner-title">Premium Office Essentials</h2>
+                            <p class="banner-text">Equip your team with high-quality office supplies for maximum
+                                productivity.</p>
+                            <a href="#" class="banner-btn">Shop Collection <i
+                                    class="fa-solid fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
                 </div>
+                <!-- Arrows (Hidden on Mobile automatically by CSS) -->
+                <button class="banner-arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="banner-arrow next"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
@@ -1852,7 +1882,7 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-4">
-                    <a href="#" class="link-block-card">
+                    <a href="ink-toner.html" class="link-block-card">
                         <div class="block-icon-wrapper">
                             <i class="fa-solid fa-print"></i>
                         </div>
@@ -1874,7 +1904,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-4">
-                    <a href="#" class="link-block-card">
+                    <a href="product-search.html" class="link-block-card">
                         <div class="block-icon-wrapper">
                             <i class="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
@@ -1896,8 +1926,18 @@
                             data-bs-toggle="collapse" data-bs-target="#sidebarCategories" aria-expanded="false">
                             <h5 class="mb-0 fw-bold d-flex justify-content-between align-items-center all-cate">
                                 <span><i class="fa-solid fa-list-ul me-2"></i> All Categories</span>
-                                <i class="fa-solid fa-chevron-down toggle-icon d-md-none"></i>
+                                <div class="d-flex align-items-center">
+                                    <i class="fa-solid fa-magnifying-glass category-search-icon me-3"
+                                        id="categorySearchToggle"></i>
+                                    <i class="fa-solid fa-chevron-down toggle-icon d-md-none"></i>
+                                </div>
                             </h5>
+                        </div>
+                        <div class="category-search-container" id="categorySearchContainer" style="display: none;">
+                            <div class="p-2 bg-white border-bottom">
+                                <input type="text" id="categorySearchInput" class="form-control form-control-sm"
+                                    placeholder="Filter categories...">
+                            </div>
                         </div>
                         <div class="collapse d-md-block" id="sidebarCategories">
                             <ul class="list-group list-group-flush">
@@ -1938,15 +1978,44 @@
                 <div class="col-lg-9 col-md-8">
                     <!-- Hero Banner (Desktop Only) -->
                     <div class="hero-banner d-none d-lg-block">
-                        <img src="assets/banner.avif" alt="Industrial Supplies Banner" class="banner-img">
-                        <div class="banner-content">
-                            <span class="banner-tag">Flash Sale</span>
-                            <h2 class="banner-title">Professional Tools for Every Job</h2>
-                            <p class="banner-text">Upgrade your facility with our premium selection of industrial and
-                                janitorial equipment. Quality guaranteed.</p>
-                            <a href="#" class="banner-btn">Shop Collection <i
-                                    class="fa-solid fa-arrow-right ms-2"></i></a>
+                        <div class="banner-slides">
+                            <div class="banner-slide">
+                                <img src="assets/banner11.jpg" alt="Industrial Supplies Banner" class="banner-img">
+                                <div class="banner-content">
+                                    <span class="banner-tag">Flash Sale</span>
+                                    <h2 class="banner-title">Professional Tools for Every Job</h2>
+                                    <p class="banner-text">Upgrade your facility with our premium selection of
+                                        industrial and
+                                        janitorial equipment. Quality guaranteed.</p>
+                                    <a href="#" class="banner-btn">Shop Collection <i
+                                            class="fa-solid fa-arrow-right ms-2"></i></a>
+                                </div>
+                            </div>
+                            <div class="banner-slide">
+                                <img src="assets/banner22.avif" alt="Waste Management Banner" class="banner-img">
+                                <div class="banner-content">
+                                    <span class="banner-tag">New Arrival</span>
+                                    <h2 class="banner-title">Efficient Waste Management</h2>
+                                    <p class="banner-text">Keep your workspace clean and organized with our durable
+                                        waste bins and recycling solutions.</p>
+                                    <a href="#" class="banner-btn">Shop Collection <i
+                                            class="fa-solid fa-arrow-right ms-2"></i></a>
+                                </div>
+                            </div>
+                            <div class="banner-slide">
+                                <img src="assets/banner3.jpg" alt="Office Essentials Banner" class="banner-img">
+                                <div class="banner-content">
+                                    <span class="banner-tag">Best Seller</span>
+                                    <h2 class="banner-title">Premium Office Essentials</h2>
+                                    <p class="banner-text">Equip your team with high-quality office supplies for maximum
+                                        productivity.</p>
+                                    <a href="#" class="banner-btn">Shop Collection <i
+                                            class="fa-solid fa-arrow-right ms-2"></i></a>
+                                </div>
+                            </div>
                         </div>
+                        <button class="banner-arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="banner-arrow next"><i class="fa-solid fa-chevron-right"></i></button>
                     </div>
 
                     <!-- Featured Products Section -->
@@ -2037,20 +2106,20 @@
                     <h5 class="footer-column-title">Browse Our Catalog</h5>
                     <ul class="footer-links-list">
                         <li><a href="janitorial.html">Janitorial & Facility Supplies</a></li>
-                        <li><a href="#">Industrial Safety</a></li>
-                        <li><a href="#">Laundry & Warewash</a></li>
-                        <li><a href="#">Office Supplies</a></li>
-                        <li><a href="#">Janitorial Equipment</a></li>
-                        <li><a href="#">Restaurant Supplies</a></li>
-                        <li><a href="#">Healthcare</a></li>
-                        <li><a href="#">Safety & PPE</a></li>
-                        <li><a href="#">Microfiber</a></li>
-                        <li><a href="#">Technology</a></li>
-                        <li><a href="#">Janitorial Hardware</a></li>
-                        <li><a href="#">Furniture & Interiors</a></li>
-                        <li><a href="#">Breakroom</a></li>
-                        <li><a href="#">School Supplies</a></li>
-                        <li><a href="#">Txley's Picks</a></li>
+                        <li><a href="janitorial.html">Industrial Safety</a></li>
+                        <li><a href="janitorial.html">Laundry & Warewash</a></li>
+                        <li><a href="janitorial.html">Office Supplies</a></li>
+                        <li><a href="janitorial.html">Janitorial Equipment</a></li>
+                        <li><a href="janitorial.html">Restaurant Supplies</a></li>
+                        <li><a href="janitorial.html">Healthcare</a></li>
+                        <li><a href="janitorial.html">Safety & PPE</a></li>
+                        <li><a href="janitorial.html">Microfiber</a></li>
+                        <li><a href="janitorial.html">Technology</a></li>
+                        <li><a href="janitorial.html">Janitorial Hardware</a></li>
+                        <li><a href="janitorial.html">Furniture & Interiors</a></li>
+                        <li><a href="janitorial.html">Breakroom</a></li>
+                        <li><a href="janitorial.html">School Supplies</a></li>
+                        <li><a href="janitorial.html">Txley's Picks</a></li>
                     </ul>
                 </div>
 
@@ -2058,12 +2127,12 @@
                 <div class="col-lg-3 col-md-6 footer-column">
                     <h5 class="footer-column-title">More On Us</h5>
                     <ul class="footer-links-list">
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
                         <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Shipping Policy</a></li>
-                        <li><a href="#">Terms of Sale</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="shipping-policy.html">Shipping Policy</a></li>
+                        <li><a href="termsandconditions.html">Terms of Sale</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
                         <li><a href="#">Join the Txley Team</a></li>
                     </ul>
                 </div>
@@ -2075,7 +2144,7 @@
                         <strong>Txley</strong>
                         <p>139 E. Fairhaven Avenue<br>Burlington, WA 98233</p>
                         <p>Phone: <a href="tel:3605454433" class="contact-highlight">(360) 545-4433</a></p>
-                        <p><a href="#" class="contact-highlight">Need more information?</a></p>
+                        <p><a href="contactus.html" class="contact-highlight">Need more information?</a></p>
                     </div>
                 </div>
 
@@ -2235,6 +2304,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/script.js"></script>
     <!-- Mobile Account Dropdown -->
     <div class="mobile-account-dropdown" id="mobileAccountDropdown">
         <div class="dropdown-header-mobile">
@@ -2247,9 +2317,9 @@
             <li><a href="#"><i class="fa-solid fa-bolt"></i> Quick Order</a></li>
             <hr>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Markets</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="markets.html">Markets</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
             <li><a href="#" class="highlight">Promos & Specials</a></li>
         </ul>
     </div>

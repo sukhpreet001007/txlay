@@ -704,10 +704,11 @@
 
 /* More Row Container */
 .more-nav-row {
-    position: fixed;
+    position: absolute;
     top: var(--navbar-top, 0px);
     left: 0;
     width: 100%;
+
     background-color: #232f3e;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 0 20px;

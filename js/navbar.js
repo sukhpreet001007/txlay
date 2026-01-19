@@ -195,22 +195,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 const isActive = moreRowContainer.classList.toggle('active');
                 moreButton.querySelector('i').style.transform = isActive ? 'rotate(180deg)' : '';
 
-                // Calculate navbar position for fixed positioning
+                // Calculate absolute position (including scroll)
                 const navbarRect = navMenu.parentElement.parentElement.getBoundingClientRect();
-                moreRowContainer.style.setProperty('--navbar-top', `${navbarRect.bottom}px`);
+                const absoluteTop = navbarRect.bottom + window.scrollY;
+                moreRowContainer.style.setProperty('--navbar-top', `${absoluteTop}px`);
             });
 
             // Close when clicking outside
             document.addEventListener('click', (e) => {
                 if (!moreRowContainer.contains(e.target) && !moreButton.contains(e.target)) {
-                    moreRowContainer.classList.remove('active');
-                    moreButton.querySelector('i').style.transform = '';
-                }
-            });
-
-            // Close when scrolling
-            window.addEventListener('scroll', () => {
-                if (moreRowContainer.classList.contains('active')) {
                     moreRowContainer.classList.remove('active');
                     moreButton.querySelector('i').style.transform = '';
                 }

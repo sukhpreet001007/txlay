@@ -1,0 +1,116 @@
+/* About Us Section Styles */
+
+.about-us-section {
+    padding: 60px 0;
+    background-color: #fff;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.about-header {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #000;
+}
+
+.about-paragraph {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.about-subheading {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.about-sub-paragraph {
+    font-size: 15px;
+    /* Slightly smaller or same as main paragraph usually */
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-style: italic;
+    /* Text in screenshot looks italicized for subsections? No, only the text under Mission & Values starts with 'At Txley...' seems italicized in screenshot partially? Actually, looks like italicized. */
+    text-align: justify;
+}
+
+/* Looking closer at the screenshot:
+Main paragraph is normal.
+Text under "MISSION & VALUES" starts with "At Txley..." and IS italicized.
+Text under "DELIVERING CUSTOMIZED SOLUTIONS" starts with "For us..." and IS italicized.
+Text under "MARKET & INDUSTRY KNOWLEDGE" starts with "We are..." and IS italicized.
+Text under "PRODUCT EXPERTISE" starts with "Our powerful..." and IS italicized.
+*/
+
+.about-sub-paragraph.italic-text {
+    font-style: italic;
+}
+
+/* Images Row */
+.about-images-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.about-img-wrapper {
+    flex: 1;
+    overflow: hidden;
+    /* Maintain a square-ish or consistent aspect ratio */
+    height: 150px;
+    /* Adjust as needed */
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+    transform: scale(.97);
+    overflow:hidden;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .about-header {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-images-row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about-img-wrapper {
+        flex: 0 0 45%;
+        /* 2 images per row on tablet/mobile */
+        margin-bottom: 15px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-img-wrapper {
+        flex: 0 0 100%;
+        /* 1 image per row on small screens */
+    }
+
+    .about-paragraph,
+    .about-sub-paragraph {
+        text-align: left;
+        /* Justify can look bad on small screens */
+    }
+}

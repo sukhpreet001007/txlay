@@ -46,3 +46,21 @@
         cursor: default !important;
     }
 }
+
+/* Category Search Styles */
+.category-search-icon {
+    cursor: pointer;
+    pointer-events: auto !important;
+    /* Override the pointer-events: none from parent on desktop */
+    font-size: 16px;
+    transition: transform 0.2s;
+}
+
+.category-search-icon:hover {
+    transform: scale(1.1);
+}
+
+.category-search-container {
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
