@@ -1,3 +1,8 @@
+/* ===================================
+   MY ACCOUNT PAGE STYLES - SIDEBAR LAYOUT
+   =================================== */
+
+/* Container */
 .my-account-table-form {
     padding: 40px 0;
     background-color: #f8f9fa;
@@ -38,52 +43,87 @@
     box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
 }
 
-/* Tab Navigation */
-.account-tabs {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
+/* Main Layout: Sidebar + Content */
+.account-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Left Sidebar */
+.account-sidebar {
     background-color: white;
-    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-.tab-btn {
-    flex: 1;
-    min-width: 150px;
-    padding: 12px 20px;
-    background-color: #e9ecef;
-    border: none;
-    border-radius: 5px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #495057;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-}
-
-.tab-btn:hover {
-    background-color: #dee2e6;
-    transform: translateY(-2px);
-}
-
-.tab-btn.active {
-    background-color: #00AFEF;
+.sidebar-header {
+    background-color: #2c3e50;
     color: white;
-    box-shadow: 0 4px 8px rgba(0, 188, 212, 0.3);
+    padding: 20px;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-link1 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 20px;
+    color: #495057;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.sidebar-link1:last-child {
+    border-bottom: none;
+}
+
+.sidebar-link1 i {
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-link1:hover {
+    background-color: #f8f9fa;
+    color: #00AFEF;
+    padding-left: 25px;
+}
+
+.sidebar-link1.active {
+    /* background-color: #00AFEF; */
+    color: #00AFEF;
+    font-weight: 600;
+}
+
+.sidebar-link1.active:hover {
+    padding-left: 20px;
+}
+
+/* Right Content Area */
+.account-content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
 }
 
 /* Tab Content */
-.tab-content-wrapper {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
 .tab-content {
     display: none;
 }
@@ -143,8 +183,8 @@
 
 .form-group .form-control:focus {
     outline: none;
-    border-color: #00bcd4;
-    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.1);
+    border-color: #00AFEF;
+    box-shadow: 0 0 0 3px rgba(0, 175, 239, 0.1);
 }
 
 .form-group textarea.form-control {
@@ -270,7 +310,7 @@
 
 .quantity-input:focus {
     outline: none;
-    border-color: #00bcd4;
+    border-color: #00AFEF;
 }
 
 .actions-cell {
@@ -312,24 +352,6 @@
 .btn-add-cart:hover {
     background-color: #218838;
     transform: translateY(-2px);
-}
-
-/* Empty State */
-.empty-state {
-    text-align: center;
-    padding: 60px 20px;
-    color: #6c757d;
-}
-
-.empty-state i {
-    font-size: 64px;
-    margin-bottom: 20px;
-    opacity: 0.5;
-}
-
-.empty-state p {
-    font-size: 18px;
-    margin: 0;
 }
 
 /* Orders Table */
@@ -445,41 +467,84 @@
     transform: translateY(-2px);
 }
 
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6c757d;
+}
+
+.empty-state i {
+    font-size: 64px;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.empty-state p {
+    font-size: 18px;
+    margin: 0;
+}
+
 /* ===================================
    RESPONSIVE MEDIA QUERIES
    =================================== */
 
-/* Tablet (Portrait) - 768px and below */
-@media (max-width: 768px) {
-    .my-account-table-form {
-        padding: 30px 0;
+/* Larger Tablets - 769px to 1400px */
+@media (min-width: 769px) and (max-width: 1400px) {
+
+    /* Stack sidebar and content */
+    .account-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .my-account-container {
-        padding: 0 15px;
+    .account-sidebar {
+        width: 100%;
     }
 
-    .account-tabs {
-        padding: 10px;
-        gap: 8px;
+    .account-content {
+        width: 100%;
     }
 
-    .tab-btn {
-        min-width: 120px;
-        padding: 10px 15px;
-        font-size: 12px;
+    /* Enable horizontal scroll for all tables */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 8px;
     }
 
-    .tab-content-wrapper {
-        padding: 20px;
+    .favorites-table,
+    .orders-table,
+    .billing-table {
+        display: table;
+        width: 100%;
     }
 
-    .form-row {
-        gap: 15px;
+    .favorites-table thead,
+    .orders-table thead,
+    .billing-table thead {
+        display: table-header-group;
+    }
+
+    .favorites-table tbody,
+    .orders-table tbody,
+    .billing-table tbody {
+        display: table-row-group;
+    }
+
+    .favorites-table tr,
+    .orders-table tr,
+    .billing-table tr {
+        display: table-row;
     }
 
     .favorites-table th,
-    .favorites-table td {
+    .favorites-table td,
+    .orders-table th,
+    .orders-table td,
+    .billing-table th,
+    .billing-table td {
+        display: table-cell;
         padding: 12px;
         font-size: 13px;
     }
@@ -495,6 +560,121 @@
 
     .price-cell {
         font-size: 14px;
+    }
+}
+
+/* Medium Tablets - 769px to 1000px - Compact Tables */
+@media (min-width: 769px) and (max-width: 1091px) {
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .favorites-table th,
+  .favorites-table td,
+  .orders-table th,
+  .orders-table td,
+  .billing-table th,
+  .billing-table td {
+    padding: 8px;
+    font-size: 11px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .favorites-table .thumbnail-cell {
+    width: 60px;
+  }
+
+  .product-thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+
+  .favorites-table .description-cell {
+    max-width: 200px;
+  }
+
+  .item-description h6 {
+    font-size: 11px;
+    line-height: 1.3;
+    margin-bottom: 2px;
+  }
+
+  .item-code {
+    font-size: 9px;
+  }
+
+  .favorites-table .price-cell {
+    min-width: 60px;
+    font-size: 12px;
+  }
+
+  .favorites-table .quantity-cell {
+    width: 70px;
+  }
+
+  .quantity-input {
+    width: 50px;
+    padding: 4px;
+    font-size: 11px;
+  }
+
+  .favorites-table .actions-cell {
+    width: 140px;
+  }
+
+  .favorites-table .actions-cell button {
+    padding: 6px 8px;
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+
+  /* Orders */
+  .orders-table td[data-label="Date"] { width: 90px; font-size: 10px; }
+  .orders-table td[data-label="Order ID"] { width: 95px; font-size: 10px; }
+  .orders-table td[data-label="Subtotal"],
+  .orders-table td[data-label="Tax Amount"],
+  .orders-table td[data-label="Grand Total"] { width: 75px; }
+  .orders-table td[data-label="Actions"] { width: 80px; }
+
+  /* Billing */
+  .billing-table td[data-label="Email"] { width: 120px; }
+  .billing-table td[data-label="Address"] { width: 150px; line-height: 1.4; }
+
+  .btn-print,
+  .btn-delete {
+    padding: 6px 8px;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+}
+
+
+/* Tablet (Portrait) - 768px and below */
+@media (max-width: 768px) {
+    .my-account-table-form {
+        padding: 30px 0;
+    }
+
+    .my-account-container {
+        padding: 0 15px;
+    }
+
+    /* Stack sidebar and content */
+    .account-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .account-content {
+        padding: 20px;
+    }
+
+    .form-row {
+        gap: 15px;
     }
 
     /* Enable horizontal scroll for all tables on tablet */
@@ -536,6 +716,281 @@
     .billing-table th,
     .billing-table td {
         display: table-cell;
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .product-thumbnail {
+        width: 60px;
+        height: 60px;
+    }
+
+    .item-description h6 {
+        font-size: 13px;
+    }
+
+    .price-cell {
+        font-size: 14px;
+    }
+
+    /* Tablet Portrait - 3 cards per row layout */
+    .account-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .account-sidebar {
+        width: 100%;
+    }
+
+    .account-content {
+        width: 100%;
+    }
+
+    /* Tables - 3 Column Card Layout for Tablet */
+    .favorites-table {
+        min-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .favorites-table thead {
+        display: none;
+    }
+
+    .favorites-table tbody {
+        display: contents;
+    }
+
+    .favorites-table tbody tr {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 12px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    .favorites-table tbody tr:hover {
+        background-color: #f8f9fa;
+    }
+
+    .favorites-table td {
+        display: block;
+        padding: 6px 0;
+        border: none;
+        text-align: left;
+    }
+
+    .favorites-table .thumbnail-cell {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .favorites-table .product-thumbnail {
+        width: 70px;
+        height: 70px;
+    }
+
+    .favorites-table .description-cell {
+        max-width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .favorites-table .item-description h6 {
+        font-size: 12px;
+        margin-bottom: 4px;
+        line-height: 1.3;
+    }
+
+    .favorites-table .item-code {
+        font-size: 10px;
+    }
+
+    .favorites-table .price-cell {
+        font-size: 15px;
+        color: #00AFEF;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+
+    .favorites-table .quantity-cell {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .favorites-table .quantity-input {
+        width: 60px;
+        padding: 6px;
+        font-size: 13px;
+    }
+
+    .favorites-table .actions-cell {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    .favorites-table .actions-cell button {
+        flex: 1;
+        margin-bottom: 0;
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    /* Orders Table - 3 Column Card Layout */
+    .orders-table {
+        min-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .orders-table thead {
+        display: none;
+    }
+
+    .orders-table tbody {
+        display: contents;
+    }
+
+    .orders-table tbody tr {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 12px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    .orders-table tbody tr:hover {
+        background-color: #f8f9fa;
+    }
+
+    .orders-table td {
+        display: block;
+        padding: 5px 0;
+        border: none;
+        text-align: left;
+        font-size: 12px;
+    }
+
+    .orders-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #495057;
+        display: block;
+        margin-bottom: 3px;
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+
+    .orders-table td[data-label="Order ID"] {
+        font-family: monospace;
+        font-size: 11px;
+        color: #6c757d;
+        word-break: break-all;
+    }
+
+    .orders-table td[data-label="Grand Total"] {
+        font-size: 15px;
+        font-weight: 700;
+        color: #00AFEF;
+        margin-top: 6px;
+    }
+
+    .orders-table td[data-label="Payment Status"] {
+        margin-bottom: 8px;
+    }
+
+    .orders-table td[data-label="Actions"] {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+    }
+
+    .orders-table .btn-print {
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 13px;
+        justify-content: center;
+    }
+
+    /* Billing Address Table - 3 Column Card Layout */
+    .billing-table {
+        min-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .billing-table thead {
+        display: none;
+    }
+
+    .billing-table tbody {
+        display: contents;
+    }
+
+    .billing-table tbody tr {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 12px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    .billing-table tbody tr:hover {
+        background-color: #f8f9fa;
+    }
+
+    .billing-table td {
+        display: block;
+        padding: 5px 0;
+        border: none;
+        text-align: left;
+        font-size: 12px;
+        word-wrap: break-word;
+    }
+
+    .billing-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #495057;
+        display: block;
+        margin-bottom: 3px;
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+
+    .billing-table td[data-label="Email"] {
+        word-break: break-all;
+        color: #0066cc;
+    }
+
+    .billing-table td[data-label="Address"] {
+        line-height: 1.5;
+        margin: 6px 0;
+    }
+
+    .billing-table td[data-label="Action"] {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+    }
+
+    .billing-table .btn-delete {
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 13px;
+        justify-content: center;
     }
 }
 
@@ -559,26 +1014,45 @@
         font-size: 13px;
     }
 
-    /* Tab Navigation - Full Width Stacked */
-    .account-tabs {
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 10px;
-        gap: 8px;
+    /* Sidebar - VERTICAL STACKED LAYOUT */
+    .account-sidebar {
+        margin-bottom: 20px;
     }
 
-    .tab-btn {
-        width: calc(50% - 4px);
-        /* Two buttons per row */
-        min-width: auto;
-        padding: 12px 10px;
-        font-size: 12px;
-        text-align: center;
+    .sidebar-header {
+        padding: 15px;
     }
 
+    .sidebar-header h3 {
+        font-size: 16px;
+    }
 
-    /* Tab Content */
-    .tab-content-wrapper {
+    .sidebar-nav {
+        flex-direction: column;
+    }
+
+    .sidebar-link1 {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 14px;
+        border-bottom: 1px solid #e9ecef;
+        border-right: none;
+    }
+
+    .sidebar-link1:last-child {
+        border-bottom: none;
+    }
+
+    .sidebar-link1:hover {
+        padding-left: 25px;
+    }
+
+    .sidebar-link1.active:hover {
+        padding-left: 20px;
+    }
+
+    /* Content */
+    .account-content {
         padding: 15px;
     }
 
@@ -609,25 +1083,31 @@
         font-size: 15px;
     }
 
-    /* Favorites Table - Card Layout */
+    /* Favorites Table - 2 Column Card Layout */
     .favorites-table {
         min-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 
     .favorites-table thead {
         display: none;
     }
 
-    .favorites-table tbody tr {
-        display: block;
-        margin-bottom: 20px;
-        border: 1px solid #dee2e6;
-        border-radius: 8px;
-        padding: 15px;
-        background-color: white;
-        position: relative;
+    .favorites-table tbody {
+        display: contents;
     }
 
+    .favorites-table tbody tr {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
 
     .favorites-table tbody tr:hover {
         background-color: #f8f9fa;
@@ -635,100 +1115,292 @@
 
     .favorites-table td {
         display: block;
-        padding: 8px 0;
+        padding: 5px 0;
         border: none;
         text-align: left;
     }
 
-
     .thumbnail-cell {
         width: 100%;
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 6px;
     }
 
     .product-thumbnail {
-        width: 100px;
-        height: 100px;
+        width: 65px;
+        height: 65px;
     }
 
     .description-cell {
         max-width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 6px;
     }
 
     .item-description h6 {
-        font-size: 14px;
-        margin-bottom: 8px;
+        font-size: 11px;
+        margin-bottom: 3px;
+        line-height: 1.3;
     }
 
     .item-code {
-        font-size: 12px;
+        font-size: 9px;
     }
 
     .price-cell {
-        font-size: 18px;
-        color: #00bcd4;
-        margin-bottom: 10px;
-    }
-
-    .price-cell::before {
-        content: 'Price: ';
-        font-weight: 400;
-        color: #6c757d;
         font-size: 14px;
+        color: #00AFEF;
+        margin-bottom: 6px;
+        font-weight: 700;
     }
 
     .quantity-cell {
         width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .quantity-cell::before {
-        content: 'Quantity: ';
-        font-weight: 600;
-        color: #212529;
-        font-size: 14px;
-        margin-right: 10px;
+        margin-bottom: 6px;
     }
 
     .quantity-input {
-        width: 80px;
-        display: inline-block;
+        width: 55px;
+        padding: 5px;
+        font-size: 12px;
     }
 
+    /* Action Buttons - ICON ONLY with vibrant colors */
     .actions-cell {
         width: 100%;
-        display: flex !important;
-        /* Force flex display */
-        gap: 10px;
-        margin-top: 15px;
-        padding-top: 15px;
-        border-top: 1px solid #eee;
+        display: flex;
+        gap: 6px;
+        margin-top: 8px;
     }
 
     .actions-cell button {
         flex: 1;
         margin-bottom: 0;
-        padding: 12px 8px;
-        font-size: 13px;
+        padding: 10px 6px;
+        font-size: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
-        height: 44px;
-        min-height: 44px;
-        /* Better touch target */
-    }
-
-    .actions-cell button span,
-    .actions-cell button .btn-text {
-        display: none;
+        min-height: 40px;
+        border-radius: 6px;
     }
 
     .actions-cell button i {
+        font-size: 18px;
         margin: 0;
+    }
+
+    .btn-remove {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    }
+
+    .btn-remove:hover {
+        background: linear-gradient(135deg, #ff5252 0%, #e53935 100%);
+    }
+
+    .btn-add-cart {
+        background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+    }
+
+    .btn-add-cart:hover {
+        background: linear-gradient(135deg, #40c057 0%, #2f9e44 100%);
+    }
+
+    /* Orders Table - 2 Column Card Layout */
+    .orders-table {
+        min-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .orders-table thead {
+        display: none;
+    }
+
+    .orders-table tbody {
+        display: contents;
+    }
+
+    .orders-table tbody tr {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    .orders-table tbody tr:hover {
+        background-color: #f8f9fa;
+    }
+
+    .orders-table td {
+        display: block;
+        padding: 4px 0;
+        border: none;
+        text-align: left;
+        font-size: 11px;
+    }
+
+    .orders-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #495057;
+        display: block;
+        margin-bottom: 2px;
+        font-size: 9px;
+        text-transform: uppercase;
+    }
+
+    .orders-table td[data-label="Date"] {
+        font-size: 10px;
+    }
+
+    .orders-table td[data-label="Order ID"] {
+        font-family: monospace;
+        font-size: 10px;
+        color: #6c757d;
+        word-break: break-all;
+    }
+
+    .orders-table td[data-label="Subtotal"],
+    .orders-table td[data-label="Tax Amount"] {
+        font-size: 11px;
+    }
+
+    .orders-table td[data-label="Grand Total"] {
         font-size: 14px;
+        font-weight: 700;
+        color: #00AFEF;
+        margin-top: 4px;
+    }
+
+    .orders-table td[data-label="Payment Status"] {
+        margin-bottom: 6px;
+    }
+
+    .orders-table td[data-label="Actions"] {
+        margin-top: 8px;
+        padding-top: 8px;
+        border-top: 1px solid #eee;
+    }
+
+    /* Print Button - ICON ONLY */
+    .btn-print {
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 0;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        min-height: 40px;
+        background: linear-gradient(135deg, #ffd93d 0%, #ffc107 100%);
+        border-radius: 6px;
+    }
+
+    .btn-print i {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .btn-print:hover {
+        background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+    }
+
+    /* Billing Address Table - 2 Column Card Layout */
+    .billing-table {
+        min-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .billing-table thead {
+        display: none;
+    }
+
+    .billing-table tbody {
+        display: contents;
+    }
+
+    .billing-table tbody tr {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    .billing-table tbody tr:hover {
+        background-color: #f8f9fa;
+    }
+
+    .billing-table td {
+        display: block;
+        padding: 4px 0;
+        border: none;
+        text-align: left;
+        font-size: 11px;
+        word-wrap: break-word;
+    }
+
+    .billing-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #495057;
+        display: block;
+        margin-bottom: 2px;
+        font-size: 9px;
+        text-transform: uppercase;
+    }
+
+    .billing-table td[data-label="First Name"],
+    .billing-table td[data-label="Last Name"] {
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    .billing-table td[data-label="Email"] {
+        word-break: break-all;
+        color: #0066cc;
+        font-size: 10px;
+    }
+
+    .billing-table td[data-label="Address"] {
+        line-height: 1.4;
+        margin: 4px 0;
+        font-size: 10px;
+    }
+
+    .billing-table td[data-label="Action"] {
+        margin-top: 8px;
+        padding-top: 8px;
+        border-top: 1px solid #eee;
+    }
+
+    /* Delete Button - ICON ONLY */
+    .btn-delete {
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 0;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        min-height: 40px;
+        background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+        border-radius: 6px;
+    }
+
+    .btn-delete i {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .btn-delete:hover {
+        background: linear-gradient(135deg, #ff5252 0%, #e53935 100%);
     }
 
     /* Empty State */
@@ -743,207 +1415,17 @@
     .empty-state p {
         font-size: 16px;
     }
-
-    .btn-remove::before {
-        content: "Remove";
-        display: none;
-    }
-
-    .btn-add-cart::before {
-        content: "Add to Cart";
-        display: none;
-    }
-
-    .actions-cell button .btn-text {
-        display: none;
-    }
-
-    .actions-cell button i {
-        margin: 0;
-        font-size: 18px !important;
-        /* Bigger icons */
-    }
-
-    .actions-cell button {
-        position: relative;
-    }
-
-    .actions-cell button:hover::after {
-        content: attr(aria-label);
-        position: absolute;
-        bottom: -30px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #333;
-        color: white;
-        padding: 4px 8px;
-        border-radius: 4px;
-        font-size: 12px;
-        white-space: nowrap;
-        z-index: 10;
-    }
-
-    .btn-remove {
-        background-color: #dc3545;
-        color: white;
-    }
-
-    .btn-add-cart {
-        background-color: #28a745;
-        color: white;
-    }
-
-    /* Button hover effects */
-    .btn-remove:hover {
-        background-color: #c82333;
-    }
-
-    .btn-add-cart:hover {
-        background-color: #218838;
-    }
-
-    /* Orders Table - Mobile Card Layout */
-    .orders-table {
-        min-width: 100%;
-    }
-
-    .orders-table thead {
-        display: none;
-    }
-
-    .orders-table tbody tr {
-        display: block;
-        margin-bottom: 20px;
-        border: 1px solid #dee2e6;
-        border-radius: 8px;
-        padding: 15px;
-        background-color: white;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .orders-table tbody tr:hover {
-        background-color: #f8f9fa;
-    }
-
-    .orders-table td {
-        display: block;
-        padding: 8px 0;
-        border: none;
-        text-align: left;
-        font-size: 14px;
-    }
-
-    .orders-table td::before {
-        content: attr(data-label);
-        font-weight: 600;
-        color: #495057;
-        display: block;
-        margin-bottom: 4px;
-        font-size: 12px;
-        text-transform: uppercase;
-    }
-
-    .orders-table td[data-label="Order ID"] {
-        font-family: monospace;
-        font-size: 13px;
-        color: #6c757d;
-    }
-
-    .orders-table td[data-label="Grand Total"] {
-        font-size: 18px;
-        font-weight: 700;
-        color: #00bcd4;
-        margin-top: 8px;
-    }
-
-    .orders-table td[data-label="Payment Status"] {
-        margin-bottom: 12px;
-    }
-
-    .orders-table td[data-label="Actions"] {
-        margin-top: 15px;
-        padding-top: 15px;
-        border-top: 1px solid #eee;
-    }
-
-    .btn-print {
-        width: 100%;
-        padding: 12px 20px;
-        font-size: 14px;
-        justify-content: center;
-    }
-
-    /* Billing Address Table - Mobile Card Layout */
-    .billing-table {
-        min-width: 100%;
-    }
-
-    .billing-table thead {
-        display: none;
-    }
-
-    .billing-table tbody tr {
-        display: block;
-        margin-bottom: 20px;
-        border: 1px solid #dee2e6;
-        border-radius: 8px;
-        padding: 15px;
-        background-color: white;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .billing-table tbody tr:hover {
-        background-color: #f8f9fa;
-    }
-
-    .billing-table td {
-        display: block;
-        padding: 8px 0;
-        border: none;
-        text-align: left;
-        font-size: 14px;
-    }
-
-    .billing-table td::before {
-        content: attr(data-label);
-        font-weight: 600;
-        color: #495057;
-        display: block;
-        margin-bottom: 4px;
-        font-size: 12px;
-        text-transform: uppercase;
-    }
-
-    .billing-table td[data-label="Email"] {
-        word-break: break-all;
-        color: #0066cc;
-    }
-
-    .billing-table td[data-label="Address"] {
-        line-height: 1.6;
-        margin: 10px 0;
-    }
-
-    .billing-table td[data-label="Action"] {
-        margin-top: 15px;
-        padding-top: 15px;
-        border-top: 1px solid #eee;
-    }
-
-    .btn-delete {
-        width: 100%;
-        padding: 12px 20px;
-        font-size: 14px;
-        justify-content: center;
-    }
 }
 
 /* Extra Small Mobile - 400px and below */
 @media (max-width: 400px) {
-    .tab-btn {
-        padding: 10px 8px;
-        font-size: 11px;
-    }
+
+    /* Single column layout for very small screens */
+    /* .favorites-table,
+    .orders-table,
+    .billing-table {
+        grid-template-columns: 1fr;
+    } */
 
     .btn-logout {
         padding: 7px 14px;
@@ -951,51 +1433,66 @@
     }
 
     .product-thumbnail {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
     }
 
     .item-description h6 {
-        font-size: 13px;
-    }
-
-    .price-cell {
-        font-size: 16px;
-    }
-
-    .actions-cell {
-        gap: 8px;
-    }
-
-    .actions-cell button {
-        padding: 10px 6px;
-        height: 42px;
-    }
-
-    .actions-cell button i {
-        font-size: 16px !important;
-    }
-
-
-}
-
-@media (max-width: 350px) {
-    .account-tabs {
-        gap: 5px;
-    }
-
-    .tab-btn {
-        width: calc(50% - 2.5px);
-        padding: 10px 5px;
         font-size: 10px;
     }
 
+    .price-cell {
+        font-size: 13px;
+    }
+
     .actions-cell button {
-        padding: 8px 4px;
-        height: 40px;
+        padding: 9px 5px;
     }
 
     .actions-cell button i {
-        font-size: 15px !important;
+        font-size: 16px;
     }
+
+    .btn-print i,
+    .btn-delete i {
+        font-size: 16px;
+    }
+}
+
+/* Very Small Devices - 350px and below */
+@media (max-width: 350px) {
+    .sidebar-link1 {
+        padding: 12px 15px;
+        font-size: 13px;
+    }
+
+    .item-description h6 {
+        font-size: 9px;
+    }
+
+    .item-code {
+        font-size: 8px;
+    }
+
+    .orders-table td {
+        font-size: 10px;
+    }
+
+    .orders-table td::before,
+    .billing-table td::before {
+        font-size: 8px;
+    }
+
+    .billing-table td {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1091px) {
+
+  .favorites-table,
+  .orders-table,
+  .billing-table {
+    min-width: 100% !important; /* 🔥 critical */
+  }
 }

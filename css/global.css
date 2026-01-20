@@ -109,3 +109,27 @@ ul {
     color: #333;
     font-weight: 500;
 }
+
+/* ===== Global Scrollbar ===== */
+
+/* Chrome, Edge, Safari */
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #84C44C;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6fa83f;
+}
+
+/* Firefox */

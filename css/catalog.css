@@ -18,8 +18,9 @@
 .catalog-sidebar .list-group-item a {
     color: #444;
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-start;
     align-items: center;
+    gap: 10px;
 }
 
 .catalog-sidebar .list-group-item:hover a {

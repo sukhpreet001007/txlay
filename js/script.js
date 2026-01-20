@@ -26,11 +26,12 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
 
         function moveSlide(index, animate = true) {
-            isTransitioning = true;
             if (animate) {
                 slidesContainer.style.transition = 'transform 0.5s ease-in-out';
+                isTransitioning = true;
             } else {
                 slidesContainer.style.transition = 'none';
+                isTransitioning = false;
             }
             slidesContainer.style.transform = `translateX(-${index * 100}%)`;
             currentIndex = index;
@@ -50,12 +51,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         function nextSlide() {
-            if (currentIndex >= totalSlides - 1 || isTransitioning) return;
+            if (isTransitioning) return;
             moveSlide(currentIndex + 1);
         }
 
         function prevSlide() {
-            if (currentIndex <= 0 || isTransitioning) return;
+            if (isTransitioning) return;
             moveSlide(currentIndex - 1);
         }
 
@@ -87,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         startAutoSlide();
     });
+
 
     // Category Search & Filter Logic
     const categorySearchToggle = document.getElementById('categorySearchToggle');
@@ -175,19 +177,20 @@ document.addEventListener('DOMContentLoaded', function () {
     // ===================================
     // MY ACCOUNT TAB SWITCHING
     // ===================================
-    const tabButtons = document.querySelectorAll('.tab-btn');
+    const sidebarLinks = document.querySelectorAll('.sidebar-link1');
     const tabContents = document.querySelectorAll('.tab-content');
 
-    if (tabButtons.length > 0 && tabContents.length > 0) {
-        tabButtons.forEach(button => {
-            button.addEventListener('click', function () {
+    if (sidebarLinks.length > 0 && tabContents.length > 0) {
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
                 const targetTab = this.getAttribute('data-tab');
 
-                // Remove active class from all buttons and contents
-                tabButtons.forEach(btn => btn.classList.remove('active'));
+                // Remove active class from all links and contents
+                sidebarLinks.forEach(l => l.classList.remove('active'));
                 tabContents.forEach(content => content.classList.remove('active'));
 
-                // Add active class to clicked button and corresponding content
+                // Add active class to clicked link and corresponding content
                 this.classList.add('active');
                 const targetContent = document.getElementById(targetTab);
                 if (targetContent) {
