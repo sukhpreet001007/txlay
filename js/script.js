@@ -171,4 +171,29 @@ document.addEventListener('DOMContentLoaded', function () {
         // Prevent click on input from bubbling (optional safety)
         categorySearchInput.addEventListener('click', (e) => e.stopPropagation());
     }
+
+    // ===================================
+    // MY ACCOUNT TAB SWITCHING
+    // ===================================
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    if (tabButtons.length > 0 && tabContents.length > 0) {
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const targetTab = this.getAttribute('data-tab');
+
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add active class to clicked button and corresponding content
+                this.classList.add('active');
+                const targetContent = document.getElementById(targetTab);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+    }
 });

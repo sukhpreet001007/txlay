@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -28,6 +28,9 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/auth-modal.css">
+    <link rel="stylesheet" href="css/auth-page.css">
+    <link rel="stylesheet" href="css/product-search.css">
+    <link rel="stylesheet" href="css/my-account.css">
 </head>
 
 <body>
@@ -1835,257 +1838,6 @@
 
 
 
-    <!-- Hero Banner (Mobile Only - Top) -->
-    <section class="banner-section py-2 mt-2 d-lg-none">
-        <div class="container">
-            <div class="hero-banner mb-0">
-                <div class="banner-slides">
-                    <div class="banner-slide">
-                        <img src="assets/banner11.jpg" alt="Industrial Supplies Banner" class="banner-img">
-                        <div class="banner-content">
-                            <span class="banner-tag">Flash Sale</span>
-                            <h2 class="banner-title">Professional Tools for Every Job</h2>
-                            <p class="banner-text">Upgrade your facility with our premium selection of industrial and
-                                janitorial equipment. Quality guaranteed.</p>
-                            <a href="#" class="banner-btn">Shop Collection <i
-                                    class="fa-solid fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                    <div class="banner-slide">
-                        <img src="assets/banner22.avif" alt="Waste Management Banner" class="banner-img">
-                        <div class="banner-content">
-                            <span class="banner-tag">New Arrival</span>
-                            <h2 class="banner-title">Efficient Waste Management</h2>
-                            <p class="banner-text">Keep your workspace clean and organized with our durable waste bins
-                                and recycling solutions.</p>
-                            <a href="#" class="banner-btn">Shop Collection <i
-                                    class="fa-solid fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                    <div class="banner-slide">
-                        <img src="assets/banner3.jpg" alt="Office Essentials Banner" class="banner-img">
-                        <div class="banner-content">
-                            <span class="banner-tag">Best Seller</span>
-                            <h2 class="banner-title">Premium Office Essentials</h2>
-                            <p class="banner-text">Equip your team with high-quality office supplies for maximum
-                                productivity.</p>
-                            <a href="#" class="banner-btn">Shop Collection <i
-                                    class="fa-solid fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Arrows (Hidden on Mobile automatically by CSS) -->
-                <button class="banner-arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="banner-arrow next"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
-        </div>
-    </section>
-
-    <section class="three-blocks-links">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-4">
-                    <a href="ink-toner.html" class="link-block-card">
-                        <div class="block-icon-wrapper">
-                            <i class="fa-solid fa-print"></i>
-                        </div>
-                        <div class="block-content-text">
-                            <h4 class="block-title">Ink & Toner Finder</h4>
-                            <p class="block-desc">Find correct supplies for your business machines.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <a href="#" class="link-block-card">
-                        <div class="block-icon-wrapper">
-                            <i class="fa-solid fa-cart-flatbed"></i>
-                        </div>
-                        <div class="block-content-text">
-                            <h4 class="block-title">Quick Order Form</h4>
-                            <p class="block-desc">Quickly add your favorites to your cart.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <a href="product-search.html" class="link-block-card">
-                        <div class="block-icon-wrapper">
-                            <i class="fa-solid fa-magnifying-glass-plus"></i>
-                        </div>
-                        <div class="block-content-text">
-                            <h4 class="block-title">Product Search</h4>
-                            <p class="block-desc">Find what you need using our quick and easy search.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="catalog-side py-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-4">
-                    <div class="catalog-sidebar card border-0 shadow-sm rounded-3 overflow-hidden">
-                        <div class="card-header text-white py-3 border-0 collapsible-sidebar-header"
-                            data-bs-toggle="collapse" data-bs-target="#sidebarCategories" aria-expanded="false">
-                            <h5 class="mb-0 fw-bold d-flex justify-content-between align-items-center all-cate">
-                                <span><i class="fa-solid fa-list-ul me-2"></i> All Categories</span>
-                                <div class="d-flex align-items-center">
-                                    <i class="fa-solid fa-magnifying-glass category-search-icon me-3"
-                                        id="categorySearchToggle"></i>
-                                    <i class="fa-solid fa-chevron-down toggle-icon d-md-none"></i>
-                                </div>
-                            </h5>
-                        </div>
-                        <div class="category-search-container" id="categorySearchContainer" style="display: none;">
-                            <div class="p-2 bg-white border-bottom">
-                                <input type="text" id="categorySearchInput" class="form-control form-control-sm"
-                                    placeholder="Filter categories...">
-                            </div>
-                        </div>
-                        <div class="collapse d-md-block" id="sidebarCategories">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><a href="janitorial.html">Janitorial & Facility Supplies <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Industrial Safety <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Laundry & Warewash <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Office Supplies <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Janitorial Equipment <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Restaurant Supplies <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Healthcare <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Safety & PPE <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Microfiber <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Technology <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Janitorial Hardware <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Furniture & Interiors <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Breakroom <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">School Supplies <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Txley's Picks <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-8">
-                    <!-- Hero Banner (Desktop Only) -->
-                    <div class="hero-banner d-none d-lg-block">
-                        <div class="banner-slides">
-                            <div class="banner-slide">
-                                <img src="assets/banner11.jpg" alt="Industrial Supplies Banner" class="banner-img">
-                                <div class="banner-content">
-                                    <span class="banner-tag">Flash Sale</span>
-                                    <h2 class="banner-title">Professional Tools for Every Job</h2>
-                                    <p class="banner-text">Upgrade your facility with our premium selection of
-                                        industrial and
-                                        janitorial equipment. Quality guaranteed.</p>
-                                    <a href="#" class="banner-btn">Shop Collection <i
-                                            class="fa-solid fa-arrow-right ms-2"></i></a>
-                                </div>
-                            </div>
-                            <div class="banner-slide">
-                                <img src="assets/banner22.avif" alt="Waste Management Banner" class="banner-img">
-                                <div class="banner-content">
-                                    <span class="banner-tag">New Arrival</span>
-                                    <h2 class="banner-title">Efficient Waste Management</h2>
-                                    <p class="banner-text">Keep your workspace clean and organized with our durable
-                                        waste bins and recycling solutions.</p>
-                                    <a href="#" class="banner-btn">Shop Collection <i
-                                            class="fa-solid fa-arrow-right ms-2"></i></a>
-                                </div>
-                            </div>
-                            <div class="banner-slide">
-                                <img src="assets/banner3.jpg" alt="Office Essentials Banner" class="banner-img">
-                                <div class="banner-content">
-                                    <span class="banner-tag">Best Seller</span>
-                                    <h2 class="banner-title">Premium Office Essentials</h2>
-                                    <p class="banner-text">Equip your team with high-quality office supplies for maximum
-                                        productivity.</p>
-                                    <a href="#" class="banner-btn">Shop Collection <i
-                                            class="fa-solid fa-arrow-right ms-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="banner-arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
-                        <button class="banner-arrow next"><i class="fa-solid fa-chevron-right"></i></button>
-                    </div>
-
-                    <!-- Featured Products Section -->
-                    <h3 class="section-sub-title">Featured Products</h3>
-                    <div class="row g-4">
-                        <!-- Product 1 -->
-                        <div class="col-lg-4 col-md-6">
-                            <a href="product.html" class="product-card">
-                                <div class="product-img-wrapper">
-                                    <img src="assets/copybook.png" alt="Industrial Floor Cleaner" class="product-img">
-                                </div>
-                                <div class="product-info">
-                                    <span class="product-cat">School Supplies</span>
-                                    <h4 class="product-title">Copies/Pens</h4>
-                                    <p class="product-desc">Highly concentrated formula for industrial surfaces and deep
-                                        grime removal.</p>
-                                    <div class="product-price-row">
-                                        <span class="product-price">$85.00</span>
-                                        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i>
-                                            Add</button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Product 2 -->
-                        <div class="col-lg-4 col-md-6">
-                            <a href="product.html" class="product-card">
-                                <div class="product-img-wrapper">
-                                    <img src="assets/gloves.webp" alt="Safety Gloves" class="product-img">
-                                </div>
-                                <div class="product-info">
-                                    <span class="product-cat">Industrial Safety</span>
-                                    <h4 class="product-title">IronClad Industrial Grip Safety Gloves</h4>
-                                    <p class="product-desc">High-visibility orange gloves with reinforced textured grip
-                                        for heavy handling.</p>
-                                    <div class="product-price-row">
-                                        <span class="product-price">$24.50</span>
-                                        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i>
-                                            Add</button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Product 3 -->
-                        <div class="col-lg-4 col-md-6">
-                            <a href="product.html" class="product-card">
-                                <div class="product-img-wrapper">
-                                    <img src="assets/vaccum.png" alt="Smart Waste Bin" class="product-img">
-                                </div>
-                                <div class="product-info">
-                                    <span class="product-cat">Furniture & Interiors</span>
-                                    <h4 class="product-title">Vacuum Cleaner</h4>
-                                    <p class="product-desc">Modern stainless steel finish with touchless sensor
-                                        technology for hygienic waste disposal.</p>
-                                    <div class="product-price-row">
-                                        <span class="product-price">$129.00</span>
-                                        <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i>
-                                            Add</button>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 
@@ -2101,236 +1853,11 @@
 
 
 
-    <footer class="main-footer mt-3">
-        <div class="container footer-container">
-            <div class="row">
-                <!-- Column 1: Browse Our Catalog -->
-                <div class="col-lg-3 col-md-6 footer-column">
-                    <h5 class="footer-column-title">Browse Our Catalog</h5>
-                    <ul class="footer-links-list">
-                        <li><a href="janitorial.html">Janitorial & Facility Supplies</a></li>
-                        <li><a href="janitorial.html">Industrial Safety</a></li>
-                        <li><a href="janitorial.html">Laundry & Warewash</a></li>
-                        <li><a href="janitorial.html">Office Supplies</a></li>
-                        <li><a href="janitorial.html">Janitorial Equipment</a></li>
-                        <li><a href="janitorial.html">Restaurant Supplies</a></li>
-                        <li><a href="janitorial.html">Healthcare</a></li>
-                        <li><a href="janitorial.html">Safety & PPE</a></li>
-                        <li><a href="janitorial.html">Microfiber</a></li>
-                        <li><a href="janitorial.html">Technology</a></li>
-                        <li><a href="janitorial.html">Janitorial Hardware</a></li>
-                        <li><a href="janitorial.html">Furniture & Interiors</a></li>
-                        <li><a href="janitorial.html">Breakroom</a></li>
-                        <li><a href="janitorial.html">School Supplies</a></li>
-                        <li><a href="janitorial.html">Txley's Picks</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 2: More On Us -->
-                <div class="col-lg-3 col-md-6 footer-column">
-                    <h5 class="footer-column-title">More On Us</h5>
-                    <ul class="footer-links-list">
-                        <li><a href="contactus.html">Contact Us</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="faq.html">FAQs</a></li>
-                        <li><a href="shipping-policy.html">Shipping Policy</a></li>
-                        <li><a href="termsandconditions.html">Terms of Sale</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="jointeam.html">Join the Txley Team</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 3: Contact Us -->
-                <div class="col-lg-3 col-md-6 footer-column">
-                    <h5 class="footer-column-title">Contact Us</h5>
-                    <div class="contact-info-text">
-                        <strong>Txley</strong>
-                        <p>139 E. Fairhaven Avenue<br>Burlington, WA 98233</p>
-                        <p>Phone: <a href="tel:3605454433" class="contact-highlight">(360) 545-4433</a></p>
-                        <p><a href="contactus.html" class="contact-highlight">Need more information?</a></p>
-                    </div>
-                </div>
-
-                <!-- Column 4: Certifications & Affiliations -->
-                <div class="col-lg-3 col-md-6 footer-column">
-                    <h5 class="footer-column-title">Certifications & Affiliations:</h5>
-                    <div class="certifications-img-wrapper">
-                        <img src="assets/footer-image.png" alt="Certifications & Affiliations"
-                            class="certifications-img">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer Bottom -->
-            <div class="footer-bottom text-center">
-                <p class="footer-note">* Please note: Effective 3-7-2022, a fuel surcharge will be applied to all
-                    deliveries.</p>
-                <p class="copyright-text">Â© 2024 Txley. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Auth Modal -->
-    <div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content auth-modal-content">
-                <div class="modal-header auth-modal-header">
-                    <h5 class="modal-title auth-modal-title">Welcome to Txley</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body auth-modal-body">
-                    <!-- Tabs -->
-                    <ul class="nav nav-tabs auth-tabs" id="authTabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="signin-tab" data-bs-toggle="tab"
-                                data-bs-target="#signin" type="button" role="tab" aria-selected="true">Sign In</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup"
-                                type="button" role="tab" aria-selected="false">Create Account</button>
-                        </li>
-                    </ul>
-
-                    <!-- Content -->
-                    <div class="tab-content" id="authTabsContent">
-                        <!-- Sign In -->
-                        <div class="tab-pane fade show active" id="signin" role="tabpanel">
-                            <form>
-                                <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="signinEmail"
-                                        placeholder="name@example.com">
-                                    <label for="signinEmail">Email Address</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="password" class="form-control" id="signinPassword"
-                                        placeholder="Password">
-                                    <label for="signinPassword">Password</label>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center mb-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="rememberMe">
-                                        <label class="form-check-label" for="rememberMe">Remember me</label>
-                                    </div>
-                                    <a href="#" class="text-decoration-none small">Forgot Password?</a>
-                                </div>
-                                <button type="submit" class="btn btn-auth-submit">Login</button>
-                            </form>
-                        </div>
-
-                        <!-- Create Account -->
-                        <div class="tab-pane fade" id="signup" role="tabpanel">
-                            <form>
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="signupFirstName"
-                                                placeholder="First Name">
-                                            <label for="signupFirstName">First Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="signupLastName"
-                                                placeholder="Last Name">
-                                            <label for="signupLastName">Last Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control" id="signupEmail"
-                                                placeholder="Email">
-                                            <label for="signupEmail">Email Address</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="signupAddress"
-                                                placeholder="Address">
-                                            <label for="signupAddress">Address</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="signupCity" placeholder="City">
-                                            <label for="signupCity">City</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-floating">
-                                            <select class="form-select" id="signupState">
-                                                <option selected>Choose...</option>
-                                                <option value="AL">Alabama</option>
-                                                <option value="AK">Alaska</option>
-                                                <option value="AZ">Arizona</option>
-                                                <option value="CA">California</option>
-                                                <option value="NY">New York</option>
-                                                <option value="TX">Texas</option>
-                                                <option value="WA">Washington</option>
-                                                <!-- Add more states as needed -->
-                                            </select>
-                                            <label for="signupState">State</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="signupZip" placeholder="Zip">
-                                            <label for="signupZip">Zip Code</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="password" class="form-control" id="signupPassword"
-                                                placeholder="Password">
-                                            <label for="signupPassword">Password</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="password" class="form-control" id="signupConfirmPassword"
-                                                placeholder="Confirm Password">
-                                            <label for="signupConfirmPassword">Confirm Password</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 mt-4">
-                                        <button type="submit" class="btn btn-auth-submit">Create Account</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/script.js"></script>
-    <!-- Mobile Account Dropdown -->
-    <div class="mobile-account-dropdown" id="mobileAccountDropdown">
-        <div class="dropdown-header-mobile">
-            <span>Account Details</span>
-            <i class="fa-solid fa-xmark" id="closeAccountDropdown"></i>
-        </div>
-        <ul class="mobile-account-links">
-            <li><a href="auth.html"><i class="fa-solid fa-right-to-bracket"></i> Sign In / Create Account</a></li>
-            <li><a href="#"><i class="fa-regular fa-user"></i> My Account</a></li>
-            <li><a href="#"><i class="fa-solid fa-bolt"></i> Quick Order</a></li>
-            <hr>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="markets.html">Markets</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-            <li><a href="#" class="highlight">Promos & Specials</a></li>
-        </ul>
-    </div>
     <!-- Mobile Sidebar -->
     <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
     <div class="mobile-sidebar" id="mobileSidebar">
         <div class="sidebar-header">
-            <div class="sidebar-title"><img class="sidebar-img" src="assets/txley-logo.png" alt="logo"></div>
+            <div class="sidebar-title">Menu</div>
             <button class="close-sidebar-btn" id="closeSidebarBtn"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <ul class="sidebar-menu">
@@ -2381,8 +1908,7 @@
                     </li>
                     <li class="sidebar-subitem">
                         <div class="sidebar-link has-submenu">Janitorial Equipment <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
+                                class="fa-solid fa-chevron-down"></i></div>
                         <ul class="sidebar-submenu-level-2">
                             <li class="sidebar-link"><a href="#">Cleaning/Utlity Carts</a></li>
                             <li class="sidebar-link"><a href="#">Cleaning Tool Organizers</a></li>
@@ -2390,8 +1916,7 @@
                     </li>
                     <li class="sidebar-subitem">
                         <div class="sidebar-link has-submenu">Air & Odor Control <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
+                                class="fa-solid fa-chevron-down"></i></div>
                         <ul class="sidebar-submenu-level-2">
                             <li class="sidebar-link"><a href="#">Air Fresheners</a></li>
                             <li class="sidebar-link"><a href="#">Air Purifier Filters</a></li>
@@ -2555,8 +2080,7 @@
                     </li>
                     <li class="sidebar-subitem">
                         <div class="sidebar-link has-submenu">Cleaning Chemicals <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
+                                class="fa-solid fa-chevron-down"></i></div>
                         <ul class="sidebar-submenu-level-2">
                             <li class="sidebar-link"><a href="#">All Purpose Cleaners</a></li>
                             <li class="sidebar-link"><a href="#">Disinfectants</a></li>
@@ -2598,8 +2122,7 @@
                     <li class="sidebar-link"><a href="#">View All Office Supplies</a></li>
                     <li class="sidebar-subitem">
                         <div class="sidebar-link has-submenu">Calendars & Planners <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
+                                class="fa-solid fa-chevron-down"></i></div>
                         <ul class="sidebar-submenu-level-2">
                             <li class="sidebar-link"><a href="#">Calendars & Refills</a></li>
                             <li class="sidebar-link"><a href="#">Planners & Refills</a></li>
@@ -2661,8 +2184,7 @@
                     </li>
                     <li class="sidebar-subitem">
                         <div class="sidebar-link has-submenu">Mailing & Shipping <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
+                                class="fa-solid fa-chevron-down"></i></div>
                         <ul class="sidebar-submenu-level-2">
                             <li class="sidebar-link"><a href="#">Mailroom Equipment & Supplies</a></li>
                             <li class="sidebar-link"><a href="#">Packing Supplies</a></li>
@@ -2712,8 +2234,7 @@
                     </li>
                     <li class="sidebar-subitem">
                         <div class="sidebar-link has-submenu">Forms & Recordkeeping <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
+                                class="fa-solid fa-chevron-down"></i></div>
                         <ul class="sidebar-submenu-level-2">
                             <li class="sidebar-link"><a href="#">Visitor Registry Books</a></li>
                             <li class="sidebar-link"><a href="#">Automobile Log Books</a></li>
@@ -2793,8 +2314,7 @@
                     </li>
                     <li class="sidebar-subitem">
                         <div class="sidebar-link has-submenu">Binder Accessories <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
+                                class="fa-solid fa-chevron-down"></i></div>
                         <ul class="sidebar-submenu-level-2">
                             <li class="sidebar-link"><a href="#">Binder Pockets</a></li>
                             <li class="sidebar-link"><a href="#">Index Divider</a></li>
@@ -2838,8 +2358,7 @@
                     </li>
                     <li class="sidebar-subitem">
                         <div class="sidebar-link has-submenu">Paper & Writing Pads <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
+                                class="fa-solid fa-chevron-down"></i></div>
                         <ul class="sidebar-submenu-level-2">
                             <li class="sidebar-link"><a href="#">Copy & Printer Pads</a></li>
                             <li class="sidebar-link"><a href="#">Filler Paper</a></li>
@@ -2873,8 +2392,7 @@
                     </li>
                     <li class="sidebar-subitem">
                         <div class="sidebar-link has-submenu">Cards & Stationery <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
+                                class="fa-solid fa-chevron-down"></i></div>
                         <ul class="sidebar-submenu-level-2">
                             <li class="sidebar-link"><a href="#">Greeting Cards</a></li>
                             <li class="sidebar-link"><a href="#">Cards & Stationery Sets</a></li>
@@ -2892,8 +2410,7 @@
                     </li>
                     <li class="sidebar-subitem">
                         <div class="sidebar-link has-submenu">Stamps & Stamps Pads <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
+                                class="fa-solid fa-chevron-down"></i></div>
                         <ul class="sidebar-submenu-level-2">
                             <li class="sidebar-link"><a href="#">Stamp Pads & Accessories</a></li>
                             <li class="sidebar-link"><a href="#">Stamp Ink & Refills</a></li>
@@ -3024,8 +2541,7 @@
                     </li>
                     <li class="sidebar-subitem">
                         <div class="sidebar-link has-submenu">Healthcare Supplies <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
+                                class="fa-solid fa-chevron-down"></i></div>
                         <ul class="sidebar-submenu-level-2">
                             <li class="sidebar-link"><a href="#">Medications</a></li>
                             <li class="sidebar-link"><a href="#">Air Respirators & Accessories</a></li>
@@ -3169,574 +2685,1074 @@
                     <li class="sidebar-link"><a href="#">View All Technology</a></li>
                     <li class="sidebar-subitem">
                         <div class="sidebar-link has-submenu">Computers & Tablets <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
+                                class="fa-solid fa-chevron-down"></i></div>
                         <ul class="sidebar-submenu-level-2">
                             <li class="sidebar-link"><a href="#">Laptops</a></li>
                             <li class="sidebar-link"><a href="#">Tablets</a></li>
                         </ul>
                     </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Computer Supplies <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Monitor</a></li>
-                            <li class="sidebar-link"><a href="#">Keyboards & Mice</a></li>
-                            <li class="sidebar-link"><a href="#">Computer/Laptop Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Networking & Wifi Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Power Cords & Surge Protectors</a></li>
-                            <li class="sidebar-link"><a href="#">UPS Backup Sytems</a></li>
-                            <li class="sidebar-link"><a href="#">Monitor Arms & Stands</a></li>
-                            <li class="sidebar-link"><a href="#">Discs & Media</a></li>
-                            <li class="sidebar-link"><a href="#">Screen Filters & Protectors</a></li>
-                            <li class="sidebar-link"><a href="#">Memory & USB Drives</a></li>
-                            <li class="sidebar-link"><a href="#">Hard Drives</a></li>
-                            <li class="sidebar-link"><a href="#">Media Storage</a></li>
-                            <li class="sidebar-link"><a href="#">Networking & Wif-Fi Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Mouse Pads & Wrist Rests</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Consumer Electronics & Accessories <i
-                                class="fa-solid fa-chevron-down"></i></div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Laser Pointers</a></li>
-                            <li class="sidebar-link"><a href="#">Projectors & Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Batteries & Battery Chargers</a></li>
-                            <li class="sidebar-link"><a href="#">Phone Systems</a></li>
-                            <li class="sidebar-link"><a href="#">Consumer Electronics & Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Electronics Cleaning Supplies</a></li>
-                            <li class="sidebar-link"><a href="#">Headphones</a></li>
-                            <li class="sidebar-link"><a href="#">Audio / Video Cables</a></li>
-                            <li class="sidebar-link"><a href="#">Speakers & Audio</a></li>
-                            <li class="sidebar-link"><a href="#">Cameras</a></li>
-                            <li class="sidebar-link"><a href="#">Two-way & NOAA Radios</a></li>
-                            <li class="sidebar-link"><a href="#">TVs & Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Electronic Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Audio / Video Cables & Accessories</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Printers, Scanners & Supplies <i
-                                class="fa-solid fa-chevron-down"></i></div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Printing Supplies</a></li>
-                            <li class="sidebar-link"><a href="#">Printers & Multifunction Machines</a></li>
-                            <li class="sidebar-link"><a href="#">Scanners</a></li>
-                            <li class="sidebar-link"><a href="#">Fax Machines</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Business Machines & Accessories <i
-                                class="fa-solid fa-chevron-down"></i></div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Laminating Supplies</a></li>
-                            <li class="sidebar-link"><a href="#">Time Clocks & Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Label Maker Supplies</a></li>
-                            <li class="sidebar-link"><a href="#">Label Printers / Labelers</a></li>
-                            <li class="sidebar-link"><a href="#">Laminators</a></li>
-                            <li class="sidebar-link"><a href="#">Calculators</a></li>
-                            <li class="sidebar-link"><a href="#">Shredders & Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Binding Machine Supplies</a></li>
-                            <li class="sidebar-link"><a href="#">Binding Machines</a></li>
-                            <li class="sidebar-link"><a href="#">Pricing Guns</a></li>
-                            <li class="sidebar-link"><a href="#">Digital Recorders & Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">POS Systems</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">"Printers, Scanners & Supplies" <i
-                                class="fa-solid fa-chevron-down"></i></div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Printing Supplies</a></li>
-                            <li class="sidebar-link"><a href="#">Printers & Multifunction Machines</a></li>
-                            <li class="sidebar-link"><a href="#">Scanners</a></li>
-                            <li class="sidebar-link"><a href="#">Fax Machines</a></li>
-                        </ul>
-                    </li>
+                    <div class="sidebar-link has-submenu">Computer Supplies <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Monitor</a></li>
+                        <li class="sidebar-link"><a href="#">Keyboards & Mice</a></li>
+                        <li class="sidebar-link"><a href="#">Computer/Laptop Accessories</a></li>
+                        <li class="sidebar-link"><a href="#">Networking & Wifi Accessories</a></li>
+                        <li class="sidebar-link"><a href="#">Power Cords & Surge Protectors</a></li>
+                        <li class="sidebar-link"><a href="#">UPS Backup Sytems</a></li>
+                        <li class="sidebar-link"><a href="#">Monitor Arms & Stands</a></li>
+                        <li class="sidebar-link"><a href="#">Discs & Media</a></li>
+                        <li class="sidebar-link"><a href="#">Screen Filters & Protectors</a></li>
+                        <li class="sidebar-link"><a href="#">Memory & USB Drives</a></li>
+                        <li class="sidebar-link"><a href="#">Hard Drives</a></li>
+                        <li class="sidebar-link"><a href="#">Media Storage</a></li>
+                        <li class="sidebar-link"><a href="#">Networking & Wif-Fi Accessories</a></li>
+                        <li class="sidebar-link"><a href="#">Mouse Pads & Wrist Rests</a></li>
+                    </ul>
+            </li>
+            <li class="sidebar-subitem">
+                <div class="sidebar-link has-submenu">Consumer Electronics & Accessories <i
+                        class="fa-solid fa-chevron-down"></i></div>
+                <ul class="sidebar-submenu-level-2">
+                    <li class="sidebar-link"><a href="#">Laser Pointers</a></li>
+                    <li class="sidebar-link"><a href="#">Projectors & Accessories</a></li>
+                    <li class="sidebar-link"><a href="#">Batteries & Battery Chargers</a></li>
+                    <li class="sidebar-link"><a href="#">Phone Systems</a></li>
+                    <li class="sidebar-link"><a href="#">Consumer Electronics & Accessories</a></li>
+                    <li class="sidebar-link"><a href="#">Electronics Cleaning Supplies</a></li>
+                    <li class="sidebar-link"><a href="#">Headphones</a></li>
+                    <li class="sidebar-link"><a href="#">Audio / Video Cables</a></li>
+                    <li class="sidebar-link"><a href="#">Speakers & Audio</a></li>
+                    <li class="sidebar-link"><a href="#">Cameras</a></li>
+                    <li class="sidebar-link"><a href="#">Two-way & NOAA Radios</a></li>
+                    <li class="sidebar-link"><a href="#">TVs & Accessories</a></li>
+                    <li class="sidebar-link"><a href="#">Electronic Accessories</a></li>
+                    <li class="sidebar-link"><a href="#">Audio / Video Cables & Accessories</a></li>
                 </ul>
             </li>
-
-            <!-- Sidebar Item 11: Janitorial Hardware -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Janitorial Hardware <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">View All Janitorial Hardware</a></li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Cleaning Supplies <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Paper Products & Dispensers</a></li>
-                            <li class="sidebar-link"><a href="#">Trash Bags & Cans</a></li>
-                            <li class="sidebar-link"><a href="#">Cleaners & Disinfectants</a></li>
-                            <li class="sidebar-link"><a href="#">Air Fresheners & Sanitizers</a></li>
-                            <li class="sidebar-link"><a href="#">Pest Control</a></li>
-                            <li class="sidebar-link"><a href="#">Janitorial Products</a></li>
-                            <li class="sidebar-link"><a href="#">Hand & Skin Care</a></li>
-                            <li class="sidebar-link"><a href="#">Restroom Supplies</a></li>
-                            <li class="sidebar-link"><a href="#">Brooms, Dusters & Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Mops, Sponges & Buckets</a></li>
-                        </ul>
-                    </li>
+            <li class="sidebar-subitem">
+                <div class="sidebar-link has-submenu">Printers, Scanners & Supplies <i
+                        class="fa-solid fa-chevron-down"></i></div>
+                <ul class="sidebar-submenu-level-2">
+                    <li class="sidebar-link"><a href="#">Printing Supplies</a></li>
+                    <li class="sidebar-link"><a href="#">Printers & Multifunction Machines</a></li>
+                    <li class="sidebar-link"><a href="#">Scanners</a></li>
+                    <li class="sidebar-link"><a href="#">Fax Machines</a></li>
                 </ul>
             </li>
-
-            <!-- Sidebar Item 12: Furniture & Interiors -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Furniture & Interiors <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">View All Furniture & Interiors</a></li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Boards & Easels <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Planning Boards</a></li>
-                            <li class="sidebar-link"><a href="#">Board Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Bulletin Boards</a></li>
-                            <li class="sidebar-link"><a href="#">Easels</a></li>
-                            <li class="sidebar-link"><a href="#">Dry Erase Boards</a></li>
-                            <li class="sidebar-link"><a href="#">Calendar Boards</a></li>
-                            <li class="sidebar-link"><a href="#">Combo Boards</a></li>
-                            <li class="sidebar-link"><a href="#">Enclosed Boards</a></li>
-                            <li class="sidebar-link"><a href="#">Chalk Boards</a></li>
-                            <li class="sidebar-link"><a href="#">Board & Easel Accessories</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Organizers & Literature Displays <i
-                                class="fa-solid fa-chevron-down"></i></div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Floor Display Racks</a></li>
-                            <li class="sidebar-link"><a href="#">Wall Display Racks</a></li>
-                            <li class="sidebar-link"><a href="#">Literature Holders/Sorters</a></li>
-                            <li class="sidebar-link"><a href="#">Tabletop Display Racks</a></li>
-                            <li class="sidebar-link"><a href="#">Catalog Racks/Reference Display</a></li>
-                            <li class="sidebar-link"><a href="#">Car Organizers</a></li>
-                            <li class="sidebar-link"><a href="#">Literature Sorters</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Office Decor & Lamps <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Clocks</a></li>
-                            <li class="sidebar-link"><a href="#">Hooks & Hangers</a></li>
-                            <li class="sidebar-link"><a href="#">Garment Racks</a></li>
-                            <li class="sidebar-link"><a href="#">Maps, Flags & Globes</a></li>
-                            <li class="sidebar-link"><a href="#">Frames & Plaques</a></li>
-                            <li class="sidebar-link"><a href="#">Lamps</a></li>
-                            <li class="sidebar-link"><a href="#">Carpets / Rugs</a></li>
-                            <li class="sidebar-link"><a href="#">Wall Art</a></li>
-                            <li class="sidebar-link"><a href="#">Mirrors</a></li>
-                            <li class="sidebar-link"><a href="#">Decorative Accents</a></li>
-                            <li class="sidebar-link"><a href="#">Lamps & Lighting</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Carts & Stands <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Carts</a></li>
-                            <li class="sidebar-link"><a href="#">Stands</a></li>
-                            <li class="sidebar-link"><a href="#">Lecterns</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Storage Solutions <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">File & Storage Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">File Carts</a></li>
-                            <li class="sidebar-link"><a href="#">Storage Cabinets</a></li>
-                            <li class="sidebar-link"><a href="#">Pedestals</a></li>
-                            <li class="sidebar-link"><a href="#">Bookcase</a></li>
-                            <li class="sidebar-link"><a href="#">Vertical Files</a></li>
-                            <li class="sidebar-link"><a href="#">Medical Cabinets</a></li>
-                            <li class="sidebar-link"><a href="#">Lateral Files</a></li>
-                            <li class="sidebar-link"><a href="#">Safes</a></li>
-                            <li class="sidebar-link"><a href="#">Shelving</a></li>
-                            <li class="sidebar-link"><a href="#">Lockers</a></li>
-                            <li class="sidebar-link"><a href="#">Large Document Storage</a></li>
-                            <li class="sidebar-link"><a href="#">Display Cases</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Furniture Care <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Furniture Repair Kits</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Furniture Accessories <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Desk Drawers</a></li>
-                            <li class="sidebar-link"><a href="#">Furniture Covers</a></li>
-                            <li class="sidebar-link"><a href="#">Furniture Pads & Slides</a></li>
-                            <li class="sidebar-link"><a href="#">Casters & Glides</a></li>
-                            <li class="sidebar-link"><a href="#">Monitor Arms & Stands</a></li>
-                            <li class="sidebar-link"><a href="#">Conferencing Power Modules</a></li>
-                            <li class="sidebar-link"><a href="#">Furniture Repair Kits</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Seating <i class="fa-solid fa-chevron-down"></i></div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Reception</a></li>
-                            <li class="sidebar-link"><a href="#">Seating Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Office Chairs</a></li>
-                            <li class="sidebar-link"><a href="#">Stools</a></li>
-                            <li class="sidebar-link"><a href="#">Guest Chairs</a></li>
-                            <li class="sidebar-link"><a href="#">Task Chairs</a></li>
-                            <li class="sidebar-link"><a href="#">Big & Tall Chairs</a></li>
-                            <li class="sidebar-link"><a href="#">Folding Chairs</a></li>
-                            <li class="sidebar-link"><a href="#">Active Seating</a></li>
-                            <li class="sidebar-link"><a href="#">Chairmats</a></li>
-                            <li class="sidebar-link"><a href="#">Gaming Chairs</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Desks <i class="fa-solid fa-chevron-down"></i></div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Desktop Risers</a></li>
-                            <li class="sidebar-link"><a href="#">Collections</a></li>
-                            <li class="sidebar-link"><a href="#">Sit-Stand</a></li>
-                            <li class="sidebar-link"><a href="#">Sit-Stand Mats</a></li>
-                            <li class="sidebar-link"><a href="#">Home & Office Desks</a></li>
-                            <li class="sidebar-link"><a href="#">Commercial Desks</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Educational Furniture <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Cubbies & Storage</a></li>
-                            <li class="sidebar-link"><a href="#">Student Desks & Carrels</a></li>
-                            <li class="sidebar-link"><a href="#">Activity Tables</a></li>
-                            <li class="sidebar-link"><a href="#">Cots & Mats</a></li>
-                            <li class="sidebar-link"><a href="#">Student Chairs</a></li>
-                            <li class="sidebar-link"><a href="#">Rugs & Mats</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Panels & Dividers <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Panels</a></li>
-                            <li class="sidebar-link"><a href="#">Social Distancing Barriers</a></li>
-                            <li class="sidebar-link"><a href="#">Panel Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Room Dividers</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Tables <i class="fa-solid fa-chevron-down"></i></div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Conference Tables</a></li>
-                            <li class="sidebar-link"><a href="#">Folding Tables</a></li>
-                            <li class="sidebar-link"><a href="#">Training Tables</a></li>
-                            <li class="sidebar-link"><a href="#">Bases & Legs</a></li>
-                            <li class="sidebar-link"><a href="#">Multipurpose Tops</a></li>
-                            <li class="sidebar-link"><a href="#">Hospitality Tables</a></li>
-                            <li class="sidebar-link"><a href="#">Reception Tables & Desks</a></li>
-                            <li class="sidebar-link"><a href="#">Table Covers & Skirts</a></li>
-                        </ul>
-                    </li>
+            <li class="sidebar-subitem">
+                <div class="sidebar-link has-submenu">Business Machines & Accessories <i
+                        class="fa-solid fa-chevron-down"></i></div>
+                <ul class="sidebar-submenu-level-2">
+                    <li class="sidebar-link"><a href="#">Laminating Supplies</a></li>
+                    <li class="sidebar-link"><a href="#">Time Clocks & Accessories</a></li>
+                    <li class="sidebar-link"><a href="#">Label Maker Supplies</a></li>
+                    <li class="sidebar-link"><a href="#">Label Printers / Labelers</a></li>
+                    <li class="sidebar-link"><a href="#">Laminators</a></li>
+                    <li class="sidebar-link"><a href="#">Calculators</a></li>
+                    <li class="sidebar-link"><a href="#">Shredders & Accessories</a></li>
+                    <li class="sidebar-link"><a href="#">Binding Machine Supplies</a></li>
+                    <li class="sidebar-link"><a href="#">Binding Machines</a></li>
+                    <li class="sidebar-link"><a href="#">Pricing Guns</a></li>
+                    <li class="sidebar-link"><a href="#">Digital Recorders & Accessories</a></li>
+                    <li class="sidebar-link"><a href="#">POS Systems</a></li>
                 </ul>
             </li>
-
-            <!-- Sidebar Item 13: Breakroom -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Breakroom <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">View All Breakroom</a></li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Foodservice Supplies <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Table Covers</a></li>
-                            <li class="sidebar-link"><a href="#">Food Storage</a></li>
-                            <li class="sidebar-link"><a href="#">Paper Napkins</a></li>
-                            <li class="sidebar-link"><a href="#">Breakroom Organizers</a></li>
-                            <li class="sidebar-link"><a href="#">Napkin Dispensers</a></li>
-                            <li class="sidebar-link"><a href="#">Water Pitchers</a></li>
-                            <li class="sidebar-link"><a href="#">Cooking Utensils</a></li>
-                            <li class="sidebar-link"><a href="#">Disposable Tablecloths</a></li>
-                            <li class="sidebar-link"><a href="#">Carry/Shopping Bags</a></li>
-                            <li class="sidebar-link"><a href="#">Shopping Bags</a></li>
-                            <li class="sidebar-link"><a href="#">Tablecloths</a></li>
-                            <li class="sidebar-link"><a href="#">Cooking Tools</a></li>
-                            <li class="sidebar-link"><a href="#">Toothpicks</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Plates, Cups & Cutlery <i
-                                class="fa-solid fa-chevron-down"></i></div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Plates</a></li>
-                            <li class="sidebar-link"><a href="#">Bowls</a></li>
-                            <li class="sidebar-link"><a href="#">Cutlery</a></li>
-                            <li class="sidebar-link"><a href="#">Drinking Cups</a></li>
-                            <li class="sidebar-link"><a href="#">Beverage Straws</a></li>
-                            <li class="sidebar-link"><a href="#">Beverage Tumblers</a></li>
-                            <li class="sidebar-link"><a href="#">Cup Dispensers/Organizers</a></li>
-                            <li class="sidebar-link"><a href="#">Toothpicks</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Food & Condiments <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Snacks</a></li>
-                            <li class="sidebar-link"><a href="#">Condiments</a></li>
-                            <li class="sidebar-link"><a href="#">Candy & Gum</a></li>
-                            <li class="sidebar-link"><a href="#">Sweets</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Beverage Applicances <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Refrigerator/Coolers/Freezers</a></li>
-                            <li class="sidebar-link"><a href="#">Microwave Ovens</a></li>
-                            <li class="sidebar-link"><a href="#">Beverage Dispensers</a></li>
-                            <li class="sidebar-link"><a href="#">Toasters & Toaster Ovens</a></li>
-                            <li class="sidebar-link"><a href="#">Can openers</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Beverages <i class="fa-solid fa-chevron-down"></i></div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Tea</a></li>
-                            <li class="sidebar-link"><a href="#">Juice</a></li>
-                            <li class="sidebar-link"><a href="#">Water</a></li>
-                            <li class="sidebar-link"><a href="#">Sodas & Sports Drinks</a></li>
-                            <li class="sidebar-link"><a href="#">Hot Chocolate/Cocoa</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Coffee & Coffee Supplies <i
-                                class="fa-solid fa-chevron-down"></i></div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Coffee Pots / Servers</a></li>
-                            <li class="sidebar-link"><a href="#">Coffee Makers</a></li>
-                            <li class="sidebar-link"><a href="#">Coffee Filters</a></li>
-                            <li class="sidebar-link"><a href="#">Coffee Warmers</a></li>
-                            <li class="sidebar-link"><a href="#">Coffee</a></li>
-                            <li class="sidebar-link"><a href="#">Creamers</a></li>
-                            <li class="sidebar-link"><a href="#">Water Filters</a></li>
-                            <li class="sidebar-link"><a href="#">Stirrers</a></li>
-                            <li class="sidebar-link"><a href="#">Coffee Pots & Servers</a></li>
-                            <li class="sidebar-link"><a href="#">Coffee Makers & Warmers</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Appliances <i class="fa-solid fa-chevron-down"></i></div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Refrigerators / Coolers / Freezers</a></li>
-                            <li class="sidebar-link"><a href="#">Microwave Ovens</a></li>
-                            <li class="sidebar-link"><a href="#">Beverage Dispensers</a></li>
-                            <li class="sidebar-link"><a href="#">Toasters & Toaster Ovens</a></li>
-                            <li class="sidebar-link"><a href="#">Can Openers</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Tableware <i class="fa-solid fa-chevron-down"></i></div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Plates</a></li>
-                            <li class="sidebar-link"><a href="#">Bowls</a></li>
-                            <li class="sidebar-link"><a href="#">Cups</a></li>
-                            <li class="sidebar-link"><a href="#">Cutlery</a></li>
-                            <li class="sidebar-link"><a href="#">Tumblers</a></li>
-                            <li class="sidebar-link"><a href="#">Cup Dispensers & Organizers</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Beverage Supplies <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Water Dispensers & Filters</a></li>
-                            <li class="sidebar-link"><a href="#">Ice Buckets</a></li>
-                            <li class="sidebar-link"><a href="#">Straws</a></li>
-                            <li class="sidebar-link"><a href="#">Stirrers</a></li>
-                        </ul>
-                    </li>
+            <li class="sidebar-subitem">
+                <div class="sidebar-link has-submenu">"Printers, Scanners & Supplies" <i
+                        class="fa-solid fa-chevron-down"></i></div>
+                <ul class="sidebar-submenu-level-2">
+                    <li class="sidebar-link"><a href="#">Printing Supplies</a></li>
+                    <li class="sidebar-link"><a href="#">Printers & Multifunction Machines</a></li>
+                    <li class="sidebar-link"><a href="#">Scanners</a></li>
+                    <li class="sidebar-link"><a href="#">Fax Machines</a></li>
                 </ul>
-            </li>
-
-            <!-- Sidebar Item 14: School Supplies -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">School Supplies <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">View All School Supplies</a></li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Basic Supplies <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Rulers</a></li>
-                            <li class="sidebar-link"><a href="#">Pencil Boxes</a></li>
-                            <li class="sidebar-link"><a href="#">Storage Pouches</a></li>
-                            <li class="sidebar-link"><a href="#">Kid Scissors</a></li>
-                            <li class="sidebar-link"><a href="#">Book Bags</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Drafting Supplies <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Compass</a></li>
-                            <li class="sidebar-link"><a href="#">Templates</a></li>
-                            <li class="sidebar-link"><a href="#">Graphics Tapes</a></li>
-                            <li class="sidebar-link"><a href="#">Drafting Supplies</a></li>
-                            <li class="sidebar-link"><a href="#">Protractors &Triangles</a></li>
-                            <li class="sidebar-link"><a href="#">Drafting Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Rules</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Art & Craft Supplies <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Arts & Crafts Kits/Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Puzzles</a></li>
-                            <li class="sidebar-link"><a href="#">Art Paper Rolls/Tissue</a></li>
-                            <li class="sidebar-link"><a href="#">Art Markers</a></li>
-                            <li class="sidebar-link"><a href="#">Beads & Rhinestones</a></li>
-                            <li class="sidebar-link"><a href="#">Stencils</a></li>
-                            <li class="sidebar-link"><a href="#">Wiggly Eyes/Craft Eyes</a></li>
-                            <li class="sidebar-link"><a href="#">Paint Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Drawing Paper & Sketch Pad</a></li>
-                            <li class="sidebar-link"><a href="#">Paint</a></li>
-                            <li class="sidebar-link"><a href="#">Modeling Clay</a></li>
-                            <li class="sidebar-link"><a href="#">Chalk</a></li>
-                            <li class="sidebar-link"><a href="#">Crayons</a></li>
-                            <li class="sidebar-link"><a href="#">Coloring Books</a></li>
-                            <li class="sidebar-link"><a href="#">Oil Pastels / Pastel Sticks</a></li>
-                            <li class="sidebar-link"><a href="#">Specialty Marking & Colored Pencils</a></li>
-                            <li class="sidebar-link"><a href="#">Paint Dispensing Pumps</a></li>
-                            <li class="sidebar-link"><a href="#">Brush Tip Pens</a></li>
-                            <li class="sidebar-link"><a href="#">Construction Paper</a></li>
-                            <li class="sidebar-link"><a href="#">China Markers</a></li>
-                            <li class="sidebar-link"><a href="#">Foam</a></li>
-                            <li class="sidebar-link"><a href="#">Project Boards</a></li>
-                            <li class="sidebar-link"><a href="#">Shapes</a></li>
-                            <li class="sidebar-link"><a href="#">Blocks</a></li>
-                            <li class="sidebar-link"><a href="#">Stain Remover - Crayon, Marker, Ink</a></li>
-                            <li class="sidebar-link"><a href="#">Bags</a></li>
-                            <li class="sidebar-link"><a href="#">Yarn</a></li>
-                            <li class="sidebar-link"><a href="#">Craft Glue</a></li>
-                            <li class="sidebar-link"><a href="#">Plaster Crafts</a></li>
-                            <li class="sidebar-link"><a href="#">Craft Sticks</a></li>
-                            <li class="sidebar-link"><a href="#">Clothespins/Clothesline</a></li>
-                            <li class="sidebar-link"><a href="#">Felt</a></li>
-                            <li class="sidebar-link"><a href="#">Paper Mache</a></li>
-                            <li class="sidebar-link"><a href="#">Fun Buckets</a></li>
-                            <li class="sidebar-link"><a href="#">Feathers</a></li>
-                            <li class="sidebar-link"><a href="#">Sequins and Spangles</a></li>
-                            <li class="sidebar-link"><a href="#">Pipe Cleaners/Bumps/Stems</a></li>
-                            <li class="sidebar-link"><a href="#">Buttons</a></li>
-                            <li class="sidebar-link"><a href="#">Pom Poms</a></li>
-                            <li class="sidebar-link"><a href="#">Glitter</a></li>
-                            <li class="sidebar-link"><a href="#">Dough Gadgets</a></li>
-                            <li class="sidebar-link"><a href="#">Wood Crafts</a></li>
-                            <li class="sidebar-link"><a href="#">Art Stations</a></li>
-                            <li class="sidebar-link"><a href="#">Drawing Paper & Sketch Pads</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Classroom Decor <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Magnetic Shapes & Strips</a></li>
-                            <li class="sidebar-link"><a href="#">Library Pockets</a></li>
-                            <li class="sidebar-link"><a href="#">Classroom Organizers</a></li>
-                            <li class="sidebar-link"><a href="#">Bulletin Board Sets & Trim</a></li>
-                            <li class="sidebar-link"><a href="#">Letters & Numbers</a></li>
-                            <li class="sidebar-link"><a href="#">Classroom Decor Accents/Banners</a></li>
-                            <li class="sidebar-link"><a href="#">Posters</a></li>
-                            <li class="sidebar-link"><a href="#">Balloons</a></li>
-                            <li class="sidebar-link"><a href="#">Maps, Flags & Globes</a></li>
-                            <li class="sidebar-link"><a href="#">Accents/Banners</a></li>
-                            <li class="sidebar-link"><a href="#">Classroom Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Cubbies & Storage</a></li>
-                            <li class="sidebar-link"><a href="#">Rugs & Mats</a></li>
-                            <li class="sidebar-link"><a href="#">Maps, Flags & Globes</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Teaching Aids & Supplies <i
-                                class="fa-solid fa-chevron-down"></i></div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Handwriting Paper</a></li>
-                            <li class="sidebar-link"><a href="#">Learning Books & Activities</a></li>
-                            <li class="sidebar-link"><a href="#">Learning Boards</a></li>
-                            <li class="sidebar-link"><a href="#">Stickers</a></li>
-                            <li class="sidebar-link"><a href="#">Educational Record Books</a></li>
-                            <li class="sidebar-link"><a href="#">Learning Charts & Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Flash Cards & Card Games</a></li>
-                            <li class="sidebar-link"><a href="#">Games & Puzzles</a></li>
-                            <li class="sidebar-link"><a href="#">Student Certificates / Awards</a></li>
-                            <li class="sidebar-link"><a href="#">Teaching Calendars & Planners</a></li>
-                            <li class="sidebar-link"><a href="#">Reference Books</a></li>
-                            <li class="sidebar-link"><a href="#">Digital Notepads</a></li>
-                            <li class="sidebar-link"><a href="#">Learning Boards & Supplies</a></li>
-                            <li class="sidebar-link"><a href="#">Student Notebooks</a></li>
-                            <li class="sidebar-link"><a href="#">Handwriting Paper & Pads</a></li>
-                            <li class="sidebar-link"><a href="#">Pocket Charts & Accessories</a></li>
-                            <li class="sidebar-link"><a href="#">Student Notebooks & Folders</a></li>
-                            <li class="sidebar-link"><a href="#">Flash Cards</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Games & Sports <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Sports Equipment</a></li>
-                            <li class="sidebar-link"><a href="#">Learning Toys & Blocks</a></li>
-                            <li class="sidebar-link"><a href="#">Pretend Play</a></li>
-                            <li class="sidebar-link"><a href="#">Games &Puzzels</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Educational Furniture <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Cubbies & Storage</a></li>
-                            <li class="sidebar-link"><a href="#">Student Desks & Carrels</a></li>
-                            <li class="sidebar-link"><a href="#">Rugs & Mats</a></li>
-                            <li class="sidebar-link"><a href="#">Student Chairs</a></li>
-                            <li class="sidebar-link"><a href="#">Activity Tables</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-subitem">
-                        <div class="sidebar-link has-submenu">Classroom Supplies <i
-                                class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <ul class="sidebar-submenu-level-2">
-                            <li class="sidebar-link"><a href="#">Kid Scissors</a></li>
-                            <li class="sidebar-link"><a href="#">Pencil Boxes</a></li>
-                            <li class="sidebar-link"><a href="#">Storage</a></li>
-                            <li class="sidebar-link"><a href="#">Basic Supplies</a></li>
-                            <li class="sidebar-link"><a href="#">Book Bags</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-
-            <!-- Sidebar Item 15: Txley's Picks -->
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link">Txley's Picks</a>
             </li>
         </ul>
+        </li>
+
+        <!-- Sidebar Item 11: Janitorial Hardware -->
+        <li class="sidebar-item">
+            <div class="sidebar-link has-submenu">Janitorial Hardware <i class="fa-solid fa-chevron-down"></i></div>
+            <ul class="sidebar-submenu">
+                <li class="sidebar-link"><a href="#">View All Janitorial Hardware</a></li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Cleaning Supplies <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Paper Products & Dispensers</a></li>
+                        <li class="sidebar-link"><a href="#">Trash Bags & Cans</a></li>
+                        <li class="sidebar-link"><a href="#">Cleaners & Disinfectants</a></li>
+                        <li class="sidebar-link"><a href="#">Air Fresheners & Sanitizers</a></li>
+                        <li class="sidebar-link"><a href="#">Pest Control</a></li>
+                        <li class="sidebar-link"><a href="#">Janitorial Products</a></li>
+                        <li class="sidebar-link"><a href="#">Hand & Skin Care</a></li>
+                        <li class="sidebar-link"><a href="#">Restroom Supplies</a></li>
+                        <li class="sidebar-link"><a href="#">Brooms, Dusters & Accessories</a></li>
+                        <li class="sidebar-link"><a href="#">Mops, Sponges & Buckets</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <!-- Sidebar Item 12: Furniture & Interiors -->
+        <li class="sidebar-item">
+            <div class="sidebar-link has-submenu">Furniture & Interiors <i class="fa-solid fa-chevron-down"></i></div>
+            <ul class="sidebar-submenu">
+                <li class="sidebar-link"><a href="#">View All Furniture & Interiors</a></li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Boards & Easels <i class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Planning Boards</a></li>
+                        <li class="sidebar-link"><a href="#">Board Accessories</a></li>
+                        <li class="sidebar-link"><a href="#">Bulletin Boards</a></li>
+                        <li class="sidebar-link"><a href="#">Easels</a></li>
+                        <li class="sidebar-link"><a href="#">Dry Erase Boards</a></li>
+                        <li class="sidebar-link"><a href="#">Calendar Boards</a></li>
+                        <li class="sidebar-link"><a href="#">Combo Boards</a></li>
+                        <li class="sidebar-link"><a href="#">Enclosed Boards</a></li>
+                        <li class="sidebar-link"><a href="#">Chalk Boards</a></li>
+                        <li class="sidebar-link"><a href="#">Board & Easel Accessories</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Organizers & Literature Displays <i
+                            class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Floor Display Racks</a></li>
+                        <li class="sidebar-link"><a href="#">Wall Display Racks</a></li>
+                        <li class="sidebar-link"><a href="#">Literature Holders/Sorters</a></li>
+                        <li class="sidebar-link"><a href="#">Tabletop Display Racks</a></li>
+                        <li class="sidebar-link"><a href="#">Catalog Racks/Reference Display</a></li>
+                        <li class="sidebar-link"><a href="#">Car Organizers</a></li>
+                        <li class="sidebar-link"><a href="#">Literature Sorters</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Office Decor & Lamps <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Clocks</a></li>
+                        <li class="sidebar-link"><a href="#">Hooks & Hangers</a></li>
+                        <li class="sidebar-link"><a href="#">Garment Racks</a></li>
+                        <li class="sidebar-link"><a href="#">Maps, Flags & Globes</a></li>
+                        <li class="sidebar-link"><a href="#">Frames & Plaques</a></li>
+                        <li class="sidebar-link"><a href="#">Lamps</a></li>
+                        <li class="sidebar-link"><a href="#">Carpets / Rugs</a></li>
+                        <li class="sidebar-link"><a href="#">Wall Art</a></li>
+                        <li class="sidebar-link"><a href="#">Mirrors</a></li>
+                        <li class="sidebar-link"><a href="#">Decorative Accents</a></li>
+                        <li class="sidebar-link"><a href="#">Lamps & Lighting</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Carts & Stands <i class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Carts</a></li>
+                        <li class="sidebar-link"><a href="#">Stands</a></li>
+                        <li class="sidebar-link"><a href="#">Lecterns</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Storage Solutions <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">File & Storage Accessories</a></li>
+                        <li class="sidebar-link"><a href="#">File Carts</a></li>
+                        <li class="sidebar-link"><a href="#">Storage Cabinets</a></li>
+                        <li class="sidebar-link"><a href="#">Pedestals</a></li>
+                        <li class="sidebar-link"><a href="#">Bookcase</a></li>
+                        <li class="sidebar-link"><a href="#">Vertical Files</a></li>
+                        <li class="sidebar-link"><a href="#">Medical Cabinets</a></li>
+                        <li class="sidebar-link"><a href="#">Lateral Files</a></li>
+                        <li class="sidebar-link"><a href="#">Safes</a></li>
+                        <li class="sidebar-link"><a href="#">Shelving</a></li>
+                        <li class="sidebar-link"><a href="#">Lockers</a></li>
+                        <li class="sidebar-link"><a href="#">Large Document Storage</a></li>
+                        <li class="sidebar-link"><a href="#">Display Cases</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Furniture Care <i class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Furniture Repair Kits</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Furniture Accessories <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Desk Drawers</a></li>
+                        <li class="sidebar-link"><a href="#">Furniture Covers</a></li>
+                        <li class="sidebar-link"><a href="#">Furniture Pads & Slides</a></li>
+                        <li class="sidebar-link"><a href="#">Casters & Glides</a></li>
+                        <li class="sidebar-link"><a href="#">Monitor Arms & Stands</a></li>
+                        <li class="sidebar-link"><a href="#">Conferencing Power Modules</a></li>
+                        <li class="sidebar-link"><a href="#">Furniture Repair Kits</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Seating <i class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Reception</a></li>
+                        <li class="sidebar-link"><a href="#">Seating Accessories</a></li>
+                        <li class="sidebar-link"><a href="#">Office Chairs</a></li>
+                        <li class="sidebar-link"><a href="#">Stools</a></li>
+                        <li class="sidebar-link"><a href="#">Guest Chairs</a></li>
+                        <li class="sidebar-link"><a href="#">Task Chairs</a></li>
+                        <li class="sidebar-link"><a href="#">Big & Tall Chairs</a></li>
+                        <li class="sidebar-link"><a href="#">Folding Chairs</a></li>
+                        <li class="sidebar-link"><a href="#">Active Seating</a></li>
+                        <li class="sidebar-link"><a href="#">Chairmats</a></li>
+                        <li class="sidebar-link"><a href="#">Gaming Chairs</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Desks <i class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Desktop Risers</a></li>
+                        <li class="sidebar-link"><a href="#">Collections</a></li>
+                        <li class="sidebar-link"><a href="#">Sit-Stand</a></li>
+                        <li class="sidebar-link"><a href="#">Sit-Stand Mats</a></li>
+                        <li class="sidebar-link"><a href="#">Home & Office Desks</a></li>
+                        <li class="sidebar-link"><a href="#">Commercial Desks</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Educational Furniture <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Cubbies & Storage</a></li>
+                        <li class="sidebar-link"><a href="#">Student Desks & Carrels</a></li>
+                        <li class="sidebar-link"><a href="#">Activity Tables</a></li>
+                        <li class="sidebar-link"><a href="#">Cots & Mats</a></li>
+                        <li class="sidebar-link"><a href="#">Student Chairs</a></li>
+                        <li class="sidebar-link"><a href="#">Rugs & Mats</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Panels & Dividers <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Panels</a></li>
+                        <li class="sidebar-link"><a href="#">Social Distancing Barriers</a></li>
+                        <li class="sidebar-link"><a href="#">Panel Accessories</a></li>
+                        <li class="sidebar-link"><a href="#">Room Dividers</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Tables <i class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Conference Tables</a></li>
+                        <li class="sidebar-link"><a href="#">Folding Tables</a></li>
+                        <li class="sidebar-link"><a href="#">Training Tables</a></li>
+                        <li class="sidebar-link"><a href="#">Bases & Legs</a></li>
+                        <li class="sidebar-link"><a href="#">Multipurpose Tops</a></li>
+                        <li class="sidebar-link"><a href="#">Hospitality Tables</a></li>
+                        <li class="sidebar-link"><a href="#">Reception Tables & Desks</a></li>
+                        <li class="sidebar-link"><a href="#">Table Covers & Skirts</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <!-- Sidebar Item 13: Breakroom -->
+        <li class="sidebar-item">
+            <div class="sidebar-link has-submenu">Breakroom <i class="fa-solid fa-chevron-down"></i></div>
+            <ul class="sidebar-submenu">
+                <li class="sidebar-link"><a href="#">View All Breakroom</a></li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Foodservice Supplies <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Table Covers</a></li>
+                        <li class="sidebar-link"><a href="#">Food Storage</a></li>
+                        <li class="sidebar-link"><a href="#">Paper Napkins</a></li>
+                        <li class="sidebar-link"><a href="#">Breakroom Organizers</a></li>
+                        <li class="sidebar-link"><a href="#">Napkin Dispensers</a></li>
+                        <li class="sidebar-link"><a href="#">Water Pitchers</a></li>
+                        <li class="sidebar-link"><a href="#">Cooking Utensils</a></li>
+                        <li class="sidebar-link"><a href="#">Disposable Tablecloths</a></li>
+                        <li class="sidebar-link"><a href="#">Carry/Shopping Bags</a></li>
+                        <li class="sidebar-link"><a href="#">Shopping Bags</a></li>
+                        <li class="sidebar-link"><a href="#">Tablecloths</a></li>
+                        <li class="sidebar-link"><a href="#">Cooking Tools</a></li>
+                        <li class="sidebar-link"><a href="#">Toothpicks</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Plates, Cups & Cutlery <i
+                            class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Plates</a></li>
+                        <li class="sidebar-link"><a href="#">Bowls</a></li>
+                        <li class="sidebar-link"><a href="#">Cutlery</a></li>
+                        <li class="sidebar-link"><a href="#">Drinking Cups</a></li>
+                        <li class="sidebar-link"><a href="#">Beverage Straws</a></li>
+                        <li class="sidebar-link"><a href="#">Beverage Tumblers</a></li>
+                        <li class="sidebar-link"><a href="#">Cup Dispensers/Organizers</a></li>
+                        <li class="sidebar-link"><a href="#">Toothpicks</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Food & Condiments <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Snacks</a></li>
+                        <li class="sidebar-link"><a href="#">Condiments</a></li>
+                        <li class="sidebar-link"><a href="#">Candy & Gum</a></li>
+                        <li class="sidebar-link"><a href="#">Sweets</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Beverage Applicances <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Refrigerator/Coolers/Freezers</a></li>
+                        <li class="sidebar-link"><a href="#">Microwave Ovens</a></li>
+                        <li class="sidebar-link"><a href="#">Beverage Dispensers</a></li>
+                        <li class="sidebar-link"><a href="#">Toasters & Toaster Ovens</a></li>
+                        <li class="sidebar-link"><a href="#">Can openers</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Beverages <i class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Tea</a></li>
+                        <li class="sidebar-link"><a href="#">Juice</a></li>
+                        <li class="sidebar-link"><a href="#">Water</a></li>
+                        <li class="sidebar-link"><a href="#">Sodas & Sports Drinks</a></li>
+                        <li class="sidebar-link"><a href="#">Hot Chocolate/Cocoa</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Coffee & Coffee Supplies <i
+                            class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Coffee Pots / Servers</a></li>
+                        <li class="sidebar-link"><a href="#">Coffee Makers</a></li>
+                        <li class="sidebar-link"><a href="#">Coffee Filters</a></li>
+                        <li class="sidebar-link"><a href="#">Coffee Warmers</a></li>
+                        <li class="sidebar-link"><a href="#">Coffee</a></li>
+                        <li class="sidebar-link"><a href="#">Creamers</a></li>
+                        <li class="sidebar-link"><a href="#">Water Filters</a></li>
+                        <li class="sidebar-link"><a href="#">Stirrers</a></li>
+                        <li class="sidebar-link"><a href="#">Coffee Pots & Servers</a></li>
+                        <li class="sidebar-link"><a href="#">Coffee Makers & Warmers</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Appliances <i class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Refrigerators / Coolers / Freezers</a></li>
+                        <li class="sidebar-link"><a href="#">Microwave Ovens</a></li>
+                        <li class="sidebar-link"><a href="#">Beverage Dispensers</a></li>
+                        <li class="sidebar-link"><a href="#">Toasters & Toaster Ovens</a></li>
+                        <li class="sidebar-link"><a href="#">Can Openers</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Tableware <i class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Plates</a></li>
+                        <li class="sidebar-link"><a href="#">Bowls</a></li>
+                        <li class="sidebar-link"><a href="#">Cups</a></li>
+                        <li class="sidebar-link"><a href="#">Cutlery</a></li>
+                        <li class="sidebar-link"><a href="#">Tumblers</a></li>
+                        <li class="sidebar-link"><a href="#">Cup Dispensers & Organizers</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Beverage Supplies <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Water Dispensers & Filters</a></li>
+                        <li class="sidebar-link"><a href="#">Ice Buckets</a></li>
+                        <li class="sidebar-link"><a href="#">Straws</a></li>
+                        <li class="sidebar-link"><a href="#">Stirrers</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <!-- Sidebar Item 14: School Supplies -->
+        <li class="sidebar-item">
+            <div class="sidebar-link has-submenu">School Supplies <i class="fa-solid fa-chevron-down"></i></div>
+            <ul class="sidebar-submenu">
+                <li class="sidebar-link"><a href="#">View All School Supplies</a></li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Basic Supplies <i class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Rulers</a></li>
+                        <li class="sidebar-link"><a href="#">Pencil Boxes</a></li>
+                        <li class="sidebar-link"><a href="#">Storage Pouches</a></li>
+                        <li class="sidebar-link"><a href="#">Kid Scissors</a></li>
+                        <li class="sidebar-link"><a href="#">Book Bags</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Drafting Supplies <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Compass</a></li>
+                        <li class="sidebar-link"><a href="#">Templates</a></li>
+                        <li class="sidebar-link"><a href="#">Graphics Tapes</a></li>
+                        <li class="sidebar-link"><a href="#">Drafting Supplies</a></li>
+                        <li class="sidebar-link"><a href="#">Protractors &Triangles</a></li>
+                        <li class="sidebar-link"><a href="#">Drafting Accessories</a></li>
+                        <li class="sidebar-link"><a href="#">Rules</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Art & Craft Supplies <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Arts & Crafts Kits/Accessories</a></li>
+                        <li class="sidebar-link"><a href="#">Puzzles</a></li>
+                        <li class="sidebar-link"><a href="#">Art Paper Rolls/Tissue</a></li>
+                        <li class="sidebar-link"><a href="#">Art Markers</a></li>
+                        <li class="sidebar-link"><a href="#">Beads & Rhinestones</a></li>
+                        <li class="sidebar-link"><a href="#">Stencils</a></li>
+                        <li class="sidebar-link"><a href="#">Wiggly Eyes/Craft Eyes</a></li>
+                        <li class="sidebar-link"><a href="#">Paint Accessories</a></li>
+                        <li class="sidebar-link"><a href="#">Drawing Paper & Sketch Pad</a></li>
+                        <li class="sidebar-link"><a href="#">Paint</a></li>
+                        <li class="sidebar-link"><a href="#">Modeling Clay</a></li>
+                        <li class="sidebar-link"><a href="#">Chalk</a></li>
+                        <li class="sidebar-link"><a href="#">Crayons</a></li>
+                        <li class="sidebar-link"><a href="#">Coloring Books</a></li>
+                        <li class="sidebar-link"><a href="#">Oil Pastels / Pastel Sticks</a></li>
+                        <li class="sidebar-link"><a href="#">Specialty Marking & Colored Pencils</a></li>
+                        <li class="sidebar-link"><a href="#">Paint Dispensing Pumps</a></li>
+                        <li class="sidebar-link"><a href="#">Brush Tip Pens</a></li>
+                        <li class="sidebar-link"><a href="#">Construction Paper</a></li>
+                        <li class="sidebar-link"><a href="#">China Markers</a></li>
+                        <li class="sidebar-link"><a href="#">Foam</a></li>
+                        <li class="sidebar-link"><a href="#">Project Boards</a></li>
+                        <li class="sidebar-link"><a href="#">Shapes</a></li>
+                        <li class="sidebar-link"><a href="#">Blocks</a></li>
+                        <li class="sidebar-link"><a href="#">Stain Remover - Crayon, Marker, Ink</a></li>
+                        <li class="sidebar-link"><a href="#">Bags</a></li>
+                        <li class="sidebar-link"><a href="#">Yarn</a></li>
+                        <li class="sidebar-link"><a href="#">Craft Glue</a></li>
+                        <li class="sidebar-link"><a href="#">Plaster Crafts</a></li>
+                        <li class="sidebar-link"><a href="#">Craft Sticks</a></li>
+                        <li class="sidebar-link"><a href="#">Clothespins/Clothesline</a></li>
+                        <li class="sidebar-link"><a href="#">Felt</a></li>
+                        <li class="sidebar-link"><a href="#">Paper Mache</a></li>
+                        <li class="sidebar-link"><a href="#">Fun Buckets</a></li>
+                        <li class="sidebar-link"><a href="#">Feathers</a></li>
+                        <li class="sidebar-link"><a href="#">Sequins and Spangles</a></li>
+                        <li class="sidebar-link"><a href="#">Pipe Cleaners/Bumps/Stems</a></li>
+                        <li class="sidebar-link"><a href="#">Buttons</a></li>
+                        <li class="sidebar-link"><a href="#">Pom Poms</a></li>
+                        <li class="sidebar-link"><a href="#">Glitter</a></li>
+                        <li class="sidebar-link"><a href="#">Dough Gadgets</a></li>
+                        <li class="sidebar-link"><a href="#">Wood Crafts</a></li>
+                        <li class="sidebar-link"><a href="#">Art Stations</a></li>
+                        <li class="sidebar-link"><a href="#">Drawing Paper & Sketch Pads</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Classroom Decor <i class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Magnetic Shapes & Strips</a></li>
+                        <li class="sidebar-link"><a href="#">Library Pockets</a></li>
+                        <li class="sidebar-link"><a href="#">Classroom Organizers</a></li>
+                        <li class="sidebar-link"><a href="#">Bulletin Board Sets & Trim</a></li>
+                        <li class="sidebar-link"><a href="#">Letters & Numbers</a></li>
+                        <li class="sidebar-link"><a href="#">Classroom Decor Accents/Banners</a></li>
+                        <li class="sidebar-link"><a href="#">Posters</a></li>
+                        <li class="sidebar-link"><a href="#">Balloons</a></li>
+                        <li class="sidebar-link"><a href="#">Maps, Flags & Globes</a></li>
+                        <li class="sidebar-link"><a href="#">Accents/Banners</a></li>
+                        <li class="sidebar-link"><a href="#">Classroom Accessories</a></li>
+                        <li class="sidebar-link"><a href="#">Cubbies & Storage</a></li>
+                        <li class="sidebar-link"><a href="#">Rugs & Mats</a></li>
+                        <li class="sidebar-link"><a href="#">Maps, Flags & Globes</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Teaching Aids & Supplies <i
+                            class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Handwriting Paper</a></li>
+                        <li class="sidebar-link"><a href="#">Learning Books & Activities</a></li>
+                        <li class="sidebar-link"><a href="#">Learning Boards</a></li>
+                        <li class="sidebar-link"><a href="#">Stickers</a></li>
+                        <li class="sidebar-link"><a href="#">Educational Record Books</a></li>
+                        <li class="sidebar-link"><a href="#">Learning Charts & Accessories</a></li>
+                        <li class="sidebar-link"><a href="#">Flash Cards & Card Games</a></li>
+                        <li class="sidebar-link"><a href="#">Games & Puzzles</a></li>
+                        <li class="sidebar-link"><a href="#">Student Certificates / Awards</a></li>
+                        <li class="sidebar-link"><a href="#">Teaching Calendars & Planners</a></li>
+                        <li class="sidebar-link"><a href="#">Reference Books</a></li>
+                        <li class="sidebar-link"><a href="#">Digital Notepads</a></li>
+                        <li class="sidebar-link"><a href="#">Learning Boards & Supplies</a></li>
+                        <li class="sidebar-link"><a href="#">Student Notebooks</a></li>
+                        <li class="sidebar-link"><a href="#">Handwriting Paper & Pads</a></li>
+                        <li class="sidebar-link"><a href="#">Pocket Charts & Accessories</a></li>
+                        <li class="sidebar-link"><a href="#">Student Notebooks & Folders</a></li>
+                        <li class="sidebar-link"><a href="#">Flash Cards</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Games & Sports <i class="fa-solid fa-chevron-down"></i></div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Sports Equipment</a></li>
+                        <li class="sidebar-link"><a href="#">Learning Toys & Blocks</a></li>
+                        <li class="sidebar-link"><a href="#">Pretend Play</a></li>
+                        <li class="sidebar-link"><a href="#">Games &Puzzels</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Educational Furniture <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Cubbies & Storage</a></li>
+                        <li class="sidebar-link"><a href="#">Student Desks & Carrels</a></li>
+                        <li class="sidebar-link"><a href="#">Rugs & Mats</a></li>
+                        <li class="sidebar-link"><a href="#">Student Chairs</a></li>
+                        <li class="sidebar-link"><a href="#">Activity Tables</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-subitem">
+                    <div class="sidebar-link has-submenu">Classroom Supplies <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="sidebar-submenu-level-2">
+                        <li class="sidebar-link"><a href="#">Kid Scissors</a></li>
+                        <li class="sidebar-link"><a href="#">Pencil Boxes</a></li>
+                        <li class="sidebar-link"><a href="#">Storage</a></li>
+                        <li class="sidebar-link"><a href="#">Basic Supplies</a></li>
+                        <li class="sidebar-link"><a href="#">Book Bags</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <!-- Sidebar Item 15: Txley's Picks -->
+        <li class="sidebar-item">
+            <a href="#" class="sidebar-link">Txley's Picks</a>
+        </li>
+        </ul>
     </div>
+
+
+
+    <div class="breadcrumb-section">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">My Account</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+
+    <section class="my-account-table-form">
+        <div class="container my-account-container">
+            <!-- Log Out Button (Top Right) -->
+            <div class="account-header">
+                <button class="btn-logout">
+                    <i class="fa-solid fa-right-from-bracket"></i> Log Out
+                </button>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="account-tabs">
+                <button class="tab-btn active" data-tab="profile">PROFILE</button>
+                <button class="tab-btn" data-tab="favorites">FAV / QUICK ORDERS</button>
+                <button class="tab-btn" data-tab="wishlists">WISHLISTS</button>
+                <button class="tab-btn" data-tab="orders">ORDERS</button>
+                <button class="tab-btn" data-tab="billing">BILLING ADDRESS</button>
+                <button class="tab-btn" data-tab="shipping">SHIPPING ADDRESS</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content-wrapper">
+                <!-- Profile Tab -->
+                <div class="tab-content active" id="profile">
+                    <form class="profile-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" class="form-control" placeholder="First Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" class="form-control" placeholder="Last Name">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-control" placeholder="Email Address">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" class="form-control" placeholder="Phone Number">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="state">State</label>
+                                <select id="state" class="form-control">
+                                    <option value="">Select State</option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <select id="city" class="form-control">
+                                    <option value="">Select City</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="zipCode">ZIP Code</label>
+                                <input type="text" id="zipCode" class="form-control" placeholder="Zip Code">
+                            </div>
+                            <div class="form-group"></div>
+                        </div>
+
+                        <div class="form-row full-width">
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <textarea id="address" class="form-control" rows="3" placeholder="Address"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-update">
+                                <i class="fa-solid fa-floppy-disk"></i> Update Profile
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Favorites / Quick Orders Tab -->
+                <div class="tab-content" id="favorites">
+                    <div class="table-responsive">
+                        <table class="favorites-table">
+                            <thead>
+                                <tr>
+                                    <th>Thumbnail</th>
+                                    <th>Item Description</th>
+                                    <th>Unit Price</th>
+                                    <th>Quantity</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="thumbnail-cell">
+                                        <img src="assets/account-1.jpg" alt="Product" class="product-thumbnail">
+                                    </td>
+                                    <td class="description-cell">
+                                        <div class="item-description">
+                                            <h6>Digital Sender Flow 8500 fn2 Document Capture Workstation, 600 dpi
+                                                Optical Resolution, 150-Sheet Duplex Auto Document Feeder</h6>
+                                            <p class="item-code">#HEWL2762A</p>
+                                        </div>
+                                    </td>
+                                    <td class="price-cell">$5458.14</td>
+                                    <td class="quantity-cell">
+                                        <input type="number" value="1" min="1" class="quantity-input">
+                                    </td>
+                                    <td class="actions-cell">
+                                        <button class="btn-remove" aria-label="Remove">
+                                            <i class="fa-solid fa-xmark"></i> <span class="btn-text">Remove</span>
+                                        </button>
+                                        <button class="btn-add-cart" aria-label="Add to Cart">
+                                            <i class="fa-solid fa-cart-plus"></i> <span class="btn-text">Add to
+                                                Cart</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="thumbnail-cell">
+                                        <img src="assets/account-2.jpg" alt="Product" class="product-thumbnail">
+                                    </td>
+                                    <td class="description-cell">
+                                        <div class="item-description">
+                                            <h6>Colored Reinforced Hanging Folders, Letter Size, 1/5-Cut Tabs, Assorted
+                                                Bright Colors, 25/Box</h6>
+                                            <p class="item-code">#PFX41521SASST</p>
+                                        </div>
+                                    </td>
+                                    <td class="price-cell">$96.72</td>
+                                    <td class="quantity-cell">
+                                        <input type="number" value="1" min="1" class="quantity-input">
+                                    </td>
+                                    <td class="actions-cell">
+                                        <button class="btn-remove" aria-label="Remove">
+                                            <i class="fa-solid fa-xmark"></i> <span class="btn-text">Remove</span>
+                                        </button>
+                                        <button class="btn-add-cart" aria-label="Add to Cart">
+                                            <i class="fa-solid fa-cart-plus"></i> <span class="btn-text">Add to
+                                                Cart</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="thumbnail-cell">
+                                        <img src="assets/account-3.jpg" alt="Product" class="product-thumbnail">
+                                    </td>
+                                    <td class="description-cell">
+                                        <div class="item-description">
+                                            <h6>PT-H500Li Rechargeable Take-It-Anywhere Labeler with PC-Connectivity, 30
+                                                mm/s Print Speed, 4.8 × 9.7 × 3.5</h6>
+                                            <p class="item-code">#BRTPTH500LI</p>
+                                        </div>
+                                    </td>
+                                    <td class="price-cell">$318.49</td>
+                                    <td class="quantity-cell">
+                                        <input type="number" value="1" min="1" class="quantity-input">
+                                    </td>
+                                    <td class="actions-cell">
+                                        <button class="btn-remove" aria-label="Remove">
+                                            <i class="fa-solid fa-xmark"></i> <span class="btn-text">Remove</span>
+                                        </button>
+                                        <button class="btn-add-cart" aria-label="Add to Cart">
+                                            <i class="fa-solid fa-cart-plus"></i> <span class="btn-text">Add to
+                                                Cart</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Wishlists Tab -->
+                <div class="tab-content" id="wishlists">
+                    <div class="empty-state">
+                        <i class="fa-regular fa-heart"></i>
+                        <p>No items in your wishlists yet</p>
+                    </div>
+                </div>
+
+                <!-- Orders Tab -->
+                <div class="tab-content" id="orders">
+                    <div class="table-responsive">
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Order ID</th>
+                                    <th>Subtotal</th>
+                                    <th>Tax Amount</th>
+                                    <th>Grand Total</th>
+                                    <th>Payment Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Date">18-01-2026 04:28 PM</td>
+                                    <td data-label="Order ID">1768733903761</td>
+                                    <td data-label="Subtotal">$15,150.32</td>
+                                    <td data-label="Tax Amount">$0.00</td>
+                                    <td data-label="Grand Total">$15,150.32</td>
+                                    <td data-label="Payment Status"><span class="status-unpaid">Unpaid</span></td>
+                                    <td data-label="Actions">
+                                        <button class="btn-print">
+                                            <i class="fa-solid fa-print"></i> Print
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Date">06-12-2025 07:43 PM</td>
+                                    <td data-label="Order ID">1765030387392</td>
+                                    <td data-label="Subtotal">$203.94</td>
+                                    <td data-label="Tax Amount">$16.32</td>
+                                    <td data-label="Grand Total">$220.26</td>
+                                    <td data-label="Payment Status"><span class="status-unpaid">Unpaid</span></td>
+                                    <td data-label="Actions">
+                                        <button class="btn-print">
+                                            <i class="fa-solid fa-print"></i> Print
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Date">06-12-2025 03:29 PM</td>
+                                    <td data-label="Order ID">1765015171836</td>
+                                    <td data-label="Subtotal">$128.02</td>
+                                    <td data-label="Tax Amount">$5.44</td>
+                                    <td data-label="Grand Total">$133.46</td>
+                                    <td data-label="Payment Status"><span class="status-unpaid">Unpaid</span></td>
+                                    <td data-label="Actions">
+                                        <button class="btn-print">
+                                            <i class="fa-solid fa-print"></i> Print
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Date">03-12-2025 03:14 PM</td>
+                                    <td data-label="Order ID">1764755095371</td>
+                                    <td data-label="Subtotal">$54.78</td>
+                                    <td data-label="Tax Amount">$4.38</td>
+                                    <td data-label="Grand Total">$59.16</td>
+                                    <td data-label="Payment Status"><span class="status-unpaid">Unpaid</span></td>
+                                    <td data-label="Actions">
+                                        <button class="btn-print">
+                                            <i class="fa-solid fa-print"></i> Print
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Date">03-12-2025 01:29 PM</td>
+                                    <td data-label="Order ID">1764748763872</td>
+                                    <td data-label="Subtotal">$54.78</td>
+                                    <td data-label="Tax Amount">$4.38</td>
+                                    <td data-label="Grand Total">$59.16</td>
+                                    <td data-label="Payment Status"><span class="status-unpaid">Unpaid</span></td>
+                                    <td data-label="Actions">
+                                        <button class="btn-print">
+                                            <i class="fa-solid fa-print"></i> Print
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Date">03-12-2025 01:17 PM</td>
+                                    <td data-label="Order ID">1764748047578</td>
+                                    <td data-label="Subtotal">$19.19</td>
+                                    <td data-label="Tax Amount">$1.54</td>
+                                    <td data-label="Grand Total">$20.73</td>
+                                    <td data-label="Payment Status"><span class="status-unpaid">Unpaid</span></td>
+                                    <td data-label="Actions">
+                                        <button class="btn-print">
+                                            <i class="fa-solid fa-print"></i> Print
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Date">03-12-2025 01:12 PM</td>
+                                    <td data-label="Order ID">1764747740342</td>
+                                    <td data-label="Subtotal">$44.39</td>
+                                    <td data-label="Tax Amount">$3.55</td>
+                                    <td data-label="Grand Total">$47.94</td>
+                                    <td data-label="Payment Status"><span class="status-unpaid">Unpaid</span></td>
+                                    <td data-label="Actions">
+                                        <button class="btn-print">
+                                            <i class="fa-solid fa-print"></i> Print
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Date">03-12-2025 12:56 PM</td>
+                                    <td data-label="Order ID">1764746796606</td>
+                                    <td data-label="Subtotal">$96.29</td>
+                                    <td data-label="Tax Amount">$7.70</td>
+                                    <td data-label="Grand Total">$103.99</td>
+                                    <td data-label="Payment Status"><span class="status-unpaid">Unpaid</span></td>
+                                    <td data-label="Actions">
+                                        <button class="btn-print">
+                                            <i class="fa-solid fa-print"></i> Print
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Billing Address Tab -->
+                <div class="tab-content" id="billing">
+                    <div class="table-responsive">
+                        <table class="billing-table">
+                            <thead>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>Address</th>
+                                    <th>State</th>
+                                    <th>City</th>
+                                    <th>ZIP Code</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="First Name">Vi</td>
+                                    <td data-label="Last Name">Na</td>
+                                    <td data-label="Phone">968547485</td>
+                                    <td data-label="Email">techbhargav111@gmail.com</td>
+                                    <td data-label="Address">Daily market, Adara Clinic, E sector, opposite TNT Shilpa
+                                        bakery, Naharlagun, Arunchal Pradesh, 791110</td>
+                                    <td data-label="State">Washington</td>
+                                    <td data-label="City">-</td>
+                                    <td data-label="ZIP Code">98953</td>
+                                    <td data-label="Action">
+                                        <button class="btn-delete">
+                                            <i class="fa-solid fa-trash"></i> Delete
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="First Name">New name</td>
+                                    <td data-label="Last Name">-</td>
+                                    <td data-label="Phone">9632587410</td>
+                                    <td data-label="Email">newname@gmail.com</td>
+                                    <td data-label="Address">SBS nagar, Ludhiana</td>
+                                    <td data-label="State">Washington</td>
+                                    <td data-label="City">-</td>
+                                    <td data-label="ZIP Code">98951</td>
+                                    <td data-label="Action">
+                                        <button class="btn-delete">
+                                            <i class="fa-solid fa-trash"></i> Delete
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Shipping Address Tab -->
+                <div class="tab-content" id="shipping">
+                    <div class="empty-state">
+                        <i class="fa-solid fa-truck"></i>
+                        <p>No shipping address on file</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer mt-3">
+        <div class="container footer-container">
+            <div class="row">
+                <!-- Column 1: Browse Our Catalog -->
+                <div class="col-lg-3 col-md-6 footer-column">
+                    <h5 class="footer-column-title">Browse Our Catalog</h5>
+                    <ul class="footer-links-list">
+                        <li><a href="janitorial.html">Janitorial & Facility Supplies</a></li>
+                        <li><a href="janitorial.html">Industrial Safety</a></li>
+                        <li><a href="janitorial.html">Laundry & Warewash</a></li>
+                        <li><a href="janitorial.html">Office Supplies</a></li>
+                        <li><a href="janitorial.html">Janitorial Equipment</a></li>
+                        <li><a href="janitorial.html">Restaurant Supplies</a></li>
+                        <li><a href="janitorial.html">Healthcare</a></li>
+                        <li><a href="janitorial.html">Safety & PPE</a></li>
+                        <li><a href="janitorial.html">Microfiber</a></li>
+                        <li><a href="janitorial.html">Technology</a></li>
+                        <li><a href="janitorial.html">Janitorial Hardware</a></li>
+                        <li><a href="janitorial.html">Furniture & Interiors</a></li>
+                        <li><a href="janitorial.html">Breakroom</a></li>
+                        <li><a href="janitorial.html">School Supplies</a></li>
+                        <li><a href="janitorial.html">Txley's Picks</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: More On Us -->
+                <div class="col-lg-3 col-md-6 footer-column">
+                    <h5 class="footer-column-title">More On Us</h5>
+                    <ul class="footer-links-list">
+                        <li><a href="contactus.html">Contact Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="shipping-policy.html">Shipping Policy</a></li>
+                        <li><a href="termsandconditions.html">Terms of Sale</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="jointeam.html">Join the Txley Team</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Us -->
+                <div class="col-lg-3 col-md-6 footer-column">
+                    <h5 class="footer-column-title">Contact Us</h5>
+                    <div class="contact-info-text">
+                        <strong>Txley</strong>
+                        <p>139 E. Fairhaven Avenue<br>Burlington, WA 98233</p>
+                        <p>Phone: <a href="tel:3605454433" class="contact-highlight">(360) 545-4433</a></p>
+                        <p><a href="contactus.html" class="contact-highlight">Need more information?</a></p>
+                    </div>
+                </div>
+
+                <!-- Column 4: Certifications & Affiliations -->
+                <div class="col-lg-3 col-md-6 footer-column">
+                    <h5 class="footer-column-title">Certifications & Affiliations:</h5>
+                    <div class="certifications-img-wrapper">
+                        <img src="assets/footer-image.png" alt="Certifications & Affiliations"
+                            class="certifications-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom text-center">
+                <p class="footer-note">* Please note: Effective 3-7-2022, a fuel surcharge will be applied to all
+                    deliveries.</p>
+                <p class="copyright-text">Â© 2024 Txley. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
