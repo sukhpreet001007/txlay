@@ -37,6 +37,13 @@
     color: #818080;
 }
 
+/* Show mobile Shop All button for screens 992px - 1200px */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .shop-all-mobile-wrapper {
+        display: block !important;
+    }
+}
+
 /* Sidebar Overlay */
 .shop-sidebar-overlay {
     position: fixed;
@@ -283,6 +290,8 @@
     padding: 20px;
     z-index: 1;
     /* Behind parent list visually if needed, but actually side-by-side */
+    overscroll-behavior: contain;
+    /* Prevent background scrolling */
 }
 
 /* Show on Parent Hover (Desktop) */
