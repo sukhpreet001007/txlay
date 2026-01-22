@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
         let currentIndex = 1; // Start at the first real slide
         let isTransitioning = false;
         let slideInterval;
-
         // Initial position (show first real slide)
         slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
 

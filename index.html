@@ -21,11 +21,12 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/global.css">
-<link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/mediaquery.css">
     <link rel="stylesheet" href="css/catalog.css">
     <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/categories.css">
     <link rel="stylesheet" href="css/three-blocks.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/products.css">
@@ -1847,7 +1848,7 @@
 
 
 
-    
+
     <!-- Hero Banner (Mobile Only - Top) -->
     <section class="banner-section py-2 mt-2 d-lg-none">
         <div class="container">
@@ -2001,6 +2002,363 @@
                         <button class="banner-arrow next"><i class="fa-solid fa-chevron-right"></i></button>
                     </div>
 
+                    <!-- Categories Section Overlap -->
+                    <div class="categories-overlay-section">
+                        <div class="mobile-cat-controls d-lg-none">
+                            <button class="cat-arrow prev" id="catPrevBtn"><i
+                                    class="fa-solid fa-chevron-left"></i></button>
+                            <button class="cat-arrow next" id="catNextBtn"><i
+                                    class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                        <div class="categories-container">
+                            <div class="categories-grid" id="categoriesGrid">
+                                <!-- Card 1: Office Supplies -->
+                                <div class="category-card">
+                                    <h3 class="cat-card-title">Office Supplies</h3>
+                                    <div class="cat-products-grid">
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product1.avif"
+                                                    class="cat-product-img" alt="Pens"></div>
+                                            <span class="cat-product-name">Pens & Pencils</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product2.jpg"
+                                                    class="cat-product-img" alt="Paper"></div>
+                                            <span class="cat-product-name">Paper Products</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product3.png"
+                                                    class="cat-product-img" alt="Folders"></div>
+                                            <span class="cat-product-name">Folders & Files</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product4.png"
+                                                    class="cat-product-img" alt="Desk"></div>
+                                            <span class="cat-product-name">Desk Supplies</span>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="cat-shop-all">Shop All Office <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+
+                                <!-- Card 2: Janitorial -->
+                                <div class="category-card">
+                                    <h3 class="cat-card-title">Janitorial</h3>
+                                    <div class="cat-products-grid">
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product5.png"
+                                                    class="cat-product-img" alt="Cleaning"></div>
+                                            <span class="cat-product-name">Cleaning Supplies</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product6.png"
+                                                    class="cat-product-img" alt="Mops"></div>
+                                            <span class="cat-product-name">Mops & Brooms</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product7.png"
+                                                    class="cat-product-img" alt="Trash"></div>
+                                            <span class="cat-product-name">Trash Bags</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product1.avif"
+                                                    class="cat-product-img" alt="Sanitizer"></div>
+                                            <span class="cat-product-name">Sanitizers</span>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="cat-shop-all">Shop All Janitorial <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+
+                                <!-- Card 3: Breakroom -->
+                                <div class="category-card">
+                                    <h3 class="cat-card-title">Breakroom</h3>
+                                    <div class="cat-products-grid">
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product2.jpg"
+                                                    class="cat-product-img" alt="Coffee"></div>
+                                            <span class="cat-product-name">Coffee & Tea</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product3.png"
+                                                    class="cat-product-img" alt="Snacks"></div>
+                                            <span class="cat-product-name">Snacks</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product4.png"
+                                                    class="cat-product-img" alt="Cups"></div>
+                                            <span class="cat-product-name">Cups & Plates</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product5.png"
+                                                    class="cat-product-img" alt="Utensils"></div>
+                                            <span class="cat-product-name">Utensils</span>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="cat-shop-all">Shop All Breakroom <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+
+                                <!-- Card 4: Industrial -->
+                                <div class="category-card">
+                                    <h3 class="cat-card-title">Industrial</h3>
+                                    <div class="cat-products-grid">
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product6.png"
+                                                    class="cat-product-img" alt="Tools"></div>
+                                            <span class="cat-product-name">Power Tools</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product7.png"
+                                                    class="cat-product-img" alt="Safety"></div>
+                                            <span class="cat-product-name">Safety Gear</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product1.avif"
+                                                    class="cat-product-img" alt="Hardware"></div>
+                                            <span class="cat-product-name">Hardware</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product2.jpg"
+                                                    class="cat-product-img" alt="Fasteners"></div>
+                                            <span class="cat-product-name">Fasteners</span>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="cat-shop-all">Shop All Industrial <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+
+                                <!-- Card 5: Safety -->
+                                <div class="category-card">
+                                    <h3 class="cat-card-title">Safety</h3>
+                                    <div class="cat-products-grid">
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product3.png"
+                                                    class="cat-product-img" alt="Gloves"></div>
+                                            <span class="cat-product-name">Gloves</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product4.png"
+                                                    class="cat-product-img" alt="Masks"></div>
+                                            <span class="cat-product-name">Masks</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product5.png"
+                                                    class="cat-product-img" alt="Vests"></div>
+                                            <span class="cat-product-name">Safety Vests</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product6.png"
+                                                    class="cat-product-img" alt="Goggles"></div>
+                                            <span class="cat-product-name">Goggles</span>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="cat-shop-all">Shop All Safety <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+
+                                <!-- Card 6: Technology -->
+                                <div class="category-card">
+                                    <h3 class="cat-card-title">Technology</h3>
+                                    <div class="cat-products-grid">
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product7.png"
+                                                    class="cat-product-img" alt="Computers"></div>
+                                            <span class="cat-product-name">Computers</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product1.avif"
+                                                    class="cat-product-img" alt="Printers"></div>
+                                            <span class="cat-product-name">Printers</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product2.jpg"
+                                                    class="cat-product-img" alt="Cables"></div>
+                                            <span class="cat-product-name">Cables</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product3.png"
+                                                    class="cat-product-img" alt="Accessories"></div>
+                                            <span class="cat-product-name">Accessories</span>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="cat-shop-all">Shop All Technology <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                                 <div class="category-card">
+                                    <h3 class="cat-card-title">Office Supplies</h3>
+                                    <div class="cat-products-grid">
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product1.avif"
+                                                    class="cat-product-img" alt="Pens"></div>
+                                            <span class="cat-product-name">Pens & Pencils</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product2.jpg"
+                                                    class="cat-product-img" alt="Paper"></div>
+                                            <span class="cat-product-name">Paper Products</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product3.png"
+                                                    class="cat-product-img" alt="Folders"></div>
+                                            <span class="cat-product-name">Folders & Files</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product4.png"
+                                                    class="cat-product-img" alt="Desk"></div>
+                                            <span class="cat-product-name">Desk Supplies</span>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="cat-shop-all">Shop All Office <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+
+                                <!-- Card 2: Janitorial -->
+                                <div class="category-card">
+                                    <h3 class="cat-card-title">Janitorial</h3>
+                                    <div class="cat-products-grid">
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product5.png"
+                                                    class="cat-product-img" alt="Cleaning"></div>
+                                            <span class="cat-product-name">Cleaning Supplies</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product6.png"
+                                                    class="cat-product-img" alt="Mops"></div>
+                                            <span class="cat-product-name">Mops & Brooms</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product7.png"
+                                                    class="cat-product-img" alt="Trash"></div>
+                                            <span class="cat-product-name">Trash Bags</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product1.avif"
+                                                    class="cat-product-img" alt="Sanitizer"></div>
+                                            <span class="cat-product-name">Sanitizers</span>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="cat-shop-all">Shop All Janitorial <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+
+                                <!-- Card 3: Breakroom -->
+                                <div class="category-card">
+                                    <h3 class="cat-card-title">Breakroom</h3>
+                                    <div class="cat-products-grid">
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product2.jpg"
+                                                    class="cat-product-img" alt="Coffee"></div>
+                                            <span class="cat-product-name">Coffee & Tea</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product3.png"
+                                                    class="cat-product-img" alt="Snacks"></div>
+                                            <span class="cat-product-name">Snacks</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product4.png"
+                                                    class="cat-product-img" alt="Cups"></div>
+                                            <span class="cat-product-name">Cups & Plates</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product5.png"
+                                                    class="cat-product-img" alt="Utensils"></div>
+                                            <span class="cat-product-name">Utensils</span>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="cat-shop-all">Shop All Breakroom <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                                 <div class="category-card">
+                                    <h3 class="cat-card-title">Industrial</h3>
+                                    <div class="cat-products-grid">
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product6.png"
+                                                    class="cat-product-img" alt="Tools"></div>
+                                            <span class="cat-product-name">Power Tools</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product7.png"
+                                                    class="cat-product-img" alt="Safety"></div>
+                                            <span class="cat-product-name">Safety Gear</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product1.avif"
+                                                    class="cat-product-img" alt="Hardware"></div>
+                                            <span class="cat-product-name">Hardware</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product2.jpg"
+                                                    class="cat-product-img" alt="Fasteners"></div>
+                                            <span class="cat-product-name">Fasteners</span>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="cat-shop-all">Shop All Industrial <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+
+                                <!-- Card 5: Safety -->
+                                <div class="category-card">
+                                    <h3 class="cat-card-title">Safety</h3>
+                                    <div class="cat-products-grid">
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product3.png"
+                                                    class="cat-product-img" alt="Gloves"></div>
+                                            <span class="cat-product-name">Gloves</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product4.png"
+                                                    class="cat-product-img" alt="Masks"></div>
+                                            <span class="cat-product-name">Masks</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product5.png"
+                                                    class="cat-product-img" alt="Vests"></div>
+                                            <span class="cat-product-name">Safety Vests</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product6.png"
+                                                    class="cat-product-img" alt="Goggles"></div>
+                                            <span class="cat-product-name">Goggles</span>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="cat-shop-all">Shop All Safety <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+
+                                <!-- Card 6: Technology -->
+                                <div class="category-card">
+                                    <h3 class="cat-card-title">Technology</h3>
+                                    <div class="cat-products-grid">
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product7.png"
+                                                    class="cat-product-img" alt="Computers"></div>
+                                            <span class="cat-product-name">Computers</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product1.avif"
+                                                    class="cat-product-img" alt="Printers"></div>
+                                            <span class="cat-product-name">Printers</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product2.jpg"
+                                                    class="cat-product-img" alt="Cables"></div>
+                                            <span class="cat-product-name">Cables</span>
+                                        </a>
+                                        <a href="#" class="cat-product-item">
+                                            <div class="cat-product-img-box"><img src="products/product3.png"
+                                                    class="cat-product-img" alt="Accessories"></div>
+                                            <span class="cat-product-name">Accessories</span>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="cat-shop-all">Shop All Technology <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Featured Products Section -->
                     <h3 class="section-sub-title">Featured Products</h3>
                     <div class="row g-4">
@@ -2066,6 +2424,9 @@
             </div>
         </div>
     </section>
+
+
+
 
 
 
@@ -2289,6 +2650,7 @@
     <script src="js/navbar.js"></script>
     <script src="js/script.js"></script>
     <script src="js/sidebar.js"></script>
+    <script src="js/categories.js"></script>
 
     <!-- Shop Sidebar HTML -->
     <div class="shop-sidebar-overlay" id="shopSidebarOverlay"></div>
