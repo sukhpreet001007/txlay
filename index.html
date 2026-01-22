@@ -21,9 +21,11 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/mediaquery.css">
     <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/three-blocks.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/products.css">
@@ -73,6 +75,12 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </div>
+                    <!-- Mobile Shop All Button -->
+                    <div class="shop-all-mobile-wrapper d-lg-none mt-2">
+                        <button class="shop-all-btn justify-content-center w-100" id="shopAllMobileBtn">
+                            <i class="fa-solid fa-bars me-2"></i> Shop All
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Account Icon (Mobile Only) -->
@@ -119,6 +127,9 @@
         <!-- Desktop Navigation Menu -->
         <nav class="main-navbar">
             <div class="container-contents nav-container-wrapper">
+                <button class="shop-all-btn d-none d-lg-flex" id="shopAllDesktopBtn">
+                    <i class="fa-solid fa-bars me-2"></i> Shop All
+                </button>
                 <button id="navPrevBtn" class="nav-arrow-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
                 <ul class="nav-menu" id="navMenu">
                     <!-- Item 1: Janitorial -->
@@ -1835,6 +1846,8 @@
 
 
 
+
+    
     <!-- Hero Banner (Mobile Only - Top) -->
     <section class="banner-section py-2 mt-2 d-lg-none">
         <div class="container">
@@ -1845,8 +1858,9 @@
                         <div class="banner-content">
                             <span class="banner-tag">Flash Sale</span>
                             <h2 class="banner-title">Equipment That Works as Hard as You Do
-</h2>
-                            <p class="banner-text">Industry-grade janitorial solutions built for peak performance and lasting durability.</p>
+                            </h2>
+                            <p class="banner-text">Industry-grade janitorial solutions built for peak performance and
+                                lasting durability.</p>
                             <a href="#" class="banner-btn">Shop Collection <i
                                     class="fa-solid fa-arrow-right ms-2"></i></a>
                         </div>
@@ -1866,7 +1880,8 @@
                         <div class="banner-content">
                             <span class="banner-tag">Hospitality Essentials for Exceptional Service</span>
                             <h2 class="banner-title">Premium Office Essentials</h2>
-                            <p class="banner-text">Premium tools to elevate guest experiences and streamline every operation.</p>
+                            <p class="banner-text">Premium tools to elevate guest experiences and streamline every
+                                operation.</p>
                             <a href="#" class="banner-btn">Shop Collection <i
                                     class="fa-solid fa-arrow-right ms-2"></i></a>
                         </div>
@@ -1876,7 +1891,8 @@
                         <div class="banner-content">
                             <span class="banner-tag">New Arrival</span>
                             <h2 class="banner-title">Redefining Clean</h2>
-                            <p class="banner-text">Professional-grade power delivering spotless results with uncompromising efficiency.</p>
+                            <p class="banner-text">Professional-grade power delivering spotless results with
+                                uncompromising efficiency.</p>
                             <a href="#" class="banner-btn">Shop Collection <i
                                     class="fa-solid fa-arrow-right ms-2"></i></a>
                         </div>
@@ -1928,65 +1944,10 @@
             </div>
         </div>
     </section>
-    <section class="catalog-side py-1">
+    <section class="py-1">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-4">
-                    <div class="catalog-sidebar card border-0 shadow-sm rounded-3 overflow-hidden">
-                        <div class="card-header text-white py-3 border-0 collapsible-sidebar-header"
-                            data-bs-toggle="collapse" data-bs-target="#sidebarCategories" aria-expanded="false">
-                            <h5 class="mb-0 fw-bold d-flex justify-content-between align-items-center all-cate">
-                                <span><i class="fa-solid fa-list-ul me-2"></i> All Categories</span>
-                                <div class="d-flex align-items-center">
-                                    <i class="fa-solid fa-magnifying-glass category-search-icon me-3"
-                                        id="categorySearchToggle"></i>
-                                    <i class="fa-solid fa-chevron-down toggle-icon d-md-none"></i>
-                                </div>
-                            </h5>
-                        </div>
-                        <div class="category-search-container" id="categorySearchContainer" style="display: none;">
-                            <div class="p-2 bg-white border-bottom">
-                                <input type="text" id="categorySearchInput" class="form-control form-control-sm"
-                                    placeholder="Filter categories...">
-                            </div>
-                        </div>
-                        <div class="collapse d-md-block" id="sidebarCategories">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><a href="janitorial.html">Janitorial & Facility Supplies <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Industrial Safety <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Laundry & Warewash <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Office Supplies <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Janitorial Equipment <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Restaurant Supplies <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Healthcare <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Safety & PPE <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Microfiber <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Technology <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Janitorial Hardware <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Furniture & Interiors <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Breakroom <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">School Supplies <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                                <li class="list-group-item"><a href="janitorial.html">Txley's Picks <i
-                                            class="fa-solid fa-chevron-right fs-xs"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-8">
+                <div class="col-12">
                     <!-- Hero Banner (Desktop Only) -->
                     <div class="hero-banner d-none d-lg-block">
                         <div class="banner-slides">
@@ -1995,7 +1956,9 @@
                                 <div class="banner-content">
                                     <span class="banner-tag">Flash Sale</span>
                                     <h2 class="banner-title">Equipment That Works as Hard as You Do</h2>
-                                    <p class="banner-text">Upgrade your facility with reliable, industry-grade industrial and janitorial equipment designed for peak performance and long-lasting durability.</p>
+                                    <p class="banner-text">Upgrade your facility with reliable, industry-grade
+                                        industrial and janitorial equipment designed for peak performance and
+                                        long-lasting durability.</p>
                                     <a href="#" class="banner-btn">Shop Collection <i
                                             class="fa-solid fa-arrow-right ms-2"></i></a>
                                 </div>
@@ -2005,7 +1968,8 @@
                                 <div class="banner-content">
                                     <span class="banner-tag">New Arrival</span>
                                     <h2 class="banner-title">Elite Workspace Essentials</h2>
-                                    <p class="banner-text">Ignite productivity with premium tools for peak performance.</p>
+                                    <p class="banner-text">Ignite productivity with premium tools for peak performance.
+                                    </p>
                                     <a href="#" class="banner-btn">Shop Collection <i
                                             class="fa-solid fa-arrow-right ms-2"></i></a>
                                 </div>
@@ -2015,17 +1979,19 @@
                                 <div class="banner-content">
                                     <span class="banner-tag">Best Seller</span>
                                     <h2 class="banner-title">Hospitality Essentials for Exceptional Service </h2>
-                                    <p class="banner-text">Premium tools to elevate guest experiences and streamline every operation.</p>
+                                    <p class="banner-text">Premium tools to elevate guest experiences and streamline
+                                        every operation.</p>
                                     <a href="#" class="banner-btn">Shop Collection <i
                                             class="fa-solid fa-arrow-right ms-2"></i></a>
                                 </div>
                             </div>
-                             <div class="banner-slide">
+                            <div class="banner-slide">
                                 <img src="assets/banner-2.jpg" alt="Industrial Supplies Banner" class="banner-img">
                                 <div class="banner-content">
                                     <span class="banner-tag">Flash Sale</span>
                                     <h2 class="banner-title">Redefining Clean</h2>
-                                    <p class="banner-text">Professional-grade power delivering spotless results with uncompromising efficiency.</p>
+                                    <p class="banner-text">Professional-grade power delivering spotless results with
+                                        uncompromising efficiency.</p>
                                     <a href="#" class="banner-btn">Shop Collection <i
                                             class="fa-solid fa-arrow-right ms-2"></i></a>
                                 </div>
@@ -2322,6 +2288,26 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/sidebar.js"></script>
+
+    <!-- Shop Sidebar HTML -->
+    <div class="shop-sidebar-overlay" id="shopSidebarOverlay"></div>
+    <div class="shop-sidebar" id="shopSidebar">
+        <div class="shop-sidebar-header">
+            <h5 class="shop-sidebar-title">Shop All Categories</h5>
+            <button class="close-shop-sidebar" id="closeShopSidebar"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="d-flex flex-grow-1 position-relative shop-sidebar-body">
+            <!-- Left Pane -->
+            <div class="shop-sidebar-parents custom-scrollbar" id="shopSidebarParents">
+                <!-- Populated by JS -->
+            </div>
+            <!-- Right Pane (Sub Menu) -->
+            <div class="shop-sidebar-subs custom-scrollbar" id="shopSidebarSubs">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
     <!-- Mobile Account Dropdown -->
     <div class="mobile-account-dropdown" id="mobileAccountDropdown">
         <div class="dropdown-header-mobile">

@@ -21,6 +21,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/mediaquery.css">
     <link rel="stylesheet" href="css/catalog.css">
@@ -37,18 +38,18 @@
     <!-- Header Section -->
     <header class="site-header">
         <!-- Top Utility Bar -->
-         <div class="top-bar">
+        <div class="top-bar">
             <div class="container-contents">
                 <div class="top-links-left">
                     <a href="index.html">Home</a>
                     <a href="about.html">About Us</a>
                     <a href="markets.html">Markets</a>
                     <a href="contactus.html">Contact Us</a>
-                    <a href="#" class="highlight">Promos & Specials</a>
+                    <a href="promos.html" class="highlight">Promos & Specials</a>
                 </div>
                 <div class="top-links-right">
                     <a href="#"><i class="fa-solid fa-bolt"></i> Quick Order</a>
-                    <a href="#"><i class="fa-regular fa-user"></i> My Account</a>
+                    <a href="my-account.html"><i class="fa-regular fa-user"></i> My Account</a>
                     <a href="auth.html" class="login-btn">Sign In / Create Account</a>
                 </div>
             </div>
@@ -75,12 +76,18 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </div>
+                    <!-- Mobile Shop All Button -->
+                    <div class="shop-all-mobile-wrapper d-lg-none mt-2">
+                        <button class="shop-all-btn justify-content-center w-100" id="shopAllMobileBtn">
+                            <i class="fa-solid fa-bars me-2"></i> Shop All
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Account Icon (Mobile Only) -->
                 <div class="mobile-account-wrapper">
                     <button class="mobile-account-btn" id="mobileAccountBtn">
-                        <i class="fa-regular fa-user"></i>
+                        <i class="fa-solid fa-user"></i>
                     </button>
                     <div class="mobile-account-dropdown" id="mobileAccountDropdown">
                         <div class="dropdown-header-mobile">
@@ -90,14 +97,14 @@
                         <ul class="mobile-account-links">
                             <li><a href="auth.html"><i class="fa-solid fa-right-to-bracket"></i> Sign In / Create
                                     Account</a></li>
-                            <li><a href="#"><i class="fa-regular fa-user"></i> My Account</a></li>
+                            <li><a href="my-account.html"><i class="fa-regular fa-user"></i> My Account</a></li>
                             <li><a href="#"><i class="fa-solid fa-bolt"></i> Quick Order</a></li>
                             <hr>
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About Us</a></li>
                             <li><a href="markets.html">Markets</a></li>
                             <li><a href="contactus.html">Contact Us</a></li>
-                            <li><a href="#" class="highlight">Promos & Specials</a></li>
+                            <li><a href="promos.html" class="highlight">Promos & Specials</a></li>
                         </ul>
                     </div>
                 </div>
@@ -121,6 +128,10 @@
         <!-- Desktop Navigation Menu -->
         <nav class="main-navbar">
             <div class="container-contents nav-container-wrapper">
+                <button class="shop-all-btn d-none d-lg-flex" id="shopAllDesktopBtn">
+                    <i class="fa-solid fa-bars me-2"></i> Shop All
+                </button>
+                <button id="navPrevBtn" class="nav-arrow-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
                 <ul class="nav-menu" id="navMenu">
                     <!-- Item 1: Janitorial -->
                     <li class="nav-item has-dropdown">
@@ -1828,6 +1839,8 @@
                         <a href="#" class="nav-link">Txley's Picks</a>
                     </li>
                 </ul>
+                <button id="navNextBtn" class="nav-arrow-btn next-btn"><i
+                        class="fa-solid fa-chevron-right"></i></button>
             </div>
         </nav>
     </header>
@@ -3497,6 +3510,26 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/navbar.js"></script>
+     <script src="js/sidebar.js"></script>
+
+    <!-- Shop Sidebar HTML -->
+    <div class="shop-sidebar-overlay" id="shopSidebarOverlay"></div>
+    <div class="shop-sidebar" id="shopSidebar">
+        <div class="shop-sidebar-header">
+            <h5 class="shop-sidebar-title">Shop All Categories</h5>
+            <button class="close-shop-sidebar" id="closeShopSidebar"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="d-flex flex-grow-1 position-relative shop-sidebar-body">
+            <!-- Left Pane -->
+            <div class="shop-sidebar-parents custom-scrollbar" id="shopSidebarParents">
+                <!-- Populated by JS -->
+            </div>
+            <!-- Right Pane (Sub Menu) -->
+            <div class="shop-sidebar-subs custom-scrollbar" id="shopSidebarSubs">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
