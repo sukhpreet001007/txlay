@@ -260,7 +260,8 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    /* gap: 50px; */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -406,7 +407,7 @@
     position: relative;
     border-radius: 5px;
     overflow: hidden;
-    height: 450px;
+    height: 250px;
 }
 
 .recommend-img-wrapper img {
