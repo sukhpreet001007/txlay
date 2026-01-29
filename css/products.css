@@ -1,6 +1,6 @@
 .hero-banner {
-    width: calc(100% - 20px);
-    margin: 0 10px 30px 10px;
+    width: calc(100% - 90px);
+    margin: 0 45px 30px 45px;
     overflow: hidden;
     position: relative;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -342,7 +342,7 @@
 }
 
 .featured-products-section {
-    margin: 0 10px;
+    margin: 0 45px;
 }
 
 /* Section Heading */

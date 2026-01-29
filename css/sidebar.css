@@ -28,15 +28,10 @@
 .shop-all-mobile-wrapper .shop-all-btn {
     width: 100%;
     justify-content: center;
-    background: #232F3E;
     border-radius: 10px;
-    color: #fff;
+    color: #000000;
 }
 
-.shop-all-mobile-wrapper:hover .shop-all-btn {
-    background-color: #232f3eb2;
-    color: #ffffff;
-}
 
 /* Show mobile Shop All button for screens 992px - 1200px */
 @media (min-width: 992px) and (max-width: 1200px) {

@@ -445,5 +445,34 @@ document.addEventListener('DOMContentLoaded', function () {
         // Auto move every 4 seconds
         setInterval(nextSeeAllSlide, 4000);
     }
+
+    // Horizontal Slider Logic for Quick Order and Shop Categories
+    function setupHorizontalSlider(sliderId, prevBtnId, nextBtnId) {
+        const slider = document.getElementById(sliderId);
+        const prevBtn = document.getElementById(prevBtnId);
+        const nextBtn = document.getElementById(nextBtnId);
+
+        if (!slider || !prevBtn || !nextBtn) return;
+
+        const scrollAmount = 300; // Amount to scroll on each click
+
+        nextBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+
+        // Optional: Hide buttons if at start/end
+        slider.addEventListener('scroll', () => {
+            const maxScroll = slider.scrollWidth - slider.clientWidth;
+            prevBtn.style.opacity = slider.scrollLeft <= 0 ? '0.5' : '1';
+            nextBtn.style.opacity = slider.scrollLeft >= maxScroll - 1 ? '0.5' : '1';
+        });
+    }
+
+    setupHorizontalSlider('quickOrderSlider', 'quickOrderPrev', 'quickOrderNext');
+    setupHorizontalSlider('shopCatSlider', 'shopCatPrev', 'shopCatNext');
 });
 
