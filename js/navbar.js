@@ -136,69 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Desktop Paginated Navbar Logic ---
-    const navMenu = document.getElementById('navMenu');
-    const navPrevBtn = document.getElementById('navPrevBtn');
-    const navNextBtn = document.getElementById('navNextBtn');
-
-    if (navMenu && navPrevBtn && navNextBtn) {
-        const navItems = Array.from(navMenu.querySelectorAll(':scope > .nav-item'));
-        const itemsPerPage = 6;
-        let currentPage = 0;
-        const totalPages = Math.ceil(navItems.length / itemsPerPage);
-
-        function updateNavbar() {
-            if (window.innerWidth <= 1200) {
-                // On mobile, show all for the horizontal scroll if needed, 
-                // but usually the sidebar handles it.
-                // However, we added arrow buttons in index.html, so we hide them.
-                navPrevBtn.style.display = 'none';
-                navNextBtn.style.display = 'none';
-                navItems.forEach(item => item.style.display = '');
-                return;
-            }
-
-            navPrevBtn.style.display = 'flex';
-            navNextBtn.style.display = 'flex';
-
-            const start = currentPage * itemsPerPage;
-            const end = start + itemsPerPage;
-
-            navItems.forEach((item, index) => {
-                if (index >= start && index < end) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-
-            // Update arrow states
-            navPrevBtn.disabled = currentPage === 0;
-            navNextBtn.disabled = currentPage === totalPages - 1;
-
-            // Optional: Hide arrows if they aren't needed
-            navPrevBtn.style.visibility = currentPage === 0 ? 'hidden' : 'visible';
-            navNextBtn.style.visibility = currentPage === totalPages - 1 ? 'hidden' : 'visible';
-        }
-
-        navNextBtn.addEventListener('click', () => {
-            if (currentPage < totalPages - 1) {
-                currentPage++;
-                updateNavbar();
-            }
-        });
-
-        navPrevBtn.addEventListener('click', () => {
-            if (currentPage > 0) {
-                currentPage--;
-                updateNavbar();
-            }
-        });
-
-        // Initialize and handle resize
-        window.addEventListener('resize', updateNavbar);
-        updateNavbar();
-    }
+    // --- Desktop Mega Menu logic ---
+    // (Arrows removed as requested)
 
     // Function to handle long dropdowns (20+ items)
     function applyDropdownScrolling() {

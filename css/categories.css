@@ -1,7 +1,7 @@
 /* Categories Section Styles */
 .categories-overlay-section {
     position: relative;
-    z-index: 100;
+    z-index: 10;
     margin-top: -60px;
     /* Overlap banner */
     margin-bottom: 40px;

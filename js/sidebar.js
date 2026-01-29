@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         navItems.forEach((item, index) => {
             const link = item.querySelector('.nav-link');
+            const megaMenu = item.querySelector('.mega-menu-custom');
             const dropdown = item.querySelector('.dropdown-menu-custom');
 
             if (!link) return;
@@ -172,7 +173,48 @@ document.addEventListener('DOMContentLoaded', function () {
             subPanel.appendChild(featureGrid);
 
             // Copy Subcategories from Navbar
-            if (dropdown) {
+            if (megaMenu) {
+                const mainTitle = document.createElement('h5');
+                mainTitle.className = 'mb-3 mt-4 fw-bold';
+                mainTitle.textContent = 'Shop Categories';
+                subPanel.appendChild(mainTitle);
+
+                const subCatContainer = document.createElement('div');
+                subCatContainer.className = 'sub-cat-container';
+
+                const groups = megaMenu.querySelectorAll('.mega-group');
+                groups.forEach(group => {
+                    const groupTitle = group.querySelector('.mega-group-title');
+                    const links = group.querySelectorAll('.mega-links-list li a');
+
+                    if (groupTitle) {
+                        const groupDiv = document.createElement('div');
+                        groupDiv.className = 'sub-cat-group';
+
+                        const title = document.createElement('div');
+                        title.className = 'sub-cat-title';
+                        title.innerHTML = `<a href="#" style="color:inherit; text-decoration:none;">${groupTitle.textContent.trim()}</a>`;
+                        groupDiv.appendChild(title);
+
+                        if (links.length > 0) {
+                            const subUl = document.createElement('ul');
+                            subUl.className = 'sub-cat-list';
+                            links.forEach(nLink => {
+                                const subLi = document.createElement('li');
+                                const sl = document.createElement('a');
+                                sl.className = 'sub-cat-link';
+                                sl.href = nLink.href;
+                                sl.textContent = nLink.textContent;
+                                subLi.appendChild(sl);
+                                subUl.appendChild(subLi);
+                            });
+                            groupDiv.appendChild(subUl);
+                        }
+                        subCatContainer.appendChild(groupDiv);
+                    }
+                });
+                subPanel.appendChild(subCatContainer);
+            } else if (dropdown) {
                 const mainTitle = document.createElement('h5');
                 mainTitle.className = 'mb-3 mt-4 fw-bold';
                 mainTitle.textContent = 'Shop Categories';

@@ -124,24 +124,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 }, 300);
 
             } else {
-                // Close
                 categorySearchToggle.classList.remove('text-primary'); // Remove highlight
 
-                // Set explicit height to animate from
                 categorySearchContainer.style.height = categorySearchContainer.scrollHeight + 'px';
                 categorySearchContainer.style.opacity = '1';
 
-                // Force reflow
                 void categorySearchContainer.offsetWidth;
 
-                // Animate to 0
                 categorySearchContainer.style.height = '0';
                 categorySearchContainer.style.opacity = '0';
 
                 setTimeout(() => {
                     categorySearchContainer.style.display = 'none';
-                    categorySearchInput.value = ''; // Clear input
-                    filterCategories(''); // Reset list
+                    categorySearchInput.value = ''; 
+                    filterCategories(''); 
                 }, 300);
             }
         });
@@ -161,7 +157,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Check if text matches query
                     if (text.includes(query)) {
                         item.style.display = '';
-                        // Highlight match? maybe overkill for now, just filtering
                     } else {
                         item.style.display = 'none';
                     }
@@ -173,9 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
         categorySearchInput.addEventListener('click', (e) => e.stopPropagation());
     }
 
-    // ===================================
     // MY ACCOUNT TAB SWITCHING
-    // ===================================
     const sidebarLinks = document.querySelectorAll('.sidebar-link1');
     const tabContents = document.querySelectorAll('.tab-content');
 
@@ -199,9 +192,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ===================================
+   
     // QUICK ORDERS LOGIC
-    // ===================================
     const rowsContainer = document.getElementById('quick-order-rows-container');
     const addEntryBtn = document.getElementById('add-entry-btn');
     const totalItemsTop = document.getElementById('total-items-top');
@@ -232,19 +224,15 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     if (rowsContainer) {
-        // Initial rows
         addRows(5);
 
-        // Add rows on button click
         addEntryBtn.addEventListener('click', () => {
             addRows(5);
         });
 
-        // Event delegation for inputs and buttons
         rowsContainer.addEventListener('input', handleRowInput);
         rowsContainer.addEventListener('click', handleRowClick);
 
-        // CSV Download logic
         if (downloadCsvBtn) {
             downloadCsvBtn.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -292,14 +280,12 @@ document.addEventListener('DOMContentLoaded', function () {
             const priceCell = row.querySelector('.price-cell');
 
             if (val.length >= 3) {
-                // Show loading
                 infoCell.innerHTML = `
                     <div class="loading-dots">
                         <span></span><span></span><span></span>
                     </div>
                 `;
 
-                // Simulate fetch
                 setTimeout(() => {
                     const product = mockProducts[val];
                     if (product) {
