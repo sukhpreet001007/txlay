@@ -198,4 +198,229 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
+    // ===================================
+    // QUICK ORDERS LOGIC
+    // ===================================
+    const rowsContainer = document.getElementById('quick-order-rows-container');
+    const addEntryBtn = document.getElementById('add-entry-btn');
+    const totalItemsTop = document.getElementById('total-items-top');
+    const totalItemsBottom = document.getElementById('total-items-bottom');
+    const subtotalTop = document.getElementById('subtotal-value-top');
+    const subtotalBottom = document.getElementById('subtotal-value-bottom');
+    const downloadCsvBtn = document.getElementById('download-csv-btn');
+
+    const mockProducts = {
+        "G3017637": {
+            title: "Vise-Grip 11\" Locking C-Clamp, 11R, Easy Release Trigger, 3-3/8\" Jaw Opening, Alloy Steel",
+            price: 15.00,
+            originalPrice: 21.99,
+            discount: "31% off"
+        },
+        "G1234567": {
+            title: "Industrial Safety Gloves, Heavy Duty, Large",
+            price: 9.50,
+            originalPrice: 12.00,
+            discount: "20% off"
+        },
+        "G7654321": {
+            title: "Office Chair, Ergonomic Mesh Back",
+            price: 85.00,
+            originalPrice: 110.00,
+            discount: "22% off"
+        }
+    };
+
+    if (rowsContainer) {
+        // Initial rows
+        addRows(5);
+
+        // Add rows on button click
+        addEntryBtn.addEventListener('click', () => {
+            addRows(5);
+        });
+
+        // Event delegation for inputs and buttons
+        rowsContainer.addEventListener('input', handleRowInput);
+        rowsContainer.addEventListener('click', handleRowClick);
+
+        // CSV Download logic
+        if (downloadCsvBtn) {
+            downloadCsvBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                downloadCSV();
+            });
+        }
+    }
+
+    function addRows(count) {
+        for (let i = 0; i < count; i++) {
+            const row = document.createElement('div');
+            row.className = 'row-item';
+            row.innerHTML = `
+                <div class="input-field">
+                    <label>Item Number*</label>
+                    <input type="text" class="item-number-input" placeholder="Item Number*">
+                </div>
+                <div class="product-info-cell">
+                    <!-- Loaded dynamically -->
+                </div>
+                <div class="input-field">
+                    <label>Qty*</label>
+                    <input type="number" class="qty-input" value="1" min="1">
+                </div>
+                <div class="price-cell">
+                    <div class="price-display">$0.00 <span class="price-unit">/ea</span></div>
+                    <div class="price-subtotal">Subtotal: $0.00</div>
+                </div>
+                <button class="btn-delete">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+            `;
+            rowsContainer.appendChild(row);
+        }
+        updateTotals();
+    }
+
+    function handleRowInput(e) {
+        const target = e.target;
+        const row = target.closest('.row-item');
+
+        if (target.classList.contains('item-number-input')) {
+            const val = target.value.toUpperCase().trim();
+            const infoCell = row.querySelector('.product-info-cell');
+            const priceCell = row.querySelector('.price-cell');
+
+            if (val.length >= 3) {
+                // Show loading
+                infoCell.innerHTML = `
+                    <div class="loading-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                `;
+
+                // Simulate fetch
+                setTimeout(() => {
+                    const product = mockProducts[val];
+                    if (product) {
+                        infoCell.innerHTML = product.title;
+                        infoCell.setAttribute('data-price', product.price);
+
+                        let priceHtml = '';
+                        if (product.originalPrice) {
+                            priceHtml += `<span class="price-old">$${product.originalPrice.toFixed(2)}</span>`;
+                        }
+                        if (product.discount) {
+                            priceHtml += `<span class="price-discount">${product.discount}</span>`;
+                        }
+                        priceHtml += `<div class="price-actual">$${product.price.toFixed(2)} <span class="price-unit">/ea</span></div>`;
+
+                        priceCell.innerHTML = `
+                            <div class="price-display">${priceHtml}</div>
+                            <div class="price-subtotal">Subtotal: $${product.price.toFixed(2)}</div>
+                        `;
+                    } else {
+                        infoCell.innerHTML = '<span class="text-danger">Item not found</span>';
+                        priceCell.innerHTML = `
+                            <div class="price-display">$0.00 <span class="price-unit">/ea</span></div>
+                            <div class="price-subtotal">Subtotal: $0.00</div>
+                        `;
+                        infoCell.removeAttribute('data-price');
+                    }
+                    updateTotals();
+                }, 800);
+            } else {
+                infoCell.innerHTML = '';
+                infoCell.removeAttribute('data-price');
+                priceCell.innerHTML = `
+                    <div class="price-display">$0.00 <span class="price-unit">/ea</span></div>
+                    <div class="price-subtotal">Subtotal: $0.00</div>
+                `;
+                updateTotals();
+            }
+        }
+
+        if (target.classList.contains('qty-input')) {
+            updateRowSubtotal(row);
+            updateTotals();
+        }
+    }
+
+    function handleRowClick(e) {
+        const btn = e.target.closest('.btn-delete');
+        if (btn) {
+            const row = btn.closest('.row-item');
+            row.remove();
+            updateTotals();
+        }
+    }
+
+    function updateRowSubtotal(row) {
+        const infoCell = row.querySelector('.product-info-cell');
+        const qtyInput = row.querySelector('.qty-input');
+        const priceSubtotal = row.querySelector('.price-subtotal');
+        const price = parseFloat(infoCell.getAttribute('data-price')) || 0;
+        const qty = parseInt(qtyInput.value) || 0;
+
+        const subtotal = price * qty;
+        priceSubtotal.textContent = `Subtotal: $${subtotal.toFixed(2)}`;
+    }
+
+    function updateTotals() {
+        const rows = rowsContainer.querySelectorAll('.row-item');
+        let total = 0;
+        let itemCount = 0;
+
+        rows.forEach(row => {
+            const infoCell = row.querySelector('.product-info-cell');
+            const qtyInput = row.querySelector('.qty-input');
+            const price = parseFloat(infoCell.getAttribute('data-price'));
+
+            if (price) {
+                const qty = parseInt(qtyInput.value) || 0;
+                total += price * qty;
+                itemCount += qty;
+            }
+        });
+
+        totalItemsTop.textContent = itemCount;
+        totalItemsBottom.textContent = itemCount;
+        subtotalTop.textContent = `$${total.toFixed(2)}`;
+        subtotalBottom.textContent = `$${total.toFixed(2)}`;
+    }
+
+    function downloadCSV() {
+        const rows = rowsContainer.querySelectorAll('.row-item');
+        let csvContent = "data:text/csv;charset=utf-8,";
+        csvContent += "Item Number,Product Title,Qty,Price,Subtotal\n";
+
+        let hasData = false;
+        rows.forEach(row => {
+            const itemNum = row.querySelector('.item-number-input').value.trim();
+            const productTitle = row.querySelector('.product-info-cell').textContent.trim();
+            const qty = row.querySelector('.qty-input').value;
+            const price = row.querySelector('.product-info-cell').getAttribute('data-price');
+
+            if (price && itemNum) {
+                hasData = true;
+                const subtotal = parseFloat(price) * parseInt(qty);
+                // Simple CSV escaping (replace double quotes with two double quotes)
+                const safeTitle = productTitle.replace(/"/g, '""');
+                csvContent += `"${itemNum}","${safeTitle}",${qty},${price},${subtotal.toFixed(2)}\n`;
+            }
+        });
+
+        if (!hasData) {
+            alert("No items to download. Please enter valid item numbers.");
+            return;
+        }
+
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", "quick_order_txley.csv");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
 });
