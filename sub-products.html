@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Txley - Premium Supplies</title>
+    <title>Txley - Floor Scrubbers & Buffers</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,18 +25,15 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/mediaquery.css">
     <link rel="stylesheet" href="css/catalog.css">
-    <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/categories.css">
     <link rel="stylesheet" href="css/three-blocks.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/products.css">
-    <link rel="stylesheet" href="css/auth-modal.css">
+    <link rel="stylesheet" href="css/see-all.css">
 </head>
 
 <body>
 
-    <!-- Header Section -->
-    <header class="site-header">
+      <header class="site-header">
         <!-- Top Utility Bar -->
         <div class="top-bar">
             <div class="container-contents">
@@ -852,943 +849,149 @@
         </nav>
     </header>
 
-
-
-
-
-    <!-- Hero Banner (Unified for Desktop and Mobile) -->
-    <section class="banner-section">
-        <div class="hero-banner">
-            <div class="banner-slides">
-                <div class="banner-slide">
-                    <img src="assets/banner-4.jpg" alt="Industrial Supplies Banner" class="banner-img">
-                    <div class="banner-content">
-                        <span class="banner-tag">Flash Sale</span>
-                        <h2 class="banner-title">Equipment That Works as Hard as You Do</h2>
-                        <p class="banner-text">Industry-grade janitorial solutions built for peak performance and
-                            lasting durability.</p>
-                        <a href="#" class="banner-btn">Shop Collection <i class="fa-solid fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-                <div class="banner-slide">
-                    <img src="assets/banner-1.jpg" alt="Waste Management Banner" class="banner-img">
-                    <div class="banner-content">
-                        <span class="banner-tag">New Arrival</span>
-                        <h2 class="banner-title">Elite Workspace Essentials</h2>
-                        <p class="banner-text">Ignite productivity with premium tools for peak performance.</p>
-                        <a href="#" class="banner-btn">Shop Collection <i class="fa-solid fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-                <div class="banner-slide">
-                    <img src="assets/banner-3.jpg" alt="Office Essentials Banner" class="banner-img">
-                    <div class="banner-content">
-                        <span class="banner-tag">Best Seller</span>
-                        <h2 class="banner-title">Premium Office Essentials</h2>
-                        <p class="banner-text">Premium tools to elevate guest experiences and streamline every
-                            operation.</p>
-                        <a href="#" class="banner-btn">Shop Collection <i class="fa-solid fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-                <div class="banner-slide">
-                    <img src="assets/banner-2.jpg" alt="Cleaning Solutions Banner" class="banner-img">
-                    <div class="banner-content">
-                        <span class="banner-tag">New Arrival</span>
-                        <h2 class="banner-title">Redefining Clean</h2>
-                        <p class="banner-text">Professional-grade power delivering spotless results with uncompromising
-                            efficiency.</p>
-                        <a href="#" class="banner-btn">Shop Collection <i class="fa-solid fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- Arrows -->
-            <button class="banner-arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="banner-arrow next"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="breadcrumb-section">
+        <div class="container-contents">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="see-all.html">Cleaning Equipment</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Cleaning Equipment Sub Products</li>
+                </ol>
+            </nav>
         </div>
-    </section>
+    </div>
 
-    <!-- Links Blocks (Now below Banner and only 2 blocks) -->
-    <section class="three-blocks-links">
-        <div class="container-fluid">
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-6 col-md-6">
-                    <a href="quick-order.html" class="link-block-card">
-                        <div class="block-icon-wrapper">
-                            <i class="fa-solid fa-cart-flatbed"></i>
-                        </div>
-                        <div class="block-content-text">
-                            <h4 class="block-title">Quick Order Form</h4>
-                            <p class="block-desc">Quickly add your favorites to your cart.</p>
-                        </div>
-                    </a>
+    <div class="container-contents see-all-container">
+        <div class="see-all-layout">
+            <!-- Left Sidebar -->
+            <aside class="see-all-sidebar">
+                <h2 class="sidebar-catalog-title">Cleaning Equipment</h2>
+                <div class="sidebar-search-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="catalogSearch" class="sidebar-search-input"
+                        placeholder="Search sub-items...">
                 </div>
-                <div class="col-lg-6 col-md-6">
-                    <a href="product-search.html" class="link-block-card">
-                        <div class="block-icon-wrapper">
-                            <i class="fa-solid fa-magnifying-glass-plus"></i>
-                        </div>
-                        <div class="block-content-text">
-                            <h4 class="block-title">Product Search</h4>
-                            <p class="block-desc">Find what you need using our quick and easy search.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Quick Order Categories Section -->
-    <section class="quick-order-overlay-section">
-        <div class="quick-grid">
-            <!-- Item 1: Senior Living -->
-            <a href="quick-order.html" class="quick-card">
-                <img src="products/quick-1.webp" alt="Senior Living">
-                <div class="quick-overlay">
-                    <h3 class="quick-title">Senior Living</h3>
-                    <span class="quick-link-text">Quick Order <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <!-- Item 2: Facilities Maintenance -->
-            <a href="quick-order.html" class="quick-card">
-                <img src="products/quick-2.webp" alt="Facilities Maintenance">
-                <div class="quick-overlay">
-                    <h3 class="quick-title">Facilities Maintenance</h3>
-                    <span class="quick-link-text">Quick Order <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <!-- Item 3: Restaurant -->
-            <a href="quick-order.html" class="quick-card">
-                <img src="products/quick-3.jpg" alt="Restaurant">
-                <div class="quick-overlay">
-                    <h3 class="quick-title">Restaurant</h3>
-                    <span class="quick-link-text">Quick Order <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <!-- Item 4: Warehouse -->
-            <a href="quick-order.html" class="quick-card">
-                <img src="products/quick-4.jpeg" alt="Warehouse">
-                <div class="quick-overlay">
-                    <h3 class="quick-title">Warehouse</h3>
-                    <span class="quick-link-text">Quick Order <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <!-- Item 5: Schools & University -->
-            <a href="quick-order.html" class="quick-card">
-                <img src="products/quick-5.jpg" alt="Schools & University">
-                <div class="quick-overlay">
-                    <h3 class="quick-title">Schools & University</h3>
-                    <span class="quick-link-text">Quick Order <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <!-- Item 6: Construction -->
-            <a href="quick-order.html" class="quick-card">
-                <img src="products/quick-6.jpeg" alt="Construction">
-                <div class="quick-overlay">
-                    <h3 class="quick-title">Construction</h3>
-                    <span class="quick-link-text">Quick Order <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <!-- Item 7: Healthcare & Labs -->
-            <a href="quick-order.html" class="quick-card">
-                <img src="products/quick-7.jpg" alt="Healthcare & Labs">
-                <div class="quick-overlay">
-                    <h3 class="quick-title">Healthcare & Labs</h3>
-                    <span class="quick-link-text">Quick Order <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <!-- Item 8: Port Facilities -->
-            <a href="quick-order.html" class="quick-card">
-                <img src="products/quick-8.jpg" alt="Port Facilities">
-                <div class="quick-overlay">
-                    <h3 class="quick-title">Port Facilities</h3>
-                    <span class="quick-link-text">Quick Order <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <!-- Item 9: Hospitality -->
-            <a href="quick-order.html" class="quick-card">
-                <img src="products/quick-9.jpg" alt="Hospitality">
-                <div class="quick-overlay">
-                    <h3 class="quick-title">Hospitality</h3>
-                    <span class="quick-link-text">Quick Order <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <!-- Item 10: Religious & Childcare -->
-            <a href="quick-order.html" class="quick-card">
-                <img src="products/quick-10.webp" alt="Religious & Childcare">
-                <div class="quick-overlay">
-                    <h3 class="quick-title">Religious & Childcare</h3>
-                    <span class="quick-link-text">Quick Order <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <!-- Item 11: Building Service Contractors -->
-            <a href="quick-order.html" class="quick-card">
-                <img src="products/quick-11.jpg" alt="Building Service Contractors">
-                <div class="quick-overlay">
-                    <h3 class="quick-title">Building Service Contractors</h3>
-                    <span class="quick-link-text">Quick Order <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <!-- Item 12: Food Processing -->
-            <a href="quick-order.html" class="quick-card">
-                <img src="products/quick-12.jpg" alt="Food Processing">
-                <div class="quick-overlay">
-                    <h3 class="quick-title">Food Processing</h3>
-                    <span class="quick-link-text">Quick Order <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <!-- Most Popular Categories Section -->
-    <section class="popular-categories-section">
-        <h2 class="section-sub-title">Most Popular Categories</h2>
-        <div class="popular-categories-grid">
-            <!-- Category 1 -->
-            <a href="#" class="popular-cat-card">
-                <div class="popular-cat-img">
-                    <img src="products/product1.avif" alt="Paper Towels">
-                </div>
-                <div class="popular-cat-info">
-                    <h4 class="popular-cat-name">Paper Products &amp; Dispensers <span
-                            class="popular-cat-count">(508)</span></h4>
-                </div>
-            </a>
-
-            <!-- Category 2 -->
-            <a href="#" class="popular-cat-card">
-                <div class="popular-cat-img">
-                    <img src="products/product2.jpg" alt="Toilet Paper">
-                </div>
-                <div class="popular-cat-info">
-                    <h4 class="popular-cat-name">Disposable Utensils Coffee Cups &amp; ToGo containers <span
-                            class="popular-cat-count">(281)</span></h4>
-                </div>
-            </a>
-
-            <!-- Category 3 -->
-            <a href="#" class="popular-cat-card">
-                <div class="popular-cat-img">
-                    <img src="products/product3.png" alt="Cleaning Chemicals">
-                </div>
-                <div class="popular-cat-info">
-                    <h4 class="popular-cat-name">Trash Cans &amp; Liners <span class="popular-cat-count">(2068)</span>
-                    </h4>
-                </div>
-            </a>
-
-            <!-- Category 4 -->
-            <a href="#" class="popular-cat-card">
-                <div class="popular-cat-img">
-                    <img src="products/product4.png" alt="Cups, Plates, Bowls, Utensils and Napkins">
-                </div>
-                <div class="popular-cat-info">
-                    <h4 class="popular-cat-name">Soaps &amp; Dispensers <span class="popular-cat-count">(1926)</span>
-                    </h4>
-                </div>
-            </a>
-
-            <!-- Category 5 -->
-            <a href="#" class="popular-cat-card">
-                <div class="popular-cat-img">
-                    <img src="products/product5.png" alt="Kitchen Supplies">
-                </div>
-                <div class="popular-cat-info">
-                    <h4 class="popular-cat-name">Copy Paper, Pens &amp; Office<span
-                            class="popular-cat-count">(2354)</span></h4>
-                </div>
-            </a>
-
-            <!-- Category 6 -->
-            <a href="#" class="popular-cat-card">
-                <div class="popular-cat-img">
-                    <img src="products/product6.png" alt="Can Liners and Trash Cans">
-                </div>
-                <div class="popular-cat-info">
-                    <h4 class="popular-cat-name">Laundry <span class="popular-cat-count">(2027)</span>
-                    </h4>
-                </div>
-            </a>
-
-            <!-- Category 7 -->
-            <a href="#" class="popular-cat-card">
-                <div class="popular-cat-img">
-                    <img src="products/product7.png" alt="Soaps and Dispensers">
-                </div>
-                <div class="popular-cat-info">
-                    <h4 class="popular-cat-name">Warewash Eqpt &amp; Chemicals <span
-                            class="popular-cat-count">(1178)</span></h4>
-                </div>
-            </a>
-
-            <!-- Category 8 -->
-            <a href="#" class="popular-cat-card">
-                <div class="popular-cat-img">
-                    <img src="products/product1.avif" alt="Pens, Writing and Correction">
-                </div>
-                <div class="popular-cat-info">
-                    <h4 class="popular-cat-name">Cleaning Chemicals <span class="popular-cat-count">(2827)</span></h4>
-                </div>
-            </a>
-
-            <!-- Category 9 -->
-            <a href="#" class="popular-cat-card">
-                <div class="popular-cat-img">
-                    <img src="products/product2.jpg" alt="Coffee and Coffee Service">
-                </div>
-                <div class="popular-cat-info">
-                    <h4 class="popular-cat-name">Mops, Brooms, Microfiber<span class="popular-cat-count">(993)</span>
-                    </h4>
-                </div>
-            </a>
-
-            <!-- Category 10 -->
-            <a href="#" class="popular-cat-card">
-                <div class="popular-cat-img">
-                    <img src="products/product3.png" alt="Copy and Printer Paper">
-                </div>
-                <div class="popular-cat-info">
-                    <h4 class="popular-cat-name">Disinfectants, Masks &amp; Sanitizers <span
-                            class="popular-cat-count">(1050)</span>
-                    </h4>
-                </div>
-            </a>
-
-
-        </div>
-    </section>
-
-    <!-- Shop Categories Section -->
-    <section class="shop-categories-section">
-        <h2 class="section-sub-title">Shop categories</h2>
-        <div class="shop-categories-grid">
-            <!-- Column 1: Heating, Cooling & Air Quality -->
-            <div class="shop-cat-column">
-                <div class="shop-cat-header">Heating, Cooling & Air Quality</div>
-                <ul class="shop-cat-list">
-                    <li><a href="#"><img src="products/product1.avif" alt=""> Portable A/C</a></li>
-                    <li><a href="#"><img src="products/product2.jpg" alt=""> Portable Heating</a></li>
-                    <li><a href="#"><img src="products/product3.png" alt=""> Dehumidifiers</a></li>
+                <ul class="sidebar-options-list" id="catalogList">
+                    <li class="sidebar-option-item"><a href="#" class="sidebar-option-link">Scrubbers</a></li>
+                    <li class="sidebar-option-item"><a href="#" class="sidebar-option-link">Burnishers</a></li>
+                    <li class="sidebar-option-item"><a href="#" class="sidebar-option-link">Sweepers</a></li>
+                    <li class="sidebar-option-item"><a href="#" class="sidebar-option-link">Upright Vacuums</a></li>
+                    <li class="sidebar-option-item"><a href="#" class="sidebar-option-link">Backpack Vacuums</a></li>
+                    <li class="sidebar-option-item"><a href="#" class="sidebar-option-link">Wet/Dry Vacs</a></li>
+                    <li class="sidebar-option-item"><a href="#" class="sidebar-option-link">Electric Pressure
+                            Washers</a></li>
+                    <li class="sidebar-option-item"><a href="#" class="sidebar-option-link">Gas Powered Pressure
+                            Washers</a></li>
+                    <li class="sidebar-option-item"><a href="#" class="sidebar-option-link">Industrial Fans</a></li>
+                    <li class="sidebar-option-item"><a href="#" class="sidebar-option-link">Dehumidifiers</a></li>
+                    <li class="sidebar-option-item"><a href="#" class="sidebar-option-link">Floor Polishers</a></li>
+                    <li class="sidebar-option-item"><a href="#" class="sidebar-option-link">Steam Cleaners</a></li>
+                    <li class="sidebar-option-item"><a href="#" class="sidebar-option-link">Carpet Extractors</a></li>
                 </ul>
-                <a href="#" class="shop-cat-all-link">Shop all</a>
-            </div>
+            </aside>
 
-            <!-- Column 2: Matting -->
-            <div class="shop-cat-column">
-                <div class="shop-cat-header">Matting</div>
-                <ul class="shop-cat-list">
-                    <li><a href="#"><img src="products/product4.png" alt=""> Indoor</a></li>
-                    <li><a href="#"><img src="products/product5.png" alt=""> Outdoor</a></li>
-                    <li><a href="#"><img src="products/product6.png" alt=""> Pool</a></li>
-                    <li><a href="#"><img src="products/product7.png" alt=""> Entrance</a></li>
-                    <li><a href="#"><img src="products/product1.avif" alt=""> Fatigue</a></li>
-                    <li><a href="#"><img src="products/product2.jpg" alt=""> Kitchen</a></li>
-                </ul>
-                <a href="#" class="shop-cat-all-link">Shop all</a>
-            </div>
+            <!-- Right Main Content -->
+            <main class="see-all-main-content">
+                <header class="sub-product-header">
+                    <h1 class="sub-product-title">Floor Scrubbers, Floor Buffers</h1>
+                </header>
 
-            <!-- Column 3: Concrete Care -->
-            <div class="shop-cat-column">
-                <div class="shop-cat-header">Concrete Care</div>
-                <ul class="shop-cat-list">
-                    <li><a href="#"><img src="products/product3.png" alt=""> Grinders</a></li>
-                    <li><a href="#"><img src="products/product4.png" alt=""> Concrete Chemicals</a></li>
-                    <li><a href="#"><img src="products/product5.png" alt=""> Burnishers</a></li>
-                    <li><a href="#"><img src="products/product6.png" alt=""> Refreshers</a></li>
-                </ul>
-                <a href="#" class="shop-cat-all-link">Shop all</a>
-            </div>
+                <section class="group-intro-section">
+                    <div class="group-image-preview">
+                        <img src="products/cleaning-vaccum-1.jpg" alt="Scrubber 1">
+                        <img src="products/cleaning-vaccum-2.jpg" alt="Scrubber 2">
+                        <img src="products/cleaning-vaccum-3.webp" alt="Scrubber 3">
+                    </div>
+                    <p class="group-description">
+                        These machines are used for cleaning and polishing Hard Surface Floors, including Tile, Concrete
+                        or Stone.
+                        Whether you call them Floor Scrubbers, Floor Buffers, Autoscrubbers, Burnishers or Floor
+                        Polishers these high quality commercial machines make the work go faster and your floors really
+                        shine!
+                    </p>
+                    <p class="group-description">
+                        Also find Floor Pads, Floor Scrubber Brushes, Sanding Screens, Floor Cleaning Chemicals and
+                        Waxes and other accessories.
+                    </p>
+                    <p class="brand-mentions">
+                        Choose from several premium brands including: Viper, Clarke, Advance, Nilfisk, Hawk, Aztec,
+                        Koblenz, Sanitaire, Mercury, NaceCare, Eagle, Pioneer-Eclipse, 3M, Malish, Diamabrush, Oreck,
+                        Sandia, Betco, Black Diamond, Cheetah, Monkey Pads, Americo, Cleaning Stuff, Boardwalk, and
+                        others. We carry all of the <strong>top brands at lower than "wholesale"</strong> prices.
+                    </p>
+                    <a href="#" class="how-to-link">How To Shop for Your Next Floor Buffer or Floor Scrubber (CLICK
+                        HERE)</a>
+                </section>
 
-            <!-- Column 4: Dilution Systems -->
-            <div class="shop-cat-column">
-                <div class="shop-cat-header">Dilution Systems</div>
-                <ul class="shop-cat-list">
-                    <li><a href="#"><img src="products/product7.png" alt=""> Laundry</a></li>
-                    <li><a href="#"><img src="products/product1.avif" alt=""> Warewash</a></li>
-                    <li><a href="#"><img src="products/product2.jpg" alt=""> Facilities</a></li>
-                </ul>
-                <a href="#" class="shop-cat-all-link">Shop all</a>
-            </div>
+                <!-- Product Group 1 -->
+                <div class="product-group-item">
+                    <div class="group-item-header">
+                        <a href="#" class="group-item-title">Automatic Floor Scrubbers »</a>
+                    </div>
+                    <div class="group-item-images">
+                        <img src="products/cleaning-vaccum-4.jpg" alt="Automatic Scrubber">
+                        <img src="products/cleaning-vaccum-5.jpg" alt="Automatic Scrubber">
+                        <img src="products/cleaning-vaccum-6.jpg" alt="Automatic Scrubber">
+                    </div>
+                    <p class="group-item-desc">
+                        Self Contained Machines for cleaning and maintaining hard surface floors, including tile,
+                        concrete or stone. Automatic Floor Scrubbers dispense cleaning solution, scrubs, then vacuums
+                        away dirty water, leaving floors clean and dry in one pass! No need for mops and buckets!
+                    </p>
+                    <a href="#" class="more-link">more</a>
+                </div>
 
-            <!-- Column 5: Odor Control -->
-            <div class="shop-cat-column">
-                <div class="shop-cat-header">Odor Control</div>
-                <ul class="shop-cat-list">
-                    <li><a href="#"><img src="products/product3.png" alt=""> Digesters</a></li>
-                    <li><a href="#"><img src="products/product4.png" alt=""> Stain & Odor</a></li>
-                    <li><a href="#"><img src="products/product5.png" alt=""> Urinal Screens</a></li>
-                    <li><a href="#"><img src="products/product6.png" alt=""> Urine</a></li>
-                    <li><a href="#"><img src="products/product7.png" alt=""> Pet</a></li>
-                </ul>
-                <a href="#" class="shop-cat-all-link">Shop all</a>
-            </div>
+                <!-- Product Group 2 -->
+                <div class="product-group-item">
+                    <div class="group-item-header">
+                        <a href="#" class="group-item-title">Rotary Floor Machines & Buffers »</a>
+                    </div>
+                    <div class="group-item-images">
+                        <img src="products/cleaning-vaccum-1.jpg" alt="Rotary Machine">
+                        <img src="products/cleaning-vaccum-3.webp" alt="Rotary Machine">
+                    </div>
+                    <p class="group-item-desc">
+                        Heavy-duty floor machines for scrubbing, stripping, and polishing. Designed for professional use
+                        on all types of hard flooring. Built for durability and ease of operation.
+                    </p>
+                    <a href="#" class="more-link">more</a>
+                </div>
+
+                <!-- Product Group 3 -->
+                <div class="product-group-item">
+                    <div class="group-item-header">
+                        <a href="#" class="group-item-title">High Speed Floor Burnishers »</a>
+                    </div>
+                    <div class="group-item-images">
+                        <img src="products/cleaning-vaccum-2.jpg" alt="Burnisher">
+                        <img src="products/cleaning-vaccum-5.jpg" alt="Burnisher">
+                    </div>
+                    <p class="group-item-desc">
+                        Achieve a high-gloss "wet look" finish on your floors with our high-speed electric and
+                        battery-powered burnishers. Perfect for retail spaces and long hallways.
+                    </p>
+                    <a href="#" class="more-link">more</a>
+                </div>
+
+            </main>
         </div>
-    </section>
+    </div>
 
-    <!-- Featured Products Section -->
-    <section class="featured-products-section py-5">
-        <h3 class="section-sub-title">Featured Products</h3>
-        <div class="row g-2 featured-grid-5">
-            <!-- Product 1 -->
-            <div class="col-lg-custom-5 col-md-4 col-sm-6">
-                <a href="product.html" class="product-card">
-                    <div class="product-img-wrapper">
-                        <img src="assets/copybook.png" alt="Industrial Floor Cleaner" class="product-img">
-                    </div>
-                    <div class="product-info">
-                        <span class="product-cat">School Supplies</span>
-                        <h4 class="product-title">Copies/Pens</h4>
-                        <p class="product-desc">Highly concentrated formula for industrial surfaces and deep grime
-                            removal.</p>
-                        <div class="product-price-row">
-                            <span class="product-price">$85.00</span>
-                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Product 2 -->
-            <div class="col-lg-custom-5 col-md-4 col-sm-6">
-                <a href="product.html" class="product-card">
-                    <div class="product-img-wrapper">
-                        <img src="assets/gloves.webp" alt="Safety Gloves" class="product-img">
-                    </div>
-                    <div class="product-info">
-                        <span class="product-cat">Industrial Safety</span>
-                        <h4 class="product-title">IronClad Industrial Grip Safety Gloves</h4>
-                        <p class="product-desc">High-visibility orange gloves with reinforced textured grip for
-                            heavy handling.</p>
-                        <div class="product-price-row">
-                            <span class="product-price">$24.50</span>
-                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Product 3 -->
-            <div class="col-lg-custom-5 col-md-4 col-sm-6">
-                <a href="product.html" class="product-card">
-                    <div class="product-img-wrapper">
-                        <img src="assets/vaccum.png" alt="Smart Waste Bin" class="product-img">
-                    </div>
-                    <div class="product-info">
-                        <span class="product-cat">Furniture & Interiors</span>
-                        <h4 class="product-title">Vacuum Cleaner</h4>
-                        <p class="product-desc">Modern stainless steel finish with touchless sensor technology for
-                            hygienic waste disposal.</p>
-                        <div class="product-price-row">
-                            <span class="product-price">$129.00</span>
-                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Product 4 -->
-            <div class="col-lg-custom-5 col-md-4 col-sm-6">
-                <a href="product.html" class="product-card">
-                    <div class="product-img-wrapper">
-                        <img src="assets/copybook.png" alt="Industrial Floor Cleaner" class="product-img">
-                    </div>
-                    <div class="product-info">
-                        <span class="product-cat">School Supplies</span>
-                        <h4 class="product-title">Copies/Pens</h4>
-                        <p class="product-desc">Highly concentrated formula for industrial surfaces and deep grime
-                            removal.</p>
-                        <div class="product-price-row">
-                            <span class="product-price">$85.00</span>
-                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Product 5 -->
-            <div class="col-lg-custom-5 col-md-4 col-sm-6">
-                <a href="product.html" class="product-card">
-                    <div class="product-img-wrapper">
-                        <img src="assets/gloves.webp" alt="Safety Gloves" class="product-img">
-                    </div>
-                    <div class="product-info">
-                        <span class="product-cat">Industrial Safety</span>
-                        <h4 class="product-title">IronClad Industrial Grip Safety Gloves</h4>
-                        <p class="product-desc">High-visibility orange gloves with reinforced textured grip for
-                            heavy handling.</p>
-                        <div class="product-price-row">
-                            <span class="product-price">$24.50</span>
-                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Product 6 -->
-            <div class="col-lg-custom-5 col-md-4 col-sm-6">
-                <a href="product.html" class="product-card">
-                    <div class="product-img-wrapper">
-                        <img src="assets/vaccum.png" alt="Smart Waste Bin" class="product-img">
-                    </div>
-                    <div class="product-info">
-                        <span class="product-cat">Furniture & Interiors</span>
-                        <h4 class="product-title">Vacuum Cleaner</h4>
-                        <p class="product-desc">Modern stainless steel finish with touchless sensor technology for
-                            hygienic waste disposal.</p>
-                        <div class="product-price-row">
-                            <span class="product-price">$129.00</span>
-                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Product 7 -->
-            <div class="col-lg-custom-5 col-md-4 col-sm-6">
-                <a href="product.html" class="product-card">
-                    <div class="product-img-wrapper">
-                        <img src="assets/copybook.png" alt="Industrial Floor Cleaner" class="product-img">
-                    </div>
-                    <div class="product-info">
-                        <span class="product-cat">School Supplies</span>
-                        <h4 class="product-title">Copies/Pens</h4>
-                        <p class="product-desc">Highly concentrated formula for industrial surfaces and deep grime
-                            removal.</p>
-                        <div class="product-price-row">
-                            <span class="product-price">$85.00</span>
-                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Product 8 -->
-            <div class="col-lg-custom-5 col-md-4 col-sm-6">
-                <a href="product.html" class="product-card">
-                    <div class="product-img-wrapper">
-                        <img src="assets/gloves.webp" alt="Safety Gloves" class="product-img">
-                    </div>
-                    <div class="product-info">
-                        <span class="product-cat">Industrial Safety</span>
-                        <h4 class="product-title">IronClad Industrial Grip Safety Gloves</h4>
-                        <p class="product-desc">High-visibility orange gloves with reinforced textured grip for
-                            heavy handling.</p>
-                        <div class="product-price-row">
-                            <span class="product-price">$24.50</span>
-                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Product 9 -->
-            <div class="col-lg-custom-5 col-md-4 col-sm-6">
-                <a href="product.html" class="product-card">
-                    <div class="product-img-wrapper">
-                        <img src="assets/vaccum.png" alt="Smart Waste Bin" class="product-img">
-                    </div>
-                    <div class="product-info">
-                        <span class="product-cat">Furniture & Interiors</span>
-                        <h4 class="product-title">Vacuum Cleaner</h4>
-                        <p class="product-desc">Modern stainless steel finish with touchless sensor technology for
-                            hygienic waste disposal.</p>
-                        <div class="product-price-row">
-                            <span class="product-price">$129.00</span>
-                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Product 10 -->
-            <div class="col-lg-custom-5 col-md-4 col-sm-6">
-                <a href="product.html" class="product-card">
-                    <div class="product-img-wrapper">
-                        <img src="assets/copybook.png" alt="Industrial Floor Cleaner" class="product-img">
-                    </div>
-                    <div class="product-info">
-                        <span class="product-cat">School Supplies</span>
-                        <h4 class="product-title">Copies/Pens</h4>
-                        <p class="product-desc">Highly concentrated formula for industrial surfaces and deep grime
-                            removal.</p>
-                        <div class="product-price-row">
-                            <span class="product-price">$85.00</span>
-                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i> Add</button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <footer class="main-footer mt-3">
+    <!-- Footer -->
+    <footer class="main-footer mt-5">
         <div class="container footer-container">
-            <div class="row">
-                <!-- Column 1: Browse Our Catalog -->
-                <div class="col-lg-3 col-md-6 footer-column">
-                    <h5 class="footer-column-title">Browse Our Catalog</h5>
-                    <ul class="footer-links-list">
-                        <li><a href="janitorial.html">Janitorial & Facility Supplies</a></li>
-                        <li><a href="janitorial.html">Industrial Safety</a></li>
-                        <li><a href="janitorial.html">Laundry & Warewash</a></li>
-                        <li><a href="janitorial.html">Office Supplies</a></li>
-                        <li><a href="janitorial.html">Janitorial Equipment</a></li>
-                        <li><a href="janitorial.html">Restaurant Supplies</a></li>
-                        <li><a href="janitorial.html">Healthcare</a></li>
-                        <li><a href="janitorial.html">Safety & PPE</a></li>
-                        <li><a href="janitorial.html">Microfiber</a></li>
-                        <li><a href="janitorial.html">Technology</a></li>
-                        <li><a href="janitorial.html">Janitorial Hardware</a></li>
-                        <li><a href="janitorial.html">Furniture & Interiors</a></li>
-                        <li><a href="janitorial.html">Breakroom</a></li>
-                        <li><a href="janitorial.html">School Supplies</a></li>
-                        <li><a href="janitorial.html">Txley's Picks</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 2: More On Us -->
-                <div class="col-lg-3 col-md-6 footer-column">
-                    <h5 class="footer-column-title">More On Us</h5>
-                    <ul class="footer-links-list">
-                        <li><a href="contactus.html">Contact Us</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="faq.html">FAQs</a></li>
-                        <li><a href="shipping-policy.html">Shipping Policy</a></li>
-                        <li><a href="termsandconditions.html">Terms of Sale</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="jointeam.html">Join the Txley Team</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 3: Contact Us -->
-                <div class="col-lg-3 col-md-6 footer-column">
-                    <h5 class="footer-column-title">Contact Us</h5>
-                    <div class="contact-info-text">
-                        <strong>Txley</strong>
-                        <p>139 E. Fairhaven Avenue<br>Burlington, WA 98233</p>
-                        <p>Phone: <a href="tel:3605454433" class="contact-highlight">(360) 545-4433</a></p>
-                        <p><a href="contactus.html" class="contact-highlight">Need more information?</a></p>
-                    </div>
-                </div>
-
-                <!-- Column 4: Certifications & Affiliations -->
-                <div class="col-lg-3 col-md-6 footer-column">
-                    <h5 class="footer-column-title">Certifications & Affiliations:</h5>
-                    <div class="certifications-img-wrapper">
-                        <img src="assets/footer-image.png" alt="Certifications & Affiliations"
-                            class="certifications-img">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer Bottom -->
             <div class="footer-bottom text-center">
-                <p class="footer-note">* Please note: Effective 3-7-2022, a fuel surcharge will be applied to all
-                    deliveries.</p>
                 <p class="copyright-text">© 2024 Txley. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Auth Modal -->
-    <div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content auth-modal-content">
-                <div class="modal-header auth-modal-header">
-                    <h5 class="modal-title auth-modal-title">Welcome to Txley</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body auth-modal-body">
-                    <!-- Tabs -->
-                    <ul class="nav nav-tabs auth-tabs" id="authTabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="signin-tab" data-bs-toggle="tab"
-                                data-bs-target="#signin" type="button" role="tab" aria-selected="true">Sign In</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup"
-                                type="button" role="tab" aria-selected="false">Create Account</button>
-                        </li>
-                    </ul>
-
-                    <!-- Content -->
-                    <div class="tab-content" id="authTabsContent">
-                        <!-- Sign In -->
-                        <div class="tab-pane fade show active" id="signin" role="tabpanel">
-                            <form>
-                                <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="signinEmail"
-                                        placeholder="name@example.com">
-                                    <label for="signinEmail">Email Address</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="password" class="form-control" id="signinPassword"
-                                        placeholder="Password">
-                                    <label for="signinPassword">Password</label>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center mb-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="rememberMe">
-                                        <label class="form-check-label" for="rememberMe">Remember me</label>
-                                    </div>
-                                    <a href="#" class="text-decoration-none small">Forgot Password?</a>
-                                </div>
-                                <button type="submit" class="btn btn-auth-submit">Login</button>
-                            </form>
-                        </div>
-
-                        <!-- Create Account -->
-                        <div class="tab-pane fade" id="signup" role="tabpanel">
-                            <form>
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="signupFirstName"
-                                                placeholder="First Name">
-                                            <label for="signupFirstName">First Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="signupLastName"
-                                                placeholder="Last Name">
-                                            <label for="signupLastName">Last Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control" id="signupEmail"
-                                                placeholder="Email">
-                                            <label for="signupEmail">Email Address</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="signupAddress"
-                                                placeholder="Address">
-                                            <label for="signupAddress">Address</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="signupCity" placeholder="City">
-                                            <label for="signupCity">City</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-floating">
-                                            <select class="form-select" id="signupState">
-                                                <option selected>Choose...</option>
-                                                <option value="AL">Alabama</option>
-                                                <option value="AK">Alaska</option>
-                                                <option value="AZ">Arizona</option>
-                                                <option value="CA">California</option>
-                                                <option value="NY">New York</option>
-                                                <option value="TX">Texas</option>
-                                                <option value="WA">Washington</option>
-                                                <!-- Add more states as needed -->
-                                            </select>
-                                            <label for="signupState">State</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="signupZip" placeholder="Zip">
-                                            <label for="signupZip">Zip Code</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="password" class="form-control" id="signupPassword"
-                                                placeholder="Password">
-                                            <label for="signupPassword">Password</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="password" class="form-control" id="signupConfirmPassword"
-                                                placeholder="Confirm Password">
-                                            <label for="signupConfirmPassword">Confirm Password</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 mt-4">
-                                        <button type="submit" class="btn btn-auth-submit">Create Account</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/navbar.js"></script>
-    <script src="js/script.js"></script>
     <script src="js/sidebar.js"></script>
-    <script src="js/categories.js"></script>
+    <script src="js/script.js"></script>
 
-    <!-- Shop Sidebar HTML -->
-    <!-- Shop Sidebar HTML -->
-    <div class="shop-sidebar-overlay" id="shopSidebarOverlay"></div>
-    <div class="shop-sidebar" id="shopSidebar">
-        <div class="shop-sidebar-header">
-            <h5 class="shop-sidebar-title">Shop All Categories</h5>
-            <button class="close-shop-sidebar" id="closeShopSidebar"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div class="d-flex flex-grow-1 position-relative shop-sidebar-body">
-            <!-- Left Pane -->
-            <div class="shop-sidebar-parents custom-scrollbar" id="shopSidebarParents">
-                <!-- Populated by JS -->
-            </div>
-            <!-- Right Pane (Sub Menu) -->
-            <div class="shop-sidebar-subs custom-scrollbar" id="shopSidebarSubs">
-                <!-- Populated by JS -->
-            </div>
-        </div>
-    </div>
-    <!-- Mobile Account Dropdown -->
-    <div class="mobile-account-dropdown" id="mobileAccountDropdown">
-        <div class="dropdown-header-mobile">
-            <span>Account Details</span>
-            <i class="fa-solid fa-xmark" id="closeAccountDropdown"></i>
-        </div>
-        <ul class="mobile-account-links">
-            <li><a href="auth.html"><i class="fa-solid fa-right-to-bracket"></i> Sign In / Create Account</a></li>
-            <li><a href="my-account.html"><i class="fa-regular fa-user"></i> My Account</a></li>
-            <li><a href="quick-orders.html"><i class="fa-solid fa-bolt"></i> Quick Order</a></li>
-            <hr>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="markets.html">Markets</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-            <li><a href="#" class="highlight">Promos & Specials</a></li>
-        </ul>
-    </div>
-    <!-- Mobile Sidebar -->
-    <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
-    <div class="mobile-sidebar" id="mobileSidebar">
-        <div class="sidebar-header">
-            <div class="sidebar-title"><img class="sidebar-img" src="assets/txley-logo.png" alt="logo"></div>
-            <button class="close-sidebar-btn" id="closeSidebarBtn"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <ul class="sidebar-menu">
-            <!-- Item 1: OFFICE -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Breakroom <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Paper</a></li>
-                    <li class="sidebar-link"><a href="#">Office Supplies</a></li>
-                    <li class="sidebar-link"><a href="#">Envelopes & Forms</a></li>
-                    <li class="sidebar-link"><a href="#">Writing & Drafting</a></li>
-                </ul>
-            </li>
-
-            <!-- Item 2: FURNITURE -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Restaurant <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Seating</a></li>
-                    <li class="sidebar-link"><a href="#">Desks</a></li>
-                    <li class="sidebar-link"><a href="#">Tables</a></li>
-                    <li class="sidebar-link"><a href="#">Storage & Filings</a></li>
-                </ul>
-            </li>
-
-            <!-- Item 3: TECHNOLOGY -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Janitorial <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Computers</a></li>
-                    <li class="sidebar-link"><a href="#">Printers & Supplies</a></li>
-                    <li class="sidebar-link"><a href="#">Accessories</a></li>
-                    <li class="sidebar-link"><a href="#">Audio & Visual</a></li>
-                </ul>
-            </li>
-
-            <!-- Item 4: BREAKROOM -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Cleaning Equipment <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Food & Snacks</a></li>
-                    <li class="sidebar-link"><a href="#">Beverages</a></li>
-                    <li class="sidebar-link"><a href="#">Coffee Supplies</a></li>
-                    <li class="sidebar-link"><a href="#">Tableware</a></li>
-                </ul>
-            </li>
-
-            <!-- Item 5: PACKAGING -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Chemicals <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Boxes & Mailers</a></li>
-                    <li class="sidebar-link"><a href="#">Tape & Adhesives</a></li>
-                    <li class="sidebar-link"><a href="#">Shipping Supplies</a></li>
-                    <li class="sidebar-link"><a href="#">Stretch Wrap</a></li>
-                </ul>
-            </li>
-
-            <!-- Item 6: JANITORIAL -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Restroom <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Chemicals</a></li>
-                    <li class="sidebar-link"><a href="#">Tools & Hardware</a></li>
-                    <li class="sidebar-link"><a href="#">Equipment</a></li>
-                    <li class="sidebar-link"><a href="#">Waste & Recycling</a></li>
-                </ul>
-            </li>
-
-            <!-- Item 7: RESTROOM -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Industrial <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Paper Products</a></li>
-                    <li class="sidebar-link"><a href="#">Soap & Sanitizers</a></li>
-                    <li class="sidebar-link"><a href="#">Dispensers</a></li>
-                    <li class="sidebar-link"><a href="#">Fixtures</a></li>
-                </ul>
-            </li>
-
-            <!-- Item 8: INDUSTRIAL -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Medical <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Safety & PPE</a></li>
-                    <li class="sidebar-link"><a href="#">Material Handling</a></li>
-                    <li class="sidebar-link"><a href="#">Warehouse Supplies</a></li>
-                    <li class="sidebar-link"><a href="#">Tools</a></li>
-                </ul>
-            </li>
-
-            <!-- Item 9: MEDICAL -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Office <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Gloves</a></li>
-                    <li class="sidebar-link"><a href="#">Exam Room Supplies</a></li>
-                    <li class="sidebar-link"><a href="#">First Aid</a></li>
-                    <li class="sidebar-link"><a href="#">Equipment</a></li>
-                </ul>
-            </li>
-
-            <!-- Item 10: CLEARANCE -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Clearance <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Office Sale</a></li>
-                    <li class="sidebar-link"><a href="#">Furniture Sale</a></li>
-                    <li class="sidebar-link"><a href="#">Tech Sale</a></li>
-                </ul>
-            </li>
-
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link">Txley's Picks</a>
-            </li>
-        </ul>
-
-    </div>
 </body>
 
 </html>

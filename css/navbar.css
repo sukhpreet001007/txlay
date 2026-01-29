@@ -289,10 +289,12 @@
     background-color: rgba(255, 255, 255, 0.1);
     border-bottom-color: #84C44C;
 }
-.nav-item:hover > .nav-link {
+
+.nav-item:hover>.nav-link {
     background-color: rgba(255, 255, 255, 0.1);
     border-bottom-color: #84C44C;
 }
+
 .nav-link i {
     margin-left: 8px;
     font-size: 10px;
@@ -432,6 +434,89 @@
 
 .recommend-img-wrapper:hover img {
     transform: scale(.995);
+}
+
+.mega-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px 25px 40px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+.mega-menu-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+    margin: 0;
+}
+
+.mega-see-all {
+    font-size: 16px;
+    font-weight: 600;
+    color: #84C44C;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.mega-see-all:hover {
+    color: #111;
+    gap: 12px;
+}
+
+.mega-visual-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 30px 40px 0 40px;
+    border-top: 1px solid #eee;
+    margin-top: 30px;
+}
+
+.mega-visual-card {
+    position: relative;
+    height: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none !important;
+    display: block;
+}
+
+.mega-visual-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.mega-visual-card:hover img {
+    transform: scale(1.1);
+}
+
+.mega-visual-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    color: #fff;
+    z-index: 2;
+}
+
+.mega-visual-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Pagination Arrows */

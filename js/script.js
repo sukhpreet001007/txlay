@@ -136,8 +136,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 setTimeout(() => {
                     categorySearchContainer.style.display = 'none';
-                    categorySearchInput.value = ''; 
-                    filterCategories(''); 
+                    categorySearchInput.value = '';
+                    filterCategories('');
                 }, 300);
             }
         });
@@ -192,8 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-   
-    // QUICK ORDERS LOGIC
+
     const rowsContainer = document.getElementById('quick-order-rows-container');
     const addEntryBtn = document.getElementById('add-entry-btn');
     const totalItemsTop = document.getElementById('total-items-top');
@@ -409,4 +408,42 @@ document.addEventListener('DOMContentLoaded', function () {
         link.click();
         document.body.removeChild(link);
     }
+
+    // SEE ALL PAGE - CATALOG FILTER
+    const catalogSearch = document.getElementById('catalogSearch');
+    const catalogList = document.getElementById('catalogList');
+
+    if (catalogSearch && catalogList) {
+        catalogSearch.addEventListener('input', function () {
+            const query = this.value.toLowerCase().trim();
+            const items = catalogList.querySelectorAll('.sidebar-option-item');
+
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    }
+
+    // SEE ALL PAGE - BANNER SLIDER
+    const bannerTrack = document.getElementById('bannerTrack');
+    const seeAllBanner = document.querySelector('.see-all-banner-slider');
+
+    if (bannerTrack && seeAllBanner) {
+        let currentSlide = 0;
+        const totalSlides = bannerTrack.querySelectorAll('.banner-slide').length;
+
+        function nextSeeAllSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            bannerTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        // Auto move every 4 seconds
+        setInterval(nextSeeAllSlide, 4000);
+    }
 });
+
