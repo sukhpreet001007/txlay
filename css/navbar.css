@@ -233,7 +233,8 @@
 .main-navbar {
     background-color: #232f3e;
     position: relative;
-    z-index: 100;
+    z-index: 9999;
+    /* Increased to stay above overlay */
     width: 100%;
     min-height: 52px;
     display: flex;
@@ -462,11 +463,35 @@
     align-items: center;
     gap: 8px;
     transition: all 0.2s ease;
+    /* Animation for flowing colors */
+    animation: flowing-colors 3s ease-in-out infinite;
+    background: linear-gradient(90deg, #00AFEF, #84C44C, #00AFEF, #111, #00AFEF);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .mega-see-all:hover {
-    color: #111;
+    /* Keep the hover effect but maintain the animation */
     gap: 12px;
+    animation-duration: 1.5s;
+    /* Speed up on hover */
+}
+
+/* Flowing colors animation */
+@keyframes flowing-colors {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .mega-visual-grid {

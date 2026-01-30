@@ -1,6 +1,6 @@
 /* Quick Order Overlay Section */
 .quick-order-overlay-section {
-    margin: 30px 45px;
+    margin: 0 90px;
 }
 
 .quick-grid {
@@ -13,7 +13,7 @@
     position: relative;
     border-radius: 8px;
     overflow: hidden;
-    height: 250px;
+    height: 230px;
     display: block;
     text-decoration: none !important;
 }
@@ -69,7 +69,7 @@
 
 /* Popular Categories Section Styles */
 .popular-categories-section {
-    margin: 30px 45px 40px 45px;
+    margin: 20px 90px 30px 90px;
     /* Match banner side spacing */
 }
 
@@ -154,7 +154,7 @@
 
 /* Shop Categories Section Styles */
 .shop-categories-section {
-    margin: 30px 45px;
+    margin: 20px 90px 0px 90px;
 }
 
 .shop-categories-grid {

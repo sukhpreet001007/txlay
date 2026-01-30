@@ -136,8 +136,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Desktop Mega Menu logic ---
-    // (Arrows removed as requested)
+    // --- Desktop Mega Menu Overlay Logic ---
+    const navItems = document.querySelectorAll('.nav-item');
+
+    if (navItems.length > 0 && sidebarOverlay) {
+        navItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                // Only show overlay if there is a menu to show
+                const hasMenu = item.querySelector('.mega-menu-custom, .dropdown-menu-custom');
+                if (hasMenu) {
+                    sidebarOverlay.classList.add('active');
+                    // We don't hide body scroll for desktop hover to keep it smooth
+                }
+            });
+
+            item.addEventListener('mouseleave', () => {
+                // Hide overlay when leaving the nav item
+                // But check if we're not just moving to another nav item (handled by next enter)
+                sidebarOverlay.classList.remove('active');
+            });
+        });
+    }
 
     // Function to handle long dropdowns (20+ items)
     function applyDropdownScrolling() {

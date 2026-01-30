@@ -1,9 +1,10 @@
 .hero-banner {
-    width: calc(100% - 90px);
-    margin: 0 45px 30px 45px;
+    width: calc(100% - 180px);
+    margin: 30px 90px 0 90px;
     overflow: hidden;
     position: relative;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
 }
 
 .banner-slides {
@@ -43,34 +44,34 @@
 }
 
 .banner-tag {
-    background: linear-gradient(90deg,
-            #84C44C 0%,
-            #93D255 25%,
-            #84C44C 50%,
-            #93D255 75%,
-            #84C44C 100%);
-    background-size: 200% 100%;
-    color: #000000;
+    /* Background gradient with green shades for the border */
+    position: relative;
     padding: 5px 15px;
     border-radius: 50px;
-    font-size: 12px;
+    font-size: 22px;
     font-weight: 500;
     text-transform: uppercase;
     display: inline-block;
     margin-bottom: 15px;
-    font-size: 22px;
-    animation: flowEffect 3s linear infinite;
-    border: 2px solid transparent;
+    
+    /* Text styling with flowing colors */
+    background: linear-gradient(90deg,
+            #FF6B8B 0%,
+            #FFD166 25%,
+            #06D6A0 50%,
+            #118AB2 75%,
+            #FF6B8B 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: textFlowEffect 3s linear infinite;
+    
+    /* Solid background behind the text */
+    background-color: #84C44C;
 }
 
 /* For border-only flowing effect */
-.banner-tag {
-    background-color: #84C44C;
-    border: 2px solid transparent;
-    background-clip: padding-box;
-    position: relative;
-}
-
 .banner-tag::before {
     content: '';
     position: absolute;
@@ -94,7 +95,15 @@
     0% {
         background-position: 200% 0;
     }
+    100% {
+        background-position: -200% 0;
+    }
+}
 
+@keyframes textFlowEffect {
+    0% {
+        background-position: 200% 0;
+    }
     100% {
         background-position: -200% 0;
     }
@@ -163,9 +172,46 @@
     right: 20px;
 }
 
+.banner-progress {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+.progress-item {
+    width: 100px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.progress-item:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+/* We'll handle the animation via JS by setting the width */
+
 @media (max-width: 991px) {
     .banner-arrow {
         display: none;
+    }
+
+    .progress-item {
+        width: 60px;
     }
 }
 
@@ -342,7 +388,7 @@
 }
 
 .featured-products-section {
-    margin: 0 45px;
+    margin: 0 90px;
 }
 
 /* Section Heading */

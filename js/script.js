@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (!slidesContainer || originalSlides.length === 0) return;
 
+        const progressItems = banner.querySelectorAll('.progress-item');
+        const progressFills = banner.querySelectorAll('.progress-fill');
+        const autoSlideDuration = 5000; // 5 seconds for slower speed
+
         // Clone first and last slides for infinite loop effect
         const firstClone = originalSlides[0].cloneNode(true);
         const lastClone = originalSlides[originalSlides.length - 1].cloneNode(true);
@@ -21,8 +25,38 @@ document.addEventListener('DOMContentLoaded', function () {
         let currentIndex = 1; // Start at the first real slide
         let isTransitioning = false;
         let slideInterval;
+
         // Initial position (show first real slide)
         slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        function updateProgressBars() {
+            progressFills.forEach((fill, index) => {
+                // Determine real index (clones are at 0 and totalSlides-1)
+                let realIndex = currentIndex;
+                if (currentIndex === 0) realIndex = originalSlides.length;
+                if (currentIndex === totalSlides - 1) realIndex = 1;
+
+                if (index === realIndex - 1) {
+                    fill.style.transition = `width ${autoSlideDuration}ms linear`;
+                    fill.style.width = '100%';
+                } else if (index < realIndex - 1) {
+                    fill.style.transition = 'none';
+                    fill.style.width = '100%';
+                } else {
+                    fill.style.transition = 'none';
+                    fill.style.width = '0%';
+                }
+            });
+        }
+
+        function resetProgressBars() {
+            progressFills.forEach(fill => {
+                fill.style.transition = 'none';
+                fill.style.width = '0%';
+            });
+            // Force reflow
+            void banner.offsetWidth;
+        }
 
         function moveSlide(index, animate = true) {
             if (animate) {
@@ -34,6 +68,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             slidesContainer.style.transform = `translateX(-${index * 100}%)`;
             currentIndex = index;
+
+            if (animate) {
+                resetProgressBars();
+                updateProgressBars();
+            }
         }
 
         // Handle transition end to jump if necessary (infinite loop illusion)
@@ -42,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // If we are at the cloned last slide (index 0), jump to real last slide
             if (currentIndex === 0) {
                 moveSlide(totalSlides - 2, false);
+                // After jumping, we don't need to update progress bars again as they are set by the animated moveSlide
             }
             // If we are at the cloned first slide (last index), jump to real first slide
             if (currentIndex === totalSlides - 1) {
@@ -61,7 +101,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function startAutoSlide() {
             if (slideInterval) clearInterval(slideInterval);
-            slideInterval = setInterval(nextSlide, 3000);
+            slideInterval = setInterval(nextSlide, autoSlideDuration);
+            updateProgressBars();
         }
 
         function resetAutoSlide() {
@@ -84,6 +125,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 resetAutoSlide();
             });
         }
+
+        progressItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                if (isTransitioning) return;
+                moveSlide(index + 1);
+                resetAutoSlide();
+            });
+        });
 
         startAutoSlide();
     });
