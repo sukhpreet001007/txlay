@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', function () {
         addRows(5);
 
         addEntryBtn.addEventListener('click', () => {
-            addRows(5);
+            addRows(1);
         });
 
         rowsContainer.addEventListener('input', handleRowInput);
