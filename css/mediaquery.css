@@ -1,7 +1,7 @@
 /* Tablet and Desktop adjustments (Switch to Sidebar at 1200px) */
 @media (max-width: 1200px) {
     .container-contents {
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     .search-container {
@@ -53,23 +53,16 @@
         text-align: center;
     }
 
-    .cart-wrapper {
-        grid-column: 4;
-        grid-row: 1;
-        justify-self: end;
-    }
-
+    /* Search row below logo in small views */
     .search-wrapper {
         display: block;
         grid-column: 1 / -1;
-        /* Full width row below */
         grid-row: 2;
         margin-top: 10px;
     }
 
     .brand-logo {
         height: 60px;
-        /* Smaller for tablet/mobile */
     }
 
     .sidebar-img {
@@ -80,39 +73,21 @@
         display: none;
     }
 
-    .top-links-right a {
-        font-size: 10px;
-    }
-
+    .top-links-right a,
     .top-links-left a {
         font-size: 10px;
     }
 
-    .all-cate {
-        font-size: 16px;
-    }
-
-    /* Popular Categories Tablet Adjustments */
-    .popular-categories-grid {
-        grid-template-columns: repeat(4, 1fr) !important;
-        gap: 15px !important;
-    }
-
-    .popular-cat-card {
-        flex-direction: column !important;
-        text-align: center !important;
-        padding: 15px 10px !important;
-    }
-
-    .popular-cat-img {
-        width: 100% !important;
-        height: 110px !important;
-        margin-right: 0 !important;
-        margin-bottom: 12px !important;
-    }
-
-    .popular-cat-name {
-        font-size: 14px !important;
+    /* Reduce 90px margins for Tablet */
+    .hero-banner,
+    .three-blocks-links,
+    .quick-order-overlay-section,
+    .popular-categories-section,
+    .shop-categories-section,
+    .featured-products-section {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        width: calc(100% - 20px) !important;
     }
 }
 
@@ -149,7 +124,6 @@
 
     .mobile-account-btn {
         padding-right: 0;
-        /* Remove right padding to reduce gap with cart */
     }
 
     .cart-badge {
@@ -166,29 +140,11 @@
         font-size: 14px;
     }
 
-    /* Catalog Sidebar Mobile Adjustments */
-    .collapsible-sidebar-header {
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .collapsible-sidebar-header:active {
-        background-color: #1a222d;
-    }
-
-    .toggle-icon {
-        transition: transform 0.3s ease;
-    }
-
-    .collapsible-sidebar-header[aria-expanded="true"] .toggle-icon {
-        transform: rotate(180deg);
-    }
-
-    /* Banner reordering adjustment */
+    /* Banner adjustments */
     .banner-section {
         order: -1;
-        margin: 0 5px !important;
-        width: calc(100% - 10px) !important;
+        margin: 0 10px !important;
+        width: calc(100% - 20px) !important;
     }
 
     .hero-banner {
@@ -199,7 +155,7 @@
 
     .three-blocks-links {
         padding: 15px 0;
-        margin: 0 5px !important;
+        margin: 0 10px !important;
     }
 
     .three-blocks-links .container-fluid {
@@ -243,10 +199,6 @@
         font-size: 18px !important;
         text-align: center;
         margin-bottom: 20px !important;
-    }
-
-    .sidebar-img {
-        width: 100px !important;
     }
 
     /* Popular Categories Mobile Adjustments */
@@ -333,7 +285,7 @@
         right: 5px;
     }
 
-    /* Quick Order Card adjustment for mobile slider */
+    /* Quick Order Card adjustment */
     .quick-card {
         height: 180px !important;
     }
@@ -423,7 +375,6 @@
         box-shadow: 0 4px 10px rgba(0, 175, 239, 0.3) !important;
         border: none !important;
         transition: none !important;
-        /* Prevent any transition issues */
     }
 
     .shop-cat-all-link:hover {

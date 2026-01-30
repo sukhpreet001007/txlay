@@ -61,17 +61,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileSidebar = document.getElementById('mobileSidebar');
     const sidebarOverlay = document.getElementById('sidebarOverlay');
     const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+    const sidebarMainContainer = document.getElementById('sidebarMainContainer');
 
     function openSidebar() {
-        mobileSidebar.classList.add('active');
-        sidebarOverlay.classList.add('active');
+        if (mobileSidebar) mobileSidebar.classList.add('active');
+        if (sidebarOverlay) sidebarOverlay.classList.add('active');
         document.body.style.overflow = 'hidden'; // Prevent background scrolling
     }
 
     function closeSidebar() {
-        mobileSidebar.classList.remove('active');
-        sidebarOverlay.classList.remove('active');
+        if (mobileSidebar) mobileSidebar.classList.remove('active');
+        // Only remove overlay if mobile account dropdown is NOT active
+        const mobileAccountDropdown = document.getElementById('mobileAccountDropdown');
+        if (sidebarOverlay && (!mobileAccountDropdown || !mobileAccountDropdown.classList.contains('active'))) {
+            sidebarOverlay.classList.remove('active');
+        }
         document.body.style.overflow = '';
+
+        // Reset panels
+        if (sidebarMainContainer) sidebarMainContainer.classList.remove('slide-out');
+        document.querySelectorAll('.sidebar-submenu-panel.active').forEach(panel => {
+            panel.classList.remove('active');
+        });
     }
 
     if (mobileMenuBtn) {
@@ -85,7 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sidebarOverlay) {
         sidebarOverlay.addEventListener('click', () => {
             closeSidebar();
-            closeAccountDropdownFunc();
+            if (typeof closeAccountDropdownFunc === 'function') {
+                closeAccountDropdownFunc();
+            }
         });
     }
 
@@ -118,23 +131,174 @@ document.addEventListener('DOMContentLoaded', () => {
         closeAccountDropdown.addEventListener('click', closeAccountDropdownFunc);
     }
 
-    // --- Sidebar Accordion Logic ---
-    const sidebarLinks = document.querySelectorAll('.sidebar-link.has-submenu');
+    // --- Dynamic Mobile Sidebar Population ---
+    const navMenu = document.getElementById('navMenu');
+    const mobileSidebarMenu = document.getElementById('mobileSidebarMenu');
+    const sidebarPanelsContainer = document.getElementById('sidebarPanelsContainer');
 
-    sidebarLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
+    function populateMobileSidebar() {
+        if (!navMenu || !mobileSidebarMenu || !sidebarPanelsContainer) return;
 
-            // Toggle current submenu
-            const submenu = this.nextElementSibling;
-            if (submenu) {
-                const isOpen = submenu.style.display === 'block';
+        // Clear existing
+        mobileSidebarMenu.innerHTML = '';
+        sidebarPanelsContainer.innerHTML = '';
 
-                submenu.style.display = isOpen ? 'none' : 'block';
-                this.classList.toggle('open', !isOpen);
+        const navItems = navMenu.querySelectorAll(':scope > .nav-item');
+
+        navItems.forEach((item, catIndex) => {
+            const link = item.querySelector('.nav-link');
+            if (!link) return;
+
+            const catName = link.textContent.trim();
+            const megaMenu = item.querySelector('.mega-menu-custom');
+            const dropdown = item.querySelector('.dropdown-menu-custom');
+
+            // 1. Add to Main Menu (Level 0)
+            const li = document.createElement('li');
+            li.className = 'sidebar-item';
+
+            const hasSub = megaMenu || dropdown;
+            const catPanelId = `ms-panel-cat-${catIndex}`;
+
+            li.innerHTML = `
+                <div class="sidebar-link-wrapper">
+                    <a href="${link.href}" class="sidebar-link">${catName}</a>
+                    ${hasSub ? `<span class="sidebar-arrow" data-target="${catPanelId}"><i class="fa-solid fa-chevron-right"></i></span>` : ''}
+                </div>
+            `;
+            mobileSidebarMenu.appendChild(li);
+
+            if (!hasSub) return;
+
+            // 2. Create Category Panel (Level 1)
+            const catPanel = document.createElement('div');
+            catPanel.id = catPanelId;
+            catPanel.className = 'sidebar-submenu-panel';
+            catPanel.innerHTML = `
+                <div class="sidebar-back-btn" data-level="1"><i class="fa-solid fa-chevron-left"></i> Back</div>
+                <div class="sidebar-submenu-title">${catName}</div>
+                <ul class="sidebar-submenu-list" id="${catPanelId}-list"></ul>
+            `;
+            sidebarPanelsContainer.appendChild(catPanel);
+
+            const catList = catPanel.querySelector('.sidebar-submenu-list');
+
+            if (megaMenu) {
+                const groups = megaMenu.querySelectorAll('.mega-group');
+                groups.forEach((group, groupIndex) => {
+                    const groupTitle = group.querySelector('.mega-group-title');
+                    const groupLinks = group.querySelectorAll('.mega-links-list li a');
+                    if (!groupTitle) return;
+
+                    const groupName = groupTitle.textContent.trim();
+                    const groupPanelId = `ms-panel-group-${catIndex}-${groupIndex}`;
+
+                    const groupLi = document.createElement('li');
+                    groupLi.innerHTML = `
+                        <div class="sidebar-link-wrapper">
+                            <a href="#" class="sidebar-link">${groupName}</a>
+                            <span class="sidebar-arrow" data-target="${groupPanelId}"><i class="fa-solid fa-chevron-right"></i></span>
+                        </div>
+                    `;
+                    catList.appendChild(groupLi);
+
+                    // 3. Create Group Panel (Level 2)
+                    const groupPanel = document.createElement('div');
+                    groupPanel.id = groupPanelId;
+                    groupPanel.className = 'sidebar-submenu-panel';
+                    groupPanel.innerHTML = `
+                        <div class="sidebar-back-btn" data-level="2"><i class="fa-solid fa-chevron-left"></i> Back</div>
+                        <div class="sidebar-submenu-title">${groupName}</div>
+                        <ul class="sidebar-submenu-list"></ul>
+                    `;
+                    sidebarPanelsContainer.appendChild(groupPanel);
+
+                    const groupUl = groupPanel.querySelector('.sidebar-submenu-list');
+                    groupLinks.forEach(gLink => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<a href="${gLink.href}">${gLink.textContent.trim()}</a>`;
+                        groupUl.appendChild(li);
+                    });
+                    // Add See All link at bottom of group
+                    const seeAllLi = document.createElement('li');
+                    seeAllLi.innerHTML = `<a href="see-all.html" class="fw-bold text-primary">See All ${groupName}</a>`;
+                    groupUl.appendChild(seeAllLi);
+                });
+
+                // Add "We Recommend" section to Category Panel (Level 1)
+                const recommendation = megaMenu.querySelector('.mega-recommendation');
+                if (recommendation) {
+                    const recHeader = recommendation.querySelector('.recommend-header');
+                    const images = recommendation.querySelectorAll('.recommend-img-wrapper img');
+
+                    const recSection = document.createElement('div');
+                    recSection.className = 'sidebar-recommend-section';
+                    recSection.innerHTML = `
+                        <div class="sidebar-recommend-title">${recHeader ? recHeader.textContent.trim() : 'We Recommend'}</div>
+                        <div class="sidebar-recommend-grid"></div>
+                    `;
+                    const grid = recSection.querySelector('.sidebar-recommend-grid');
+                    images.forEach(img => {
+                        const item = document.createElement('div');
+                        item.className = 'sidebar-recommend-item';
+                        item.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+                        grid.appendChild(item);
+                    });
+                    catPanel.appendChild(recSection);
+                }
+
+            } else if (dropdown) {
+                // Simple dropdown logic for categories like "Clearance" (if any)
+                const dLinks = dropdown.querySelectorAll('a');
+                dLinks.forEach(dLink => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<a href="${dLink.href}">${dLink.textContent.trim()}</a>`;
+                    catList.appendChild(li);
+                });
             }
         });
-    });
+
+        // Initialize event listeners for dynamic elements
+        initDynamicEvents();
+    }
+
+    function initDynamicEvents() {
+        // Re-attach arrow clicks
+        document.querySelectorAll('.sidebar-arrow').forEach(arrow => {
+            arrow.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const targetId = this.getAttribute('data-target');
+                const targetPanel = document.getElementById(targetId);
+                if (targetPanel) {
+                    // Check if we are opening a Level 1 panel from Level 0
+                    const isFromMain = this.closest('.sidebar-main-container');
+                    if (isFromMain) {
+                        sidebarMainContainer.classList.add('slide-out');
+                    }
+                    targetPanel.classList.add('active');
+                }
+            });
+        });
+
+        // Re-attach back button clicks
+        document.querySelectorAll('.sidebar-back-btn').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const panel = this.closest('.sidebar-submenu-panel');
+                const level = this.getAttribute('data-level');
+                if (panel) {
+                    panel.classList.remove('active');
+                    // If returning from Level 1 to Level 0
+                    if (level === '1') {
+                        sidebarMainContainer.classList.remove('slide-out');
+                    }
+                }
+            });
+        });
+    }
+
+    // Call population
+    populateMobileSidebar();
 
     // --- Desktop Mega Menu Overlay Logic ---
     const navItems = document.querySelectorAll('.nav-item');

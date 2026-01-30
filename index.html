@@ -65,10 +65,10 @@
 
                 <!-- Logo -->
                 <div class="logo-wrapper">
-    <a href="index.html" class="logo-link">
-        <img src="assets/txley-logo.png" alt="Txley Logo" class="brand-logo">
-    </a>
-</div>
+                    <a href="index.html" class="logo-link">
+                        <img src="assets/txley-logo.png" alt="Txley Logo" class="brand-logo">
+                    </a>
+                </div>
 
                 <!-- Search Bar -->
                 <div class="search-wrapper">
@@ -1640,7 +1640,6 @@
     <script src="js/categories.js"></script>
 
     <!-- Shop Sidebar HTML -->
-    <!-- Shop Sidebar HTML -->
     <div class="shop-sidebar-overlay" id="shopSidebarOverlay"></div>
     <div class="shop-sidebar" id="shopSidebar">
         <div class="shop-sidebar-header">
@@ -1679,125 +1678,21 @@
     <!-- Mobile Sidebar -->
     <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
     <div class="mobile-sidebar" id="mobileSidebar">
-        <div class="sidebar-header">
-            <div class="sidebar-title"><img class="sidebar-img" src="assets/txley-logo.png" alt="logo"></div>
-            <button class="close-sidebar-btn" id="closeSidebarBtn"><i class="fa-solid fa-xmark"></i></button>
+        <!-- Main Menu (Level 0) -->
+        <div class="sidebar-main-container" id="sidebarMainContainer">
+            <div class="sidebar-header">
+                <div class="sidebar-title"><img class="sidebar-img" src="assets/txley-logo.png" alt="logo"></div>
+                <button class="close-sidebar-btn" id="closeSidebarBtn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <ul class="sidebar-menu" id="mobileSidebarMenu">
+                <!-- Dynamically populated -->
+            </ul>
         </div>
-        <ul class="sidebar-menu">
-            <!-- Item 1: OFFICE -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Breakroom <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Paper</a></li>
-                    <li class="sidebar-link"><a href="#">Office Supplies</a></li>
-                    <li class="sidebar-link"><a href="#">Envelopes & Forms</a></li>
-                    <li class="sidebar-link"><a href="#">Writing & Drafting</a></li>
-                </ul>
-            </li>
 
-            <!-- Item 2: FURNITURE -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Restaurant <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Seating</a></li>
-                    <li class="sidebar-link"><a href="#">Desks</a></li>
-                    <li class="sidebar-link"><a href="#">Tables</a></li>
-                    <li class="sidebar-link"><a href="#">Storage & Filings</a></li>
-                </ul>
-            </li>
-
-            <!-- Item 3: TECHNOLOGY -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Janitorial <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Computers</a></li>
-                    <li class="sidebar-link"><a href="#">Printers & Supplies</a></li>
-                    <li class="sidebar-link"><a href="#">Accessories</a></li>
-                    <li class="sidebar-link"><a href="#">Audio & Visual</a></li>
-                </ul>
-            </li>
-
-            <!-- Item 4: BREAKROOM -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Cleaning Equipment <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Food & Snacks</a></li>
-                    <li class="sidebar-link"><a href="#">Beverages</a></li>
-                    <li class="sidebar-link"><a href="#">Coffee Supplies</a></li>
-                    <li class="sidebar-link"><a href="#">Tableware</a></li>
-                </ul>
-            </li>
-
-            <!-- Item 5: PACKAGING -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Chemicals <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Boxes & Mailers</a></li>
-                    <li class="sidebar-link"><a href="#">Tape & Adhesives</a></li>
-                    <li class="sidebar-link"><a href="#">Shipping Supplies</a></li>
-                    <li class="sidebar-link"><a href="#">Stretch Wrap</a></li>
-                </ul>
-            </li>
-
-            <!-- Item 6: JANITORIAL -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Restroom <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Chemicals</a></li>
-                    <li class="sidebar-link"><a href="#">Tools & Hardware</a></li>
-                    <li class="sidebar-link"><a href="#">Equipment</a></li>
-                    <li class="sidebar-link"><a href="#">Waste & Recycling</a></li>
-                </ul>
-            </li>
-
-            <!-- Item 7: RESTROOM -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Industrial <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Paper Products</a></li>
-                    <li class="sidebar-link"><a href="#">Soap & Sanitizers</a></li>
-                    <li class="sidebar-link"><a href="#">Dispensers</a></li>
-                    <li class="sidebar-link"><a href="#">Fixtures</a></li>
-                </ul>
-            </li>
-
-            <!-- Item 8: INDUSTRIAL -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Medical <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Safety & PPE</a></li>
-                    <li class="sidebar-link"><a href="#">Material Handling</a></li>
-                    <li class="sidebar-link"><a href="#">Warehouse Supplies</a></li>
-                    <li class="sidebar-link"><a href="#">Tools</a></li>
-                </ul>
-            </li>
-
-            <!-- Item 9: MEDICAL -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Office <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Gloves</a></li>
-                    <li class="sidebar-link"><a href="#">Exam Room Supplies</a></li>
-                    <li class="sidebar-link"><a href="#">First Aid</a></li>
-                    <li class="sidebar-link"><a href="#">Equipment</a></li>
-                </ul>
-            </li>
-
-            <!-- Item 10: CLEARANCE -->
-            <li class="sidebar-item">
-                <div class="sidebar-link has-submenu">Clearance <i class="fa-solid fa-chevron-down"></i></div>
-                <ul class="sidebar-submenu">
-                    <li class="sidebar-link"><a href="#">Office Sale</a></li>
-                    <li class="sidebar-link"><a href="#">Furniture Sale</a></li>
-                    <li class="sidebar-link"><a href="#">Tech Sale</a></li>
-                </ul>
-            </li>
-
-            <li class="sidebar-item">
-                <a href="#" class="sidebar-link">Txley's Picks</a>
-            </li>
-        </ul>
-
+        <!-- Panels Container (Levels 1+) -->
+        <div id="sidebarPanelsContainer">
+            <!-- Dynamically populated -->
+        </div>
     </div>
 </body>
 
