@@ -328,12 +328,27 @@
 }
 
 .mega-menu-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr) 2fr;
+    display: flex;
     gap: 70px;
     max-width: 100%;
     margin: 0;
     padding: 0 40px;
+    align-items: flex-start;
+}
+
+.mega-masonry-wrapper {
+    flex: 1;
+    column-count: 4;
+    column-gap: 70px;
+    column-fill: balance;
+}
+
+/* Ensure groups don't break across columns */
+.mega-group {
+    break-inside: avoid;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 35px;
 }
 
 .mega-column-title {
@@ -384,8 +399,9 @@
 }
 
 .mega-recommendation {
+    width: 320px;
+    flex-shrink: 0;
     padding-left: 10px;
-    /* background: #fbfbfb; */
     margin: -40px 0;
     padding-top: 40px;
     padding-bottom: 40px;
